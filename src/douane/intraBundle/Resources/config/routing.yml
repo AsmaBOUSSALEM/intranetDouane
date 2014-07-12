@@ -1,0 +1,3 @@
+douaneintra_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: douaneintraBundle:Default:index }
