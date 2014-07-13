@@ -11,3 +11,6 @@ a53bb1,127.0.0.1,POST,http://localhost/stageDouane/web/app_dev.php/en/forum/defa
 732b6c,127.0.0.1,POST,http://localhost/stageDouane/web/app_dev.php/en/forum/default/topic/1/reply/process,1405271806,
 01e330,127.0.0.1,POST,http://localhost/stageDouane/web/app_dev.php/en/forum/default/topic/1/reply/process,1405271819,
 e7cee6,127.0.0.1,GET,http://localhost/stageDouane/web/app_dev.php/en/forum/default/topic/1,1405271819,
+cad330,127.0.0.1,GET,http://localhost/stageDouane/web/app_dev.php/en/forum/default/category/1,1405272644,
+d768eb,127.0.0.1,GET,http://localhost/stageDouane/web/app_dev.php/en/forum,1405272651,
+f077d7,127.0.0.1,GET,http://localhost/stageDouane/web/app_dev.php/en/forum/default/board/1,1405272660,
