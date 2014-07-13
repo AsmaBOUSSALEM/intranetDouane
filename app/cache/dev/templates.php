@@ -89,6 +89,7 @@
   'douaneintraBundle:Profile:show_content.html.twig' => '/var/www/html/stageDouane/src/douane/intraBundle/Resources/views/Profile/show_content.html.twig',
   'douaneintraBundle:Profile:show.html.twig' => '/var/www/html/stageDouane/src/douane/intraBundle/Resources/views/Profile/show.html.twig',
   'douaneintraBundle:Default:index.html.twig' => '/var/www/html/stageDouane/src/douane/intraBundle/Resources/views/Default/index.html.twig',
+  'douaneintraBundle::base.html.twig' => '/var/www/html/stageDouane/src/douane/intraBundle/Resources/views/base.html.twig',
   'FOSUserBundle:ChangePassword:changePassword.html.twig' => '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/ChangePassword/changePassword.html.twig',
   'FOSUserBundle:ChangePassword:changePassword_content.html.twig' => '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/ChangePassword/changePassword_content.html.twig',
   'FOSUserBundle:Registration:email.txt.twig' => '/var/www/html/stageDouane/src/douane/intraBundle/Resources/views/Registration/email.txt.twig',
