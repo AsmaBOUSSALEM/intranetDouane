@@ -18,6 +18,8 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new douane\intraBundle\douaneintraBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+            new CCDNForum\ForumBundle\CCDNForumForumBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

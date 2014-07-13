@@ -21,3 +21,11 @@ fos_user_resetting:
 fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
     prefix: /profile
+
+# app/config/routing.yml
+CCDNForumForumBundle:
+    resource: "@CCDNForumForumBundle/Resources/config/routing.yml"
+
+ccdn_homepage:
+    pattern: /
+    defaults: { _controller: CCDNForumForumBundle:UserCategory:index, _locale: en, forumName: default }

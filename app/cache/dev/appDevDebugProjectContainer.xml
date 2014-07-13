@@ -18,6 +18,8 @@
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
       <parameter key="douaneintraBundle">douane\intraBundle\douaneintraBundle</parameter>
       <parameter key="FOSUserBundle">FOS\UserBundle\FOSUserBundle</parameter>
+      <parameter key="KnpPaginatorBundle">Knp\Bundle\PaginatorBundle\KnpPaginatorBundle</parameter>
+      <parameter key="CCDNForumForumBundle">CCDNForum\ForumBundle\CCDNForumForumBundle</parameter>
       <parameter key="AcmeDemoBundle">Acme\DemoBundle\AcmeDemoBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -170,7 +172,9 @@
       <parameter>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/validation.xml</parameter>
       <parameter>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/validation/orm.xml</parameter>
     </parameter>
-    <parameter key="validator.mapping.loader.yaml_files_loader.mapping_files" type="collection"/>
+    <parameter key="validator.mapping.loader.yaml_files_loader.mapping_files" type="collection">
+      <parameter>/var/www/html/stageDouane/vendor/codeconsortium/ccdn-forum-bundle/CCDNForum/ForumBundle/Resources/config/validation.yml</parameter>
+    </parameter>
     <parameter key="validator.expression.class">Symfony\Component\Validator\Constraints\ExpressionValidator</parameter>
     <parameter key="validator.translation_domain">validators</parameter>
     <parameter key="fragment.listener.class">Symfony\Component\HttpKernel\EventListener\FragmentListener</parameter>
@@ -339,15 +343,20 @@
     </parameter>
     <parameter key="monolog.logger.class">Symfony\Bridge\Monolog\Logger</parameter>
     <parameter key="monolog.gelf.publisher.class">Gelf\MessagePublisher</parameter>
+    <parameter key="monolog.gelfphp.publisher.class">Gelf\Publisher</parameter>
     <parameter key="monolog.handler.stream.class">Monolog\Handler\StreamHandler</parameter>
     <parameter key="monolog.handler.console.class">Symfony\Bridge\Monolog\Handler\ConsoleHandler</parameter>
     <parameter key="monolog.handler.group.class">Monolog\Handler\GroupHandler</parameter>
     <parameter key="monolog.handler.buffer.class">Monolog\Handler\BufferHandler</parameter>
     <parameter key="monolog.handler.rotating_file.class">Monolog\Handler\RotatingFileHandler</parameter>
     <parameter key="monolog.handler.syslog.class">Monolog\Handler\SyslogHandler</parameter>
+    <parameter key="monolog.handler.syslogudp.class">Monolog\Handler\SyslogUdpHandler</parameter>
     <parameter key="monolog.handler.null.class">Monolog\Handler\NullHandler</parameter>
     <parameter key="monolog.handler.test.class">Monolog\Handler\TestHandler</parameter>
     <parameter key="monolog.handler.gelf.class">Monolog\Handler\GelfHandler</parameter>
+    <parameter key="monolog.handler.rollbar.class">Monolog\Handler\RollbarHandler</parameter>
+    <parameter key="monolog.handler.flowdock.class">Monolog\Handler\FlowdockHandler</parameter>
+    <parameter key="monolog.handler.browser_console.class">Monolog\Handler\BrowserConsoleHandler</parameter>
     <parameter key="monolog.handler.firephp.class">Symfony\Bridge\Monolog\Handler\FirePHPHandler</parameter>
     <parameter key="monolog.handler.chromephp.class">Symfony\Bridge\Monolog\Handler\ChromePhpHandler</parameter>
     <parameter key="monolog.handler.debug.class">Symfony\Bridge\Monolog\Handler\DebugHandler</parameter>
@@ -362,9 +371,11 @@
     <parameter key="monolog.handler.amqp.class">Monolog\Handler\AmqpHandler</parameter>
     <parameter key="monolog.handler.error_log.class">Monolog\Handler\ErrorLogHandler</parameter>
     <parameter key="monolog.handler.loggly.class">Monolog\Handler\LogglyHandler</parameter>
+    <parameter key="monolog.handler.logentries.class">Monolog\Handler\LogEntriesHandler</parameter>
     <parameter key="monolog.activation_strategy.not_found.class">Symfony\Bundle\MonologBundle\NotFoundActivationStrategy</parameter>
     <parameter key="monolog.handler.fingers_crossed.class">Monolog\Handler\FingersCrossedHandler</parameter>
     <parameter key="monolog.handler.fingers_crossed.error_level_activation_strategy.class">Monolog\Handler\FingersCrossed\ErrorLevelActivationStrategy</parameter>
+    <parameter key="monolog.handler.filter.class">Monolog\Handler\FilterHandler</parameter>
     <parameter key="monolog.handler.mongo.class">Monolog\Handler\MongoDBHandler</parameter>
     <parameter key="monolog.mongo.client.class">MongoClient</parameter>
     <parameter key="monolog.swift_mailer.handlers" type="collection"/>
@@ -552,6 +563,160 @@
       <parameter>ResetPassword</parameter>
       <parameter>Default</parameter>
     </parameter>
+    <parameter key="knp_paginator.class">Knp\Component\Pager\Paginator</parameter>
+    <parameter key="knp_paginator.templating.helper.pagination.class">Knp\Bundle\PaginatorBundle\Templating\PaginationHelper</parameter>
+    <parameter key="knp_paginator.helper.processor.class">Knp\Bundle\PaginatorBundle\Helper\Processor</parameter>
+    <parameter key="knp_paginator.template.pagination">KnpPaginatorBundle:Pagination:sliding.html.twig</parameter>
+    <parameter key="knp_paginator.template.filtration">KnpPaginatorBundle:Pagination:filtration.html.twig</parameter>
+    <parameter key="knp_paginator.template.sortable">KnpPaginatorBundle:Pagination:sortable_link.html.twig</parameter>
+    <parameter key="knp_paginator.page_range">5</parameter>
+    <parameter key="ccdn_forum_forum.entity.forum.class">CCDNForum\ForumBundle\Entity\Forum</parameter>
+    <parameter key="ccdn_forum_forum.entity.category.class">CCDNForum\ForumBundle\Entity\Category</parameter>
+    <parameter key="ccdn_forum_forum.entity.board.class">CCDNForum\ForumBundle\Entity\Board</parameter>
+    <parameter key="ccdn_forum_forum.entity.topic.class">CCDNForum\ForumBundle\Entity\Topic</parameter>
+    <parameter key="ccdn_forum_forum.entity.post.class">CCDNForum\ForumBundle\Entity\Post</parameter>
+    <parameter key="ccdn_forum_forum.entity.subscription.class">CCDNForum\ForumBundle\Entity\Subscription</parameter>
+    <parameter key="ccdn_forum_forum.entity.registry.class">CCDNForum\ForumBundle\Entity\Registry</parameter>
+    <parameter key="ccdn_forum_forum.gateway.forum.class">CCDNForum\ForumBundle\Model\Component\Gateway\ForumGateway</parameter>
+    <parameter key="ccdn_forum_forum.gateway.category.class">CCDNForum\ForumBundle\Model\Component\Gateway\CategoryGateway</parameter>
+    <parameter key="ccdn_forum_forum.gateway.board.class">CCDNForum\ForumBundle\Model\Component\Gateway\BoardGateway</parameter>
+    <parameter key="ccdn_forum_forum.gateway.topic.class">CCDNForum\ForumBundle\Model\Component\Gateway\TopicGateway</parameter>
+    <parameter key="ccdn_forum_forum.gateway.post.class">CCDNForum\ForumBundle\Model\Component\Gateway\PostGateway</parameter>
+    <parameter key="ccdn_forum_forum.gateway.subscription.class">CCDNForum\ForumBundle\Model\Component\Gateway\SubscriptionGateway</parameter>
+    <parameter key="ccdn_forum_forum.gateway.registry.class">CCDNForum\ForumBundle\Model\Component\Gateway\RegistryGateway</parameter>
+    <parameter key="ccdn_forum_forum.repository.forum.class">CCDNForum\ForumBundle\Model\Component\Repository\ForumRepository</parameter>
+    <parameter key="ccdn_forum_forum.repository.category.class">CCDNForum\ForumBundle\Model\Component\Repository\CategoryRepository</parameter>
+    <parameter key="ccdn_forum_forum.repository.board.class">CCDNForum\ForumBundle\Model\Component\Repository\BoardRepository</parameter>
+    <parameter key="ccdn_forum_forum.repository.topic.class">CCDNForum\ForumBundle\Model\Component\Repository\TopicRepository</parameter>
+    <parameter key="ccdn_forum_forum.repository.post.class">CCDNForum\ForumBundle\Model\Component\Repository\PostRepository</parameter>
+    <parameter key="ccdn_forum_forum.repository.subscription.class">CCDNForum\ForumBundle\Model\Component\Repository\SubscriptionRepository</parameter>
+    <parameter key="ccdn_forum_forum.repository.registry.class">CCDNForum\ForumBundle\Model\Component\Repository\RegistryRepository</parameter>
+    <parameter key="ccdn_forum_forum.manager.forum.class">CCDNForum\ForumBundle\Model\Component\Manager\ForumManager</parameter>
+    <parameter key="ccdn_forum_forum.manager.category.class">CCDNForum\ForumBundle\Model\Component\Manager\CategoryManager</parameter>
+    <parameter key="ccdn_forum_forum.manager.board.class">CCDNForum\ForumBundle\Model\Component\Manager\BoardManager</parameter>
+    <parameter key="ccdn_forum_forum.manager.topic.class">CCDNForum\ForumBundle\Model\Component\Manager\TopicManager</parameter>
+    <parameter key="ccdn_forum_forum.manager.post.class">CCDNForum\ForumBundle\Model\Component\Manager\PostManager</parameter>
+    <parameter key="ccdn_forum_forum.manager.subscription.class">CCDNForum\ForumBundle\Model\Component\Manager\SubscriptionManager</parameter>
+    <parameter key="ccdn_forum_forum.manager.registry.class">CCDNForum\ForumBundle\Model\Component\Manager\RegistryManager</parameter>
+    <parameter key="ccdn_forum_forum.model.forum.class">CCDNForum\ForumBundle\Model\FrontModel\ForumModel</parameter>
+    <parameter key="ccdn_forum_forum.model.category.class">CCDNForum\ForumBundle\Model\FrontModel\CategoryModel</parameter>
+    <parameter key="ccdn_forum_forum.model.board.class">CCDNForum\ForumBundle\Model\FrontModel\BoardModel</parameter>
+    <parameter key="ccdn_forum_forum.model.topic.class">CCDNForum\ForumBundle\Model\FrontModel\TopicModel</parameter>
+    <parameter key="ccdn_forum_forum.model.post.class">CCDNForum\ForumBundle\Model\FrontModel\PostModel</parameter>
+    <parameter key="ccdn_forum_forum.model.subscription.class">CCDNForum\ForumBundle\Model\FrontModel\SubscriptionModel</parameter>
+    <parameter key="ccdn_forum_forum.model.registry.class">CCDNForum\ForumBundle\Model\FrontModel\RegistryModel</parameter>
+    <parameter key="ccdn_forum_forum.form.type.forum_create.class">CCDNForum\ForumBundle\Form\Type\Admin\Forum\ForumCreateFormType</parameter>
+    <parameter key="ccdn_forum_forum.form.type.forum_update.class">CCDNForum\ForumBundle\Form\Type\Admin\Forum\ForumUpdateFormType</parameter>
+    <parameter key="ccdn_forum_forum.form.type.forum_delete.class">CCDNForum\ForumBundle\Form\Type\Admin\Forum\ForumDeleteFormType</parameter>
+    <parameter key="ccdn_forum_forum.form.type.category_create.class">CCDNForum\ForumBundle\Form\Type\Admin\Category\CategoryCreateFormType</parameter>
+    <parameter key="ccdn_forum_forum.form.type.category_update.class">CCDNForum\ForumBundle\Form\Type\Admin\Category\CategoryUpdateFormType</parameter>
+    <parameter key="ccdn_forum_forum.form.type.category_delete.class">CCDNForum\ForumBundle\Form\Type\Admin\Category\CategoryDeleteFormType</parameter>
+    <parameter key="ccdn_forum_forum.form.type.board_create.class">CCDNForum\ForumBundle\Form\Type\Admin\Board\BoardCreateFormType</parameter>
+    <parameter key="ccdn_forum_forum.form.type.board_update.class">CCDNForum\ForumBundle\Form\Type\Admin\Board\BoardUpdateFormType</parameter>
+    <parameter key="ccdn_forum_forum.form.type.board_delete.class">CCDNForum\ForumBundle\Form\Type\Admin\Board\BoardDeleteFormType</parameter>
+    <parameter key="ccdn_forum_forum.form.type.topic_create.class">CCDNForum\ForumBundle\Form\Type\User\Topic\TopicCreateFormType</parameter>
+    <parameter key="ccdn_forum_forum.form.type.topic_update.class">CCDNForum\ForumBundle\Form\Type\User\Topic\TopicUpdateFormType</parameter>
+    <parameter key="ccdn_forum_forum.form.type.topic_delete.class">CCDNForum\ForumBundle\Form\Type\Moderator\Topic\TopicDeleteFormType</parameter>
+    <parameter key="ccdn_forum_forum.form.type.change_topics_board.class">CCDNForum\ForumBundle\Form\Type\Moderator\Topic\TopicChangeBoardFormType</parameter>
+    <parameter key="ccdn_forum_forum.form.type.post_create.class">CCDNForum\ForumBundle\Form\Type\User\Post\PostCreateFormType</parameter>
+    <parameter key="ccdn_forum_forum.form.type.post_update.class">CCDNForum\ForumBundle\Form\Type\User\Post\PostUpdateFormType</parameter>
+    <parameter key="ccdn_forum_forum.form.type.post_delete.class">CCDNForum\ForumBundle\Form\Type\User\Post\PostDeleteFormType</parameter>
+    <parameter key="ccdn_forum_forum.form.type.post_unlock.class">CCDNForum\ForumBundle\Form\Type\Moderator\Post\PostUnlockFormType</parameter>
+    <parameter key="ccdn_forum_forum.form.handler.forum_create.class">CCDNForum\ForumBundle\Form\Handler\Admin\Forum\ForumCreateFormHandler</parameter>
+    <parameter key="ccdn_forum_forum.form.handler.forum_update.class">CCDNForum\ForumBundle\Form\Handler\Admin\Forum\ForumUpdateFormHandler</parameter>
+    <parameter key="ccdn_forum_forum.form.handler.forum_delete.class">CCDNForum\ForumBundle\Form\Handler\Admin\Forum\ForumDeleteFormHandler</parameter>
+    <parameter key="ccdn_forum_forum.form.handler.category_create.class">CCDNForum\ForumBundle\Form\Handler\Admin\Category\CategoryCreateFormHandler</parameter>
+    <parameter key="ccdn_forum_forum.form.handler.category_update.class">CCDNForum\ForumBundle\Form\Handler\Admin\Category\CategoryUpdateFormHandler</parameter>
+    <parameter key="ccdn_forum_forum.form.handler.category_delete.class">CCDNForum\ForumBundle\Form\Handler\Admin\Category\CategoryDeleteFormHandler</parameter>
+    <parameter key="ccdn_forum_forum.form.handler.board_create.class">CCDNForum\ForumBundle\Form\Handler\Admin\Board\BoardCreateFormHandler</parameter>
+    <parameter key="ccdn_forum_forum.form.handler.board_update.class">CCDNForum\ForumBundle\Form\Handler\Admin\Board\BoardUpdateFormHandler</parameter>
+    <parameter key="ccdn_forum_forum.form.handler.board_delete.class">CCDNForum\ForumBundle\Form\Handler\Admin\Board\BoardDeleteFormHandler</parameter>
+    <parameter key="ccdn_forum_forum.form.handler.topic_create.class">CCDNForum\ForumBundle\Form\Handler\User\Topic\TopicCreateFormHandler</parameter>
+    <parameter key="ccdn_forum_forum.form.handler.topic_update.class">CCDNForum\ForumBundle\Form\Handler\User\Topic\TopicUpdateFormHandler</parameter>
+    <parameter key="ccdn_forum_forum.form.handler.topic_delete.class">CCDNForum\ForumBundle\Form\Handler\Moderator\Topic\TopicDeleteFormHandler</parameter>
+    <parameter key="ccdn_forum_forum.form.handler.change_topics_board.class">CCDNForum\ForumBundle\Form\Handler\Moderator\Topic\TopicChangeBoardFormHandler</parameter>
+    <parameter key="ccdn_forum_forum.form.handler.post_create.class">CCDNForum\ForumBundle\Form\Handler\User\Post\PostCreateFormHandler</parameter>
+    <parameter key="ccdn_forum_forum.form.handler.post_update.class">CCDNForum\ForumBundle\Form\Handler\User\Post\PostUpdateFormHandler</parameter>
+    <parameter key="ccdn_forum_forum.form.handler.post_delete.class">CCDNForum\ForumBundle\Form\Handler\User\Post\PostDeleteFormHandler</parameter>
+    <parameter key="ccdn_forum_forum.form.handler.post_unlock.class">CCDNForum\ForumBundle\Form\Handler\Moderator\Post\PostUnlockFormHandler</parameter>
+    <parameter key="ccdn_forum_forum.component.integrator.dashboard.class">CCDNForum\ForumBundle\Component\Integrator\DashboardIntegrator</parameter>
+    <parameter key="ccdn_forum_forum.component.crumb_factory.class">CCDNForum\ForumBundle\Component\Crumbs\Factory\CrumbFactory</parameter>
+    <parameter key="ccdn_forum_forum.component.crumb_builder.class">CCDNForum\ForumBundle\Component\Crumbs\CrumbBuilder</parameter>
+    <parameter key="ccdn_forum_forum.component.security.authorizer.class">CCDNForum\ForumBundle\Component\Security\Authorizer</parameter>
+    <parameter key="ccdn_forum_forum.component.flood_control.class">CCDNForum\ForumBundle\Component\FloodControl</parameter>
+    <parameter key="ccdn_forum_forum.component.helper.role.class">CCDNForum\ForumBundle\Component\Helper\RoleHelper</parameter>
+    <parameter key="ccdn_forum_forum.component.helper.pagination_config.class">CCDNForum\ForumBundle\Component\Helper\PaginationConfigHelper</parameter>
+    <parameter key="ccdn_forum_forum.component.helper.post_lock.class">CCDNForum\ForumBundle\Component\Helper\PostLockHelper</parameter>
+    <parameter key="ccdn_forum_forum.component.twig_extension.board_list.class">CCDNForum\ForumBundle\Component\TwigExtension\BoardListExtension</parameter>
+    <parameter key="ccdn_forum_forum.component.twig_extension.authorizer.class">CCDNForum\ForumBundle\Component\TwigExtension\AuthorizerExtension</parameter>
+    <parameter key="ccdn_forum_forum.component.event_listener.flash.class">CCDNForum\ForumBundle\Component\Dispatcher\Listener\FlashListener</parameter>
+    <parameter key="ccdn_forum_forum.component.event_listener.subscriber.class">CCDNForum\ForumBundle\Component\Dispatcher\Listener\SubscriberListener</parameter>
+    <parameter key="ccdn_forum_forum.component.event_listener.stats.class">CCDNForum\ForumBundle\Component\Dispatcher\Listener\StatListener</parameter>
+    <parameter key="ccdn_forum_forum.template.engine">twig</parameter>
+    <parameter key="ccdn_forum_forum.template.pager_theme">null</parameter>
+    <parameter key="ccdn_forum_forum.fixtures.user_admin">user-admin</parameter>
+    <parameter key="ccdn_forum_forum.seo.title_length">67</parameter>
+    <parameter key="ccdn_forum_forum.forum.admin.create.layout_template">CCDNForumForumBundle::base.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.forum.admin.create.form_theme">form_div_layout.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.forum.admin.edit.layout_template">CCDNForumForumBundle::base.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.forum.admin.edit.form_theme">form_div_layout.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.forum.admin.delete.layout_template">CCDNForumForumBundle::base.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.forum.admin.delete.form_theme">form_div_layout.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.forum.admin.list.layout_template">CCDNForumForumBundle::base.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.category.admin.create.layout_template">CCDNForumForumBundle::base.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.category.admin.create.form_theme">form_div_layout.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.category.admin.edit.layout_template">CCDNForumForumBundle::base.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.category.admin.edit.form_theme">form_div_layout.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.category.admin.delete.layout_template">CCDNForumForumBundle::base.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.category.admin.delete.form_theme">form_div_layout.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.category.admin.list.layout_template">CCDNForumForumBundle::base.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.category.user.last_post_datetime_format">d-m-Y - H:i</parameter>
+    <parameter key="ccdn_forum_forum.category.user.index.layout_template">CCDNForumForumBundle::base.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.category.user.show.layout_template">CCDNForumForumBundle::base.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.board.admin.create.layout_template">CCDNForumForumBundle::base.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.board.admin.create.form_theme">form_div_layout.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.board.admin.edit.layout_template">CCDNForumForumBundle::base.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.board.admin.edit.form_theme">form_div_layout.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.board.admin.delete.layout_template">CCDNForumForumBundle::base.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.board.admin.delete.form_theme">form_div_layout.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.board.admin.list.layout_template">CCDNForumForumBundle::base.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.board.user.show.layout_template">CCDNForumForumBundle::base.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.board.user.show.topics_per_page">50</parameter>
+    <parameter key="ccdn_forum_forum.board.user.show.topic_title_truncate">50</parameter>
+    <parameter key="ccdn_forum_forum.board.user.show.first_post_datetime_format">d-m-Y - H:i</parameter>
+    <parameter key="ccdn_forum_forum.board.user.show.last_post_datetime_format">d-m-Y - H:i</parameter>
+    <parameter key="ccdn_forum_forum.topic.moderator.change_board.layout_template">CCDNForumForumBundle::base.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.topic.moderator.change_board.form_theme">form_div_layout.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.topic.moderator.delete.layout_template">CCDNForumForumBundle::base.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.topic.moderator.delete.form_theme">form_div_layout.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.topic.user.flood_control.post_limit">0</parameter>
+    <parameter key="ccdn_forum_forum.topic.user.flood_control.block_for_minutes">0</parameter>
+    <parameter key="ccdn_forum_forum.topic.user.show.layout_template">CCDNForumForumBundle::base.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.topic.user.show.posts_per_page">20</parameter>
+    <parameter key="ccdn_forum_forum.topic.user.show.closed_datetime_format">d-m-Y - H:i</parameter>
+    <parameter key="ccdn_forum_forum.topic.user.show.deleted_datetime_format">d-m-Y - H:i</parameter>
+    <parameter key="ccdn_forum_forum.topic.user.create.layout_template">CCDNForumForumBundle::base.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.topic.user.create.form_theme">form_div_layout.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.topic.user.reply.layout_template">CCDNForumForumBundle::base.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.topic.user.reply.form_theme">form_div_layout.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.post.moderator.unlock.layout_template">CCDNForumForumBundle::base.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.post.moderator.unlock.form_theme">form_div_layout.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.post.user.show.layout_template">CCDNForumForumBundle::base.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.post.user.edit.layout_template">CCDNForumForumBundle::base.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.post.user.edit.form_theme">form_div_layout.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.post.user.delete.layout_template">CCDNForumForumBundle::base.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.post.user.delete.form_theme">form_div_layout.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.post.user.lock.enable">true</parameter>
+    <parameter key="ccdn_forum_forum.post.user.lock.after_days">7</parameter>
+    <parameter key="ccdn_forum_forum.item_post.created_datetime_format">d-m-Y - H:i</parameter>
+    <parameter key="ccdn_forum_forum.item_post.edited_datetime_format">d-m-Y - H:i</parameter>
+    <parameter key="ccdn_forum_forum.item_post.post_locked_datetime_format">d-m-Y - H:i</parameter>
+    <parameter key="ccdn_forum_forum.item_post.deleted_datetime_format">d-m-Y - H:i</parameter>
+    <parameter key="ccdn_forum_forum.subscription.list.layout_template">CCDNForumForumBundle::base.html.twig</parameter>
+    <parameter key="ccdn_forum_forum.subscription.list.topics_per_page">50</parameter>
+    <parameter key="ccdn_forum_forum.subscription.list.topic_title_truncate">50</parameter>
+    <parameter key="ccdn_forum_forum.subscription.list.first_post_datetime_format">d-m-Y - H:i</parameter>
+    <parameter key="ccdn_forum_forum.subscription.list.last_post_datetime_format">d-m-Y - H:i</parameter>
     <parameter key="web_profiler.controller.profiler.class">Symfony\Bundle\WebProfilerBundle\Controller\ProfilerController</parameter>
     <parameter key="web_profiler.controller.router.class">Symfony\Bundle\WebProfilerBundle\Controller\RouterController</parameter>
     <parameter key="web_profiler.controller.exception.class">Symfony\Bundle\WebProfilerBundle\Controller\ExceptionController</parameter>
@@ -740,7 +905,9 @@
     </service>
     <service id="translator.default" class="Symfony\Bundle\FrameworkBundle\Translation\Translator">
       <argument type="service" id="service_container"/>
-      <argument type="service" id="translator.selector"/>
+      <argument type="service">
+        <service class="Symfony\Component\Translation\MessageSelector" public="false"/>
+      </argument>
       <argument type="collection">
         <argument key="translation.loader.php" type="collection">
           <argument>php</argument>
@@ -781,11 +948,1158 @@
         <argument key="cache_dir">/var/www/html/stageDouane/app/cache/dev/translations</argument>
         <argument key="debug">true</argument>
       </argument>
+      <call method="setFallbackLocales">
+        <argument type="collection">
+          <argument>en</argument>
+        </argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.lt.xlf</argument>
+        <argument>lt</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.lb.xlf</argument>
+        <argument>lb</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.he.xlf</argument>
+        <argument>he</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.pl.xlf</argument>
+        <argument>pl</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.id.xlf</argument>
+        <argument>id</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.gl.xlf</argument>
+        <argument>gl</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.nb.xlf</argument>
+        <argument>nb</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.pt.xlf</argument>
+        <argument>pt</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sq.xlf</argument>
+        <argument>sq</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.cy.xlf</argument>
+        <argument>cy</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.tr.xlf</argument>
+        <argument>tr</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.fr.xlf</argument>
+        <argument>fr</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.hy.xlf</argument>
+        <argument>hy</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.th.xlf</argument>
+        <argument>th</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sl.xlf</argument>
+        <argument>sl</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.ro.xlf</argument>
+        <argument>ro</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.vi.xlf</argument>
+        <argument>vi</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.uk.xlf</argument>
+        <argument>uk</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.ca.xlf</argument>
+        <argument>ca</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sr_Cyrl.xlf</argument>
+        <argument>sr_Cyrl</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.en.xlf</argument>
+        <argument>en</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.bg.xlf</argument>
+        <argument>bg</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.nl.xlf</argument>
+        <argument>nl</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.cs.xlf</argument>
+        <argument>cs</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.hr.xlf</argument>
+        <argument>hr</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.zh_TW.xlf</argument>
+        <argument>zh_TW</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.ar.xlf</argument>
+        <argument>ar</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.de.xlf</argument>
+        <argument>de</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.fa.xlf</argument>
+        <argument>fa</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.el.xlf</argument>
+        <argument>el</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sv.xlf</argument>
+        <argument>sv</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.eu.xlf</argument>
+        <argument>eu</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.fi.xlf</argument>
+        <argument>fi</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.no.xlf</argument>
+        <argument>no</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.es.xlf</argument>
+        <argument>es</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.mn.xlf</argument>
+        <argument>mn</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.ru.xlf</argument>
+        <argument>ru</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sr_Latn.xlf</argument>
+        <argument>sr_Latn</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.da.xlf</argument>
+        <argument>da</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.hu.xlf</argument>
+        <argument>hu</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.ja.xlf</argument>
+        <argument>ja</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sk.xlf</argument>
+        <argument>sk</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.et.xlf</argument>
+        <argument>et</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.af.xlf</argument>
+        <argument>af</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.it.xlf</argument>
+        <argument>it</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.pt_BR.xlf</argument>
+        <argument>pt_BR</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.zh_CN.xlf</argument>
+        <argument>zh_CN</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.lt.xlf</argument>
+        <argument>lt</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.lb.xlf</argument>
+        <argument>lb</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.he.xlf</argument>
+        <argument>he</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.pl.xlf</argument>
+        <argument>pl</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.id.xlf</argument>
+        <argument>id</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.gl.xlf</argument>
+        <argument>gl</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.nb.xlf</argument>
+        <argument>nb</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.pt.xlf</argument>
+        <argument>pt</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.fr.xlf</argument>
+        <argument>fr</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.hy.xlf</argument>
+        <argument>hy</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.sl.xlf</argument>
+        <argument>sl</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.ro.xlf</argument>
+        <argument>ro</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.uk.xlf</argument>
+        <argument>uk</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.ca.xlf</argument>
+        <argument>ca</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.sr_Cyrl.xlf</argument>
+        <argument>sr_Cyrl</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.en.xlf</argument>
+        <argument>en</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.bg.xlf</argument>
+        <argument>bg</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.nl.xlf</argument>
+        <argument>nl</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.cs.xlf</argument>
+        <argument>cs</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.hr.xlf</argument>
+        <argument>hr</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.ar.xlf</argument>
+        <argument>ar</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.de.xlf</argument>
+        <argument>de</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.fa.xlf</argument>
+        <argument>fa</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.el.xlf</argument>
+        <argument>el</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.sv.xlf</argument>
+        <argument>sv</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.eu.xlf</argument>
+        <argument>eu</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.fi.xlf</argument>
+        <argument>fi</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.es.xlf</argument>
+        <argument>es</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.mn.xlf</argument>
+        <argument>mn</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.ru.xlf</argument>
+        <argument>ru</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.sr_Latn.xlf</argument>
+        <argument>sr_Latn</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.da.xlf</argument>
+        <argument>da</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.hu.xlf</argument>
+        <argument>hu</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.ja.xlf</argument>
+        <argument>ja</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.sk.xlf</argument>
+        <argument>sk</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.et.xlf</argument>
+        <argument>et</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.lv.xlf</argument>
+        <argument>lv</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.it.xlf</argument>
+        <argument>it</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.pt_BR.xlf</argument>
+        <argument>pt_BR</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.zh_CN.xlf</argument>
+        <argument>zh_CN</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.sr_Cyrl.xlf</argument>
+        <argument>sr_Cyrl</argument>
+        <argument>security</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.sr_Latn.xlf</argument>
+        <argument>sr_Latn</argument>
+        <argument>security</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.en.xlf</argument>
+        <argument>en</argument>
+        <argument>security</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.nl.xlf</argument>
+        <argument>nl</argument>
+        <argument>security</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.pl.xlf</argument>
+        <argument>pl</argument>
+        <argument>security</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.sl.xlf</argument>
+        <argument>sl</argument>
+        <argument>security</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.fa.xlf</argument>
+        <argument>fa</argument>
+        <argument>security</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.ar.xlf</argument>
+        <argument>ar</argument>
+        <argument>security</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.ru.xlf</argument>
+        <argument>ru</argument>
+        <argument>security</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.sv.xlf</argument>
+        <argument>sv</argument>
+        <argument>security</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.gl.xlf</argument>
+        <argument>gl</argument>
+        <argument>security</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.lb.xlf</argument>
+        <argument>lb</argument>
+        <argument>security</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.cs.xlf</argument>
+        <argument>cs</argument>
+        <argument>security</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.de.xlf</argument>
+        <argument>de</argument>
+        <argument>security</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.hu.xlf</argument>
+        <argument>hu</argument>
+        <argument>security</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.ca.xlf</argument>
+        <argument>ca</argument>
+        <argument>security</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.ro.xlf</argument>
+        <argument>ro</argument>
+        <argument>security</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.it.xlf</argument>
+        <argument>it</argument>
+        <argument>security</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.pt_BR.xlf</argument>
+        <argument>pt_BR</argument>
+        <argument>security</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.pt_PT.xlf</argument>
+        <argument>pt_PT</argument>
+        <argument>security</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.no.xlf</argument>
+        <argument>no</argument>
+        <argument>security</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.tr.xlf</argument>
+        <argument>tr</argument>
+        <argument>security</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.fr.xlf</argument>
+        <argument>fr</argument>
+        <argument>security</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.el.xlf</argument>
+        <argument>el</argument>
+        <argument>security</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.es.xlf</argument>
+        <argument>es</argument>
+        <argument>security</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.da.xlf</argument>
+        <argument>da</argument>
+        <argument>security</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.sk.xlf</argument>
+        <argument>sk</argument>
+        <argument>security</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.ua.xlf</argument>
+        <argument>ua</argument>
+        <argument>security</argument>
+      </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>/var/www/html/stageDouane/src/douane/intraBundle/Resources/translations/messages.fr.xlf</argument>
+        <argument>fr</argument>
+        <argument>messages</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.en.yml</argument>
+        <argument>en</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.pt.yml</argument>
+        <argument>pt</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.ro.yml</argument>
+        <argument>ro</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.ja.yml</argument>
+        <argument>ja</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.fa.yml</argument>
+        <argument>fa</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.sr_Latn.yml</argument>
+        <argument>sr_Latn</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.sv.yml</argument>
+        <argument>sv</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.pt_BR.yml</argument>
+        <argument>pt_BR</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.ar.yml</argument>
+        <argument>ar</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.lt.yml</argument>
+        <argument>lt</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.tr.yml</argument>
+        <argument>tr</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.de.yml</argument>
+        <argument>de</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.nb.yml</argument>
+        <argument>nb</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.sv.yml</argument>
+        <argument>sv</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.id.yml</argument>
+        <argument>id</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.es.yml</argument>
+        <argument>es</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.bg.yml</argument>
+        <argument>bg</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.pl.yml</argument>
+        <argument>pl</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.vi.yml</argument>
+        <argument>vi</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.ca.yml</argument>
+        <argument>ca</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.fr.yml</argument>
+        <argument>fr</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.fa.yml</argument>
+        <argument>fa</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.ja.yml</argument>
+        <argument>ja</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.pt_BR.yml</argument>
+        <argument>pt_BR</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.lb.yml</argument>
+        <argument>lb</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.lt.yml</argument>
+        <argument>lt</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.uk.yml</argument>
+        <argument>uk</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.pt_PT.yml</argument>
+        <argument>pt_PT</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.ro.yml</argument>
+        <argument>ro</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.ca.yml</argument>
+        <argument>ca</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.hr.yml</argument>
+        <argument>hr</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.nl.yml</argument>
+        <argument>nl</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.da.yml</argument>
+        <argument>da</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.it.yml</argument>
+        <argument>it</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.pl.yml</argument>
+        <argument>pl</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.fi.yml</argument>
+        <argument>fi</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.lv.yml</argument>
+        <argument>lv</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.tr.yml</argument>
+        <argument>tr</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.et.yml</argument>
+        <argument>et</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.ar.yml</argument>
+        <argument>ar</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.sk.yml</argument>
+        <argument>sk</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.th.yml</argument>
+        <argument>th</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.de.yml</argument>
+        <argument>de</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.id.yml</argument>
+        <argument>id</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.it.yml</argument>
+        <argument>it</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.cs.yml</argument>
+        <argument>cs</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.th.yml</argument>
+        <argument>th</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.da.yml</argument>
+        <argument>da</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.he.yml</argument>
+        <argument>he</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.uk.yml</argument>
+        <argument>uk</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.fi.yml</argument>
+        <argument>fi</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.ru.yml</argument>
+        <argument>ru</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.ru.yml</argument>
+        <argument>ru</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.nl.yml</argument>
+        <argument>nl</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.en.yml</argument>
+        <argument>en</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.lv.yml</argument>
+        <argument>lv</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.zh_CN.yml</argument>
+        <argument>zh_CN</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.hu.yml</argument>
+        <argument>hu</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.vi.yml</argument>
+        <argument>vi</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.fr.yml</argument>
+        <argument>fr</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.sr_Latn.yml</argument>
+        <argument>sr_Latn</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.sl.yml</argument>
+        <argument>sl</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.cs.yml</argument>
+        <argument>cs</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.bg.yml</argument>
+        <argument>bg</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.sl.yml</argument>
+        <argument>sl</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.hu.yml</argument>
+        <argument>hu</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.hr.yml</argument>
+        <argument>hr</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.zh_CN.yml</argument>
+        <argument>zh_CN</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.he.yml</argument>
+        <argument>he</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.es.yml</argument>
+        <argument>es</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.nb.yml</argument>
+        <argument>nb</argument>
+        <argument>validators</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.sk.yml</argument>
+        <argument>sk</argument>
+        <argument>FOSUserBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/codeconsortium/ccdn-forum-bundle/CCDNForum/ForumBundle/Resources/translations/CCDNForumForumBundle.hr.yml</argument>
+        <argument>hr</argument>
+        <argument>CCDNForumForumBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/codeconsortium/ccdn-forum-bundle/CCDNForum/ForumBundle/Resources/translations/CCDNForumForumBundle.en.yml</argument>
+        <argument>en</argument>
+        <argument>CCDNForumForumBundle</argument>
+      </call>
+      <call method="addResource">
+        <argument>yml</argument>
+        <argument>/var/www/html/stageDouane/vendor/codeconsortium/ccdn-forum-bundle/CCDNForum/ForumBundle/Resources/translations/CCDNForumForumBundle.fr.yml</argument>
+        <argument>fr</argument>
+        <argument>CCDNForumForumBundle</argument>
+      </call>
     </service>
-    <service id="translator" class="Symfony\Component\Translation\IdentityTranslator">
-      <argument type="service" id="translator.selector"/>
-    </service>
-    <service id="translator.selector" class="Symfony\Component\Translation\MessageSelector" public="false"/>
     <service id="translation.loader.php" class="Symfony\Component\Translation\Loader\PhpFileLoader">
       <tag name="translation.loader" alias="php"/>
     </service>
@@ -972,6 +2286,46 @@
       <argument type="service" id="debug.stopwatch"/>
       <argument type="service" id="monolog.logger.event" on-invalid="null"/>
       <call method="addListenerService">
+        <argument>knp_pager.before</argument>
+        <argument type="collection">
+          <argument>knp_paginator.subscriber.paginate</argument>
+          <argument>before</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListenerService">
+        <argument>knp_pager.pagination</argument>
+        <argument type="collection">
+          <argument>knp_paginator.subscriber.paginate</argument>
+          <argument>pagination</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListenerService">
+        <argument>knp_pager.before</argument>
+        <argument type="collection">
+          <argument>knp_paginator.subscriber.sortable</argument>
+          <argument>before</argument>
+        </argument>
+        <argument>1</argument>
+      </call>
+      <call method="addListenerService">
+        <argument>knp_pager.before</argument>
+        <argument type="collection">
+          <argument>knp_paginator.subscriber.filtration</argument>
+          <argument>before</argument>
+        </argument>
+        <argument>1</argument>
+      </call>
+      <call method="addListenerService">
+        <argument>knp_pager.pagination</argument>
+        <argument type="collection">
+          <argument>knp_paginator.subscriber.sliding_pagination</argument>
+          <argument>pagination</argument>
+        </argument>
+        <argument>1</argument>
+      </call>
+      <call method="addListenerService">
         <argument>kernel.controller</argument>
         <argument type="collection">
           <argument>data_collector.router</argument>
@@ -983,6 +2337,14 @@
         <argument>kernel.request</argument>
         <argument type="collection">
           <argument>assetic.request_listener</argument>
+          <argument>onKernelRequest</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListenerService">
+        <argument>kernel.request</argument>
+        <argument type="collection">
+          <argument>knp_paginator.subscriber.sliding_pagination</argument>
           <argument>onKernelRequest</argument>
         </argument>
         <argument>0</argument>
@@ -1090,6 +2452,18 @@
       <call method="addSubscriberService">
         <argument>fos_user.listener.resetting</argument>
         <argument>FOS\UserBundle\EventListener\ResettingListener</argument>
+      </call>
+      <call method="addSubscriberService">
+        <argument>ccdn_forum_forum.component.event_listener.flash</argument>
+        <argument>CCDNForum\ForumBundle\Component\Dispatcher\Listener\FlashListener</argument>
+      </call>
+      <call method="addSubscriberService">
+        <argument>ccdn_forum_forum.component.event_listener.subscriber</argument>
+        <argument>CCDNForum\ForumBundle\Component\Dispatcher\Listener\SubscriberListener</argument>
+      </call>
+      <call method="addSubscriberService">
+        <argument>ccdn_forum_forum.component.event_listener.stats</argument>
+        <argument>CCDNForum\ForumBundle\Component\Dispatcher\Listener\StatListener</argument>
       </call>
       <call method="addSubscriberService">
         <argument>web_profiler.debug_toolbar</argument>
@@ -1400,7 +2774,7 @@
     </service>
     <service id="templating.helper.translator" class="Symfony\Bundle\FrameworkBundle\Templating\Helper\TranslatorHelper">
       <tag name="templating.helper" alias="translator"/>
-      <argument type="service" id="translator"/>
+      <argument type="service" id="translator.default"/>
     </service>
     <service id="templating.helper.form" class="Symfony\Bundle\FrameworkBundle\Templating\Helper\FormHelper">
       <tag name="templating.helper" alias="form"/>
@@ -1437,7 +2811,7 @@
           </argument>
         </service>
       </argument>
-      <argument type="service" id="translator"/>
+      <argument type="service" id="translator.default"/>
       <argument>validators</argument>
       <argument type="collection">
         <argument type="service" id="doctrine.orm.validator_initializer"/>
@@ -1472,7 +2846,9 @@
             </argument>
             <argument type="service">
               <service class="Symfony\Component\Validator\Mapping\Loader\YamlFilesLoader" public="false">
-                <argument type="collection"/>
+                <argument type="collection">
+                  <argument>/var/www/html/stageDouane/vendor/codeconsortium/ccdn-forum-bundle/CCDNForum/ForumBundle/Resources/config/validation.yml</argument>
+                </argument>
               </service>
             </argument>
           </argument>
@@ -1724,7 +3100,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>53c1c0f80e003</argument>
+            <argument>53c2b0c6b7996</argument>
           </service>
         </argument>
       </argument>
@@ -1947,8 +3323,8 @@
                   </service>
                 </argument>
                 <argument type="collection">
+                  <argument key="default_target_path">/demo/hello/World</argument>
                   <argument key="always_use_default_target_path">false</argument>
-                  <argument key="default_target_path">/</argument>
                   <argument key="login_path">/login</argument>
                   <argument key="target_path_parameter">_target_path</argument>
                   <argument key="use_referer">false</argument>
@@ -1994,7 +3370,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.context"/>
-            <argument>53c1c0f80e003</argument>
+            <argument>53c2b0c6b7996</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
           </service>
         </argument>
@@ -2117,7 +3493,7 @@
         <argument type="service">
           <service class="Symfony\Bridge\Twig\Extension\TranslationExtension" public="false">
             <tag name="twig.extension"/>
-            <argument type="service" id="translator"/>
+            <argument type="service" id="translator.default"/>
           </service>
         </argument>
       </call>
@@ -2231,6 +3607,15 @@
             <tag name="twig.extension"/>
           </service>
         </argument>
+      </call>
+      <call method="addExtension">
+        <argument type="service" id="knp_paginator.twig.extension.pagination"/>
+      </call>
+      <call method="addExtension">
+        <argument type="service" id="ccdn_forum_forum.component.twig_extension.board_list"/>
+      </call>
+      <call method="addExtension">
+        <argument type="service" id="ccdn_forum_forum.component.twig_extension.authorizer"/>
       </call>
       <call method="addExtension">
         <argument type="service" id="twig.extension.acme.demo"/>
@@ -2415,6 +3800,21 @@
               </service>
             </argument>
           </call>
+          <call method="addEventListener">
+            <argument type="collection">
+              <argument>loadClassMetadata</argument>
+            </argument>
+            <argument type="service">
+              <service class="Doctrine\ORM\Tools\ResolveTargetEntityListener" public="false">
+                <tag name="doctrine.event_listener" event="loadClassMetadata"/>
+                <call method="addResolveTargetEntity">
+                  <argument>Symfony\Component\Security\Core\User\UserInterface</argument>
+                  <argument>douane\intraBundle\Entity\User</argument>
+                  <argument type="collection"/>
+                </call>
+              </service>
+            </argument>
+          </call>
         </service>
       </argument>
       <argument type="collection"/>
@@ -2447,6 +3847,7 @@
             <argument type="collection">
               <argument key="douaneintraBundle">douane\intraBundle\Entity</argument>
               <argument key="FOSUserBundle">FOS\UserBundle\Entity</argument>
+              <argument key="CCDNForumForumBundle">CCDNForum\ForumBundle\Entity</argument>
             </argument>
           </call>
           <call method="setMetadataCacheImpl">
@@ -2502,6 +3903,19 @@
                     </service>
                   </argument>
                   <argument>FOS\UserBundle\Entity</argument>
+                </call>
+                <call method="addDriver">
+                  <argument type="service">
+                    <service class="Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver" public="false">
+                      <argument type="collection">
+                        <argument key="/var/www/html/stageDouane/vendor/codeconsortium/ccdn-forum-bundle/CCDNForum/ForumBundle/Resources/config/doctrine">CCDNForum\ForumBundle\Entity</argument>
+                      </argument>
+                      <call method="setGlobalBasename">
+                        <argument>mapping</argument>
+                      </call>
+                    </service>
+                  </argument>
+                  <argument>CCDNForum\ForumBundle\Entity</argument>
                 </call>
                 <call method="addDriver">
                   <argument type="service">
@@ -2615,7 +4029,7 @@
     <service id="fos_user.listener.flash" class="FOS\UserBundle\EventListener\FlashListener">
       <tag name="kernel.event_subscriber"/>
       <argument type="service" id="session"/>
-      <argument type="service" id="translator"/>
+      <argument type="service" id="translator.default"/>
     </service>
     <service id="fos_user.username_form_type" class="FOS\UserBundle\Form\Type\UsernameFormType">
       <tag name="form.type" alias="fos_user_username"/>
@@ -2681,6 +4095,409 @@
       <tag name="kernel.event_subscriber"/>
       <argument type="service" id="router"/>
       <argument>86400</argument>
+    </service>
+    <service id="knp_paginator" class="Knp\Component\Pager\Paginator">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <call method="setDefaultPaginatorOptions">
+        <argument type="collection">
+          <argument key="pageParameterName">page</argument>
+          <argument key="sortFieldParameterName">sort</argument>
+          <argument key="sortDirectionParameterName">direction</argument>
+          <argument key="filterFieldParameterName">filterField</argument>
+          <argument key="filterValueParameterName">filterValue</argument>
+          <argument key="distinct">true</argument>
+        </argument>
+      </call>
+    </service>
+    <service id="knp_paginator.subscriber.paginate" class="Knp\Component\Pager\Event\Subscriber\Paginate\PaginationSubscriber">
+      <tag name="knp_paginator.subscriber"/>
+    </service>
+    <service id="knp_paginator.subscriber.sortable" class="Knp\Component\Pager\Event\Subscriber\Sortable\SortableSubscriber">
+      <tag name="knp_paginator.subscriber"/>
+    </service>
+    <service id="knp_paginator.subscriber.filtration" class="Knp\Component\Pager\Event\Subscriber\Filtration\FiltrationSubscriber">
+      <tag name="knp_paginator.subscriber"/>
+    </service>
+    <service id="knp_paginator.subscriber.sliding_pagination" class="Knp\Bundle\PaginatorBundle\Subscriber\SlidingPaginationSubscriber">
+      <tag name="knp_paginator.subscriber"/>
+      <tag name="kernel.event_listener" event="kernel.request" method="onKernelRequest"/>
+      <argument type="collection">
+        <argument key="defaultPaginationTemplate">KnpPaginatorBundle:Pagination:sliding.html.twig</argument>
+        <argument key="defaultSortableTemplate">KnpPaginatorBundle:Pagination:sortable_link.html.twig</argument>
+        <argument key="defaultFiltrationTemplate">KnpPaginatorBundle:Pagination:filtration.html.twig</argument>
+        <argument key="defaultPageRange">5</argument>
+      </argument>
+    </service>
+    <service id="knp_paginator.helper.processor" class="Knp\Bundle\PaginatorBundle\Helper\Processor">
+      <argument type="service" id="templating.helper.router"/>
+      <argument type="service" id="translator.default"/>
+    </service>
+    <service id="knp_paginator.templating.helper.pagination" class="Knp\Bundle\PaginatorBundle\Templating\PaginationHelper">
+      <tag name="templating.helper" alias="knp_pagination"/>
+      <argument type="service" id="knp_paginator.helper.processor"/>
+      <argument type="service" id="debug.templating.engine.php"/>
+    </service>
+    <service id="knp_paginator.twig.extension.pagination" class="Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension">
+      <tag name="twig.extension"/>
+      <argument type="service" id="knp_paginator.helper.processor"/>
+    </service>
+    <service id="ccdn_forum_forum.component.helper.post_lock" class="CCDNForum\ForumBundle\Component\Helper\PostLockHelper">
+      <argument>true</argument>
+      <argument>7</argument>
+    </service>
+    <service id="ccdn_forum_forum.component.helper.pagination_config" class="CCDNForum\ForumBundle\Component\Helper\PaginationConfigHelper">
+      <argument>50</argument>
+      <argument>50</argument>
+      <argument>20</argument>
+    </service>
+    <service id="ccdn_forum_forum.component.helper.role" class="CCDNForum\ForumBundle\Component\Helper\RoleHelper">
+      <argument type="service" id="security.context"/>
+      <argument type="collection">
+        <argument key="ROLE_ADMIN" type="collection">
+          <argument>ROLE_USER</argument>
+        </argument>
+        <argument key="ROLE_SUPER_ADMIN" type="collection">
+          <argument>ROLE_ADMIN</argument>
+        </argument>
+      </argument>
+    </service>
+    <service id="ccdn_forum_forum.component.flood_control" class="CCDNForum\ForumBundle\Component\FloodControl">
+      <argument type="service" id="security.context"/>
+      <argument type="service" id="session"/>
+      <argument>dev</argument>
+      <argument>0</argument>
+      <argument>0</argument>
+    </service>
+    <service id="ccdn_forum_forum.component.integrator.dashboard" class="CCDNForum\ForumBundle\Component\Integrator\DashboardIntegrator">
+      <tag name="ccdn_component_dashboard.integrator"/>
+    </service>
+    <service id="ccdn_forum_forum.component.event_listener.flash" class="CCDNForum\ForumBundle\Component\Dispatcher\Listener\FlashListener">
+      <tag name="kernel.event_subscriber"/>
+      <argument type="service" id="session"/>
+    </service>
+    <service id="ccdn_forum_forum.component.event_listener.subscriber" class="CCDNForum\ForumBundle\Component\Dispatcher\Listener\SubscriberListener">
+      <tag name="kernel.event_subscriber"/>
+      <argument type="service" id="ccdn_forum_forum.model.subscription"/>
+      <argument type="service" id="security.context"/>
+    </service>
+    <service id="ccdn_forum_forum.component.event_listener.stats" class="CCDNForum\ForumBundle\Component\Dispatcher\Listener\StatListener">
+      <tag name="kernel.event_subscriber"/>
+      <argument type="service" id="ccdn_forum_forum.model.board"/>
+      <argument type="service" id="ccdn_forum_forum.model.topic"/>
+      <argument type="service" id="ccdn_forum_forum.model.post"/>
+      <argument type="service" id="ccdn_forum_forum.model.registry"/>
+    </service>
+    <service id="ccdn_forum_forum.component.crumb_factory" class="CCDNForum\ForumBundle\Component\Crumbs\Factory\CrumbFactory">
+      <argument type="service" id="translator.default"/>
+      <argument type="service" id="router"/>
+    </service>
+    <service id="ccdn_forum_forum.component.crumb_builder" class="CCDNForum\ForumBundle\Component\Crumbs\CrumbBuilder">
+      <argument type="service" id="ccdn_forum_forum.component.crumb_factory"/>
+    </service>
+    <service id="ccdn_forum_forum.component.security.authorizer" class="CCDNForum\ForumBundle\Component\Security\Authorizer">
+      <argument type="service" id="security.context"/>
+      <argument type="service" id="ccdn_forum_forum.component.helper.post_lock"/>
+    </service>
+    <service id="ccdn_forum_forum.gateway.forum" class="CCDNForum\ForumBundle\Model\Component\Gateway\ForumGateway">
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
+      <argument>CCDNForum\ForumBundle\Entity\Forum</argument>
+      <argument type="service" id="knp_paginator"/>
+      <argument>null</argument>
+    </service>
+    <service id="ccdn_forum_forum.gateway.category" class="CCDNForum\ForumBundle\Model\Component\Gateway\CategoryGateway">
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
+      <argument>CCDNForum\ForumBundle\Entity\Category</argument>
+      <argument type="service" id="knp_paginator"/>
+      <argument>null</argument>
+    </service>
+    <service id="ccdn_forum_forum.gateway.board" class="CCDNForum\ForumBundle\Model\Component\Gateway\BoardGateway">
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
+      <argument>CCDNForum\ForumBundle\Entity\Board</argument>
+      <argument type="service" id="knp_paginator"/>
+      <argument>null</argument>
+    </service>
+    <service id="ccdn_forum_forum.gateway.topic" class="CCDNForum\ForumBundle\Model\Component\Gateway\TopicGateway">
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
+      <argument>CCDNForum\ForumBundle\Entity\Topic</argument>
+      <argument type="service" id="knp_paginator"/>
+      <argument>null</argument>
+    </service>
+    <service id="ccdn_forum_forum.gateway.post" class="CCDNForum\ForumBundle\Model\Component\Gateway\PostGateway">
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
+      <argument>CCDNForum\ForumBundle\Entity\Post</argument>
+      <argument type="service" id="knp_paginator"/>
+      <argument>null</argument>
+    </service>
+    <service id="ccdn_forum_forum.gateway.registry" class="CCDNForum\ForumBundle\Model\Component\Gateway\RegistryGateway">
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
+      <argument>CCDNForum\ForumBundle\Entity\Registry</argument>
+      <argument type="service" id="knp_paginator"/>
+      <argument>null</argument>
+    </service>
+    <service id="ccdn_forum_forum.gateway.subscription" class="CCDNForum\ForumBundle\Model\Component\Gateway\SubscriptionGateway">
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
+      <argument>CCDNForum\ForumBundle\Entity\Subscription</argument>
+      <argument type="service" id="knp_paginator"/>
+      <argument>null</argument>
+    </service>
+    <service id="ccdn_forum_forum.repository.forum" class="CCDNForum\ForumBundle\Model\Component\Repository\ForumRepository">
+      <argument type="service" id="ccdn_forum_forum.gateway.forum"/>
+    </service>
+    <service id="ccdn_forum_forum.repository.category" class="CCDNForum\ForumBundle\Model\Component\Repository\CategoryRepository">
+      <argument type="service" id="ccdn_forum_forum.gateway.category"/>
+    </service>
+    <service id="ccdn_forum_forum.repository.board" class="CCDNForum\ForumBundle\Model\Component\Repository\BoardRepository">
+      <argument type="service" id="ccdn_forum_forum.gateway.board"/>
+    </service>
+    <service id="ccdn_forum_forum.repository.topic" class="CCDNForum\ForumBundle\Model\Component\Repository\TopicRepository">
+      <argument type="service" id="ccdn_forum_forum.gateway.topic"/>
+    </service>
+    <service id="ccdn_forum_forum.repository.post" class="CCDNForum\ForumBundle\Model\Component\Repository\PostRepository">
+      <argument type="service" id="ccdn_forum_forum.gateway.post"/>
+    </service>
+    <service id="ccdn_forum_forum.repository.registry" class="CCDNForum\ForumBundle\Model\Component\Repository\RegistryRepository">
+      <argument type="service" id="ccdn_forum_forum.gateway.registry"/>
+    </service>
+    <service id="ccdn_forum_forum.repository.subscription" class="CCDNForum\ForumBundle\Model\Component\Repository\SubscriptionRepository">
+      <argument type="service" id="ccdn_forum_forum.gateway.subscription"/>
+    </service>
+    <service id="ccdn_forum_forum.manager.forum" class="CCDNForum\ForumBundle\Model\Component\Manager\ForumManager">
+      <argument type="service" id="ccdn_forum_forum.gateway.forum"/>
+    </service>
+    <service id="ccdn_forum_forum.manager.category" class="CCDNForum\ForumBundle\Model\Component\Manager\CategoryManager">
+      <argument type="service" id="ccdn_forum_forum.gateway.category"/>
+    </service>
+    <service id="ccdn_forum_forum.manager.board" class="CCDNForum\ForumBundle\Model\Component\Manager\BoardManager">
+      <argument type="service" id="ccdn_forum_forum.gateway.board"/>
+    </service>
+    <service id="ccdn_forum_forum.manager.topic" class="CCDNForum\ForumBundle\Model\Component\Manager\TopicManager">
+      <argument type="service" id="ccdn_forum_forum.gateway.topic"/>
+      <argument type="service" id="ccdn_forum_forum.component.helper.post_lock"/>
+    </service>
+    <service id="ccdn_forum_forum.manager.post" class="CCDNForum\ForumBundle\Model\Component\Manager\PostManager">
+      <argument type="service" id="ccdn_forum_forum.gateway.post"/>
+      <argument type="service" id="ccdn_forum_forum.component.helper.post_lock"/>
+    </service>
+    <service id="ccdn_forum_forum.manager.registry" class="CCDNForum\ForumBundle\Model\Component\Manager\RegistryManager">
+      <argument type="service" id="ccdn_forum_forum.gateway.registry"/>
+    </service>
+    <service id="ccdn_forum_forum.manager.subscription" class="CCDNForum\ForumBundle\Model\Component\Manager\SubscriptionManager">
+      <argument type="service" id="ccdn_forum_forum.gateway.subscription"/>
+    </service>
+    <service id="ccdn_forum_forum.model.forum" class="CCDNForum\ForumBundle\Model\FrontModel\ForumModel">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="ccdn_forum_forum.repository.forum"/>
+      <argument type="service" id="ccdn_forum_forum.manager.forum"/>
+    </service>
+    <service id="ccdn_forum_forum.model.category" class="CCDNForum\ForumBundle\Model\FrontModel\CategoryModel">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="ccdn_forum_forum.repository.category"/>
+      <argument type="service" id="ccdn_forum_forum.manager.category"/>
+    </service>
+    <service id="ccdn_forum_forum.model.board" class="CCDNForum\ForumBundle\Model\FrontModel\BoardModel">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="ccdn_forum_forum.repository.board"/>
+      <argument type="service" id="ccdn_forum_forum.manager.board"/>
+    </service>
+    <service id="ccdn_forum_forum.model.topic" class="CCDNForum\ForumBundle\Model\FrontModel\TopicModel">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="ccdn_forum_forum.repository.topic"/>
+      <argument type="service" id="ccdn_forum_forum.manager.topic"/>
+    </service>
+    <service id="ccdn_forum_forum.model.post" class="CCDNForum\ForumBundle\Model\FrontModel\PostModel">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="ccdn_forum_forum.repository.post"/>
+      <argument type="service" id="ccdn_forum_forum.manager.post"/>
+    </service>
+    <service id="ccdn_forum_forum.model.registry" class="CCDNForum\ForumBundle\Model\FrontModel\RegistryModel">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="ccdn_forum_forum.repository.registry"/>
+      <argument type="service" id="ccdn_forum_forum.manager.registry"/>
+    </service>
+    <service id="ccdn_forum_forum.model.subscription" class="CCDNForum\ForumBundle\Model\FrontModel\SubscriptionModel">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="ccdn_forum_forum.repository.subscription"/>
+      <argument type="service" id="ccdn_forum_forum.manager.subscription"/>
+    </service>
+    <service id="ccdn_forum_forum.form.type.forum_create" class="CCDNForum\ForumBundle\Form\Type\Admin\Forum\ForumCreateFormType">
+      <argument>CCDNForum\ForumBundle\Entity\Forum</argument>
+      <argument type="service" id="ccdn_forum_forum.component.helper.role"/>
+    </service>
+    <service id="ccdn_forum_forum.form.handler.forum_create" class="CCDNForum\ForumBundle\Form\Handler\Admin\Forum\ForumCreateFormHandler">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="form.factory"/>
+      <argument type="service" id="ccdn_forum_forum.form.type.forum_create"/>
+      <argument type="service" id="ccdn_forum_forum.model.forum"/>
+    </service>
+    <service id="ccdn_forum_forum.form.type.forum_update" class="CCDNForum\ForumBundle\Form\Type\Admin\Forum\ForumUpdateFormType">
+      <argument>CCDNForum\ForumBundle\Entity\Forum</argument>
+      <argument type="service" id="ccdn_forum_forum.component.helper.role"/>
+    </service>
+    <service id="ccdn_forum_forum.form.handler.forum_update" class="CCDNForum\ForumBundle\Form\Handler\Admin\Forum\ForumUpdateFormHandler">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="form.factory"/>
+      <argument type="service" id="ccdn_forum_forum.form.type.forum_update"/>
+      <argument type="service" id="ccdn_forum_forum.model.forum"/>
+    </service>
+    <service id="ccdn_forum_forum.form.type.forum_delete" class="CCDNForum\ForumBundle\Form\Type\Admin\Forum\ForumDeleteFormType">
+      <argument>CCDNForum\ForumBundle\Entity\Forum</argument>
+    </service>
+    <service id="ccdn_forum_forum.form.handler.forum_delete" class="CCDNForum\ForumBundle\Form\Handler\Admin\Forum\ForumDeleteFormHandler">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="form.factory"/>
+      <argument type="service" id="ccdn_forum_forum.form.type.forum_delete"/>
+      <argument type="service" id="ccdn_forum_forum.model.forum"/>
+    </service>
+    <service id="ccdn_forum_forum.form.type.category_create" class="CCDNForum\ForumBundle\Form\Type\Admin\Category\CategoryCreateFormType">
+      <argument>CCDNForum\ForumBundle\Entity\Category</argument>
+      <argument>CCDNForum\ForumBundle\Entity\Forum</argument>
+      <argument type="service" id="ccdn_forum_forum.component.helper.role"/>
+    </service>
+    <service id="ccdn_forum_forum.form.handler.category_create" class="CCDNForum\ForumBundle\Form\Handler\Admin\Category\CategoryCreateFormHandler">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="form.factory"/>
+      <argument type="service" id="ccdn_forum_forum.form.type.category_create"/>
+      <argument type="service" id="ccdn_forum_forum.model.category"/>
+    </service>
+    <service id="ccdn_forum_forum.form.type.category_update" class="CCDNForum\ForumBundle\Form\Type\Admin\Category\CategoryUpdateFormType">
+      <argument>CCDNForum\ForumBundle\Entity\Category</argument>
+      <argument>CCDNForum\ForumBundle\Entity\Forum</argument>
+      <argument type="service" id="ccdn_forum_forum.component.helper.role"/>
+    </service>
+    <service id="ccdn_forum_forum.form.handler.category_update" class="CCDNForum\ForumBundle\Form\Handler\Admin\Category\CategoryUpdateFormHandler">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="form.factory"/>
+      <argument type="service" id="ccdn_forum_forum.form.type.category_update"/>
+      <argument type="service" id="ccdn_forum_forum.model.category"/>
+    </service>
+    <service id="ccdn_forum_forum.form.type.category_delete" class="CCDNForum\ForumBundle\Form\Type\Admin\Category\CategoryDeleteFormType">
+      <argument>CCDNForum\ForumBundle\Entity\Category</argument>
+    </service>
+    <service id="ccdn_forum_forum.form.handler.category_delete" class="CCDNForum\ForumBundle\Form\Handler\Admin\Category\CategoryDeleteFormHandler">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="form.factory"/>
+      <argument type="service" id="ccdn_forum_forum.form.type.category_delete"/>
+      <argument type="service" id="ccdn_forum_forum.model.category"/>
+    </service>
+    <service id="ccdn_forum_forum.form.type.board_create" class="CCDNForum\ForumBundle\Form\Type\Admin\Board\BoardCreateFormType">
+      <argument>CCDNForum\ForumBundle\Entity\Board</argument>
+      <argument>CCDNForum\ForumBundle\Entity\Category</argument>
+      <argument type="service" id="ccdn_forum_forum.component.helper.role"/>
+    </service>
+    <service id="ccdn_forum_forum.form.handler.board_create" class="CCDNForum\ForumBundle\Form\Handler\Admin\Board\BoardCreateFormHandler">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="form.factory"/>
+      <argument type="service" id="ccdn_forum_forum.form.type.board_create"/>
+      <argument type="service" id="ccdn_forum_forum.model.board"/>
+    </service>
+    <service id="ccdn_forum_forum.form.type.board_update" class="CCDNForum\ForumBundle\Form\Type\Admin\Board\BoardUpdateFormType">
+      <argument>CCDNForum\ForumBundle\Entity\Board</argument>
+      <argument>CCDNForum\ForumBundle\Entity\Category</argument>
+      <argument type="service" id="ccdn_forum_forum.component.helper.role"/>
+    </service>
+    <service id="ccdn_forum_forum.form.handler.board_update" class="CCDNForum\ForumBundle\Form\Handler\Admin\Board\BoardUpdateFormHandler">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="form.factory"/>
+      <argument type="service" id="ccdn_forum_forum.form.type.board_update"/>
+      <argument type="service" id="ccdn_forum_forum.model.board"/>
+    </service>
+    <service id="ccdn_forum_forum.form.type.board_delete" class="CCDNForum\ForumBundle\Form\Type\Admin\Board\BoardDeleteFormType">
+      <argument>CCDNForum\ForumBundle\Entity\Board</argument>
+    </service>
+    <service id="ccdn_forum_forum.form.handler.board_delete" class="CCDNForum\ForumBundle\Form\Handler\Admin\Board\BoardDeleteFormHandler">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="form.factory"/>
+      <argument type="service" id="ccdn_forum_forum.form.type.board_delete"/>
+      <argument type="service" id="ccdn_forum_forum.model.board"/>
+    </service>
+    <service id="ccdn_forum_forum.form.type.topic_create" class="CCDNForum\ForumBundle\Form\Type\User\Topic\TopicCreateFormType">
+      <argument>CCDNForum\ForumBundle\Entity\Topic</argument>
+    </service>
+    <service id="ccdn_forum_forum.form.handler.topic_create" class="CCDNForum\ForumBundle\Form\Handler\User\Topic\TopicCreateFormHandler">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="form.factory"/>
+      <argument type="service" id="ccdn_forum_forum.form.type.topic_create"/>
+      <argument type="service" id="ccdn_forum_forum.form.type.post_create"/>
+      <argument type="service" id="ccdn_forum_forum.model.topic"/>
+      <argument type="service" id="ccdn_forum_forum.model.post"/>
+      <argument type="service" id="ccdn_forum_forum.model.board"/>
+      <argument type="service" id="ccdn_forum_forum.component.flood_control"/>
+    </service>
+    <service id="ccdn_forum_forum.form.type.topic_update" class="CCDNForum\ForumBundle\Form\Type\User\Topic\TopicUpdateFormType">
+      <argument>CCDNForum\ForumBundle\Entity\Topic</argument>
+    </service>
+    <service id="ccdn_forum_forum.form.handler.topic_update" class="CCDNForum\ForumBundle\Form\Handler\User\Topic\TopicUpdateFormHandler">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="form.factory"/>
+      <argument type="service" id="ccdn_forum_forum.form.type.topic_update"/>
+      <argument type="service" id="ccdn_forum_forum.form.type.post_update"/>
+      <argument type="service" id="ccdn_forum_forum.model.topic"/>
+      <argument type="service" id="ccdn_forum_forum.model.post"/>
+    </service>
+    <service id="ccdn_forum_forum.form.type.change_topics_board" class="CCDNForum\ForumBundle\Form\Type\Moderator\Topic\TopicChangeBoardFormType">
+      <argument>CCDNForum\ForumBundle\Entity\Topic</argument>
+      <argument>CCDNForum\ForumBundle\Entity\Board</argument>
+    </service>
+    <service id="ccdn_forum_forum.form.handler.change_topics_board" class="CCDNForum\ForumBundle\Form\Handler\Moderator\Topic\TopicChangeBoardFormHandler">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="form.factory"/>
+      <argument type="service" id="ccdn_forum_forum.form.type.change_topics_board"/>
+      <argument type="service" id="ccdn_forum_forum.model.topic"/>
+      <argument type="service" id="ccdn_forum_forum.model.board"/>
+    </service>
+    <service id="ccdn_forum_forum.form.type.topic_delete" class="CCDNForum\ForumBundle\Form\Type\Moderator\Topic\TopicDeleteFormType">
+      <argument>CCDNForum\ForumBundle\Entity\Topic</argument>
+    </service>
+    <service id="ccdn_forum_forum.form.handler.topic_delete" class="CCDNForum\ForumBundle\Form\Handler\Moderator\Topic\TopicDeleteFormHandler">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="form.factory"/>
+      <argument type="service" id="ccdn_forum_forum.form.type.topic_delete"/>
+      <argument type="service" id="ccdn_forum_forum.model.topic"/>
+    </service>
+    <service id="ccdn_forum_forum.form.type.post_create" class="CCDNForum\ForumBundle\Form\Type\User\Post\PostCreateFormType">
+      <argument>CCDNForum\ForumBundle\Entity\Post</argument>
+    </service>
+    <service id="ccdn_forum_forum.form.handler.post_create" class="CCDNForum\ForumBundle\Form\Handler\User\Post\PostCreateFormHandler">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="form.factory"/>
+      <argument type="service" id="ccdn_forum_forum.form.type.post_create"/>
+      <argument type="service" id="ccdn_forum_forum.model.post"/>
+      <argument type="service" id="ccdn_forum_forum.component.flood_control"/>
+    </service>
+    <service id="ccdn_forum_forum.form.type.post_update" class="CCDNForum\ForumBundle\Form\Type\User\Post\PostUpdateFormType">
+      <argument>CCDNForum\ForumBundle\Entity\Post</argument>
+    </service>
+    <service id="ccdn_forum_forum.form.handler.post_update" class="CCDNForum\ForumBundle\Form\Handler\User\Post\PostUpdateFormHandler">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="form.factory"/>
+      <argument type="service" id="ccdn_forum_forum.form.type.post_update"/>
+      <argument type="service" id="ccdn_forum_forum.model.post"/>
+    </service>
+    <service id="ccdn_forum_forum.form.type.post_delete" class="CCDNForum\ForumBundle\Form\Type\User\Post\PostDeleteFormType">
+      <argument>CCDNForum\ForumBundle\Entity\Post</argument>
+    </service>
+    <service id="ccdn_forum_forum.form.handler.post_delete" class="CCDNForum\ForumBundle\Form\Handler\User\Post\PostDeleteFormHandler">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="form.factory"/>
+      <argument type="service" id="ccdn_forum_forum.form.type.post_delete"/>
+      <argument type="service" id="ccdn_forum_forum.model.post"/>
+    </service>
+    <service id="ccdn_forum_forum.form.type.post_unlock" class="CCDNForum\ForumBundle\Form\Type\Moderator\Post\PostUnlockFormType">
+      <argument>CCDNForum\ForumBundle\Entity\Post</argument>
+    </service>
+    <service id="ccdn_forum_forum.form.handler.post_unlock" class="CCDNForum\ForumBundle\Form\Handler\Moderator\Post\PostUnlockFormHandler">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="form.factory"/>
+      <argument type="service" id="ccdn_forum_forum.form.type.post_unlock"/>
+      <argument type="service" id="ccdn_forum_forum.model.post"/>
+    </service>
+    <service id="ccdn_forum_forum.component.twig_extension.board_list" class="CCDNForum\ForumBundle\Component\TwigExtension\BoardListExtension">
+      <tag name="twig.extension"/>
+      <argument type="service" id="ccdn_forum_forum.model.category"/>
+    </service>
+    <service id="ccdn_forum_forum.component.twig_extension.authorizer" class="CCDNForum\ForumBundle\Component\TwigExtension\AuthorizerExtension">
+      <tag name="twig.extension"/>
+      <argument type="service" id="ccdn_forum_forum.component.security.authorizer"/>
     </service>
     <service id="twig.extension.acme.demo" class="Acme\DemoBundle\Twig\Extension\DemoExtension" public="false">
       <tag name="twig.extension"/>
@@ -2893,6 +4710,9 @@
       <argument type="service" id="templating.loader"/>
       <argument type="service" id="debug.stopwatch"/>
       <argument type="service" id="templating.globals"/>
+      <call method="setCharset">
+        <argument>UTF-8</argument>
+      </call>
       <call method="setHelpers">
         <argument type="collection">
           <argument key="slots">templating.helper.slots</argument>
@@ -2908,6 +4728,7 @@
           <argument key="logout_url">templating.helper.logout_url</argument>
           <argument key="security">templating.helper.security</argument>
           <argument key="assetic">assetic.helper.dynamic</argument>
+          <argument key="knp_pagination">knp_paginator.templating.helper.pagination</argument>
         </argument>
       </call>
     </service>
@@ -2916,7 +4737,6 @@
       <argument type="service" id="templating.name_parser"/>
       <argument type="service" id="templating.locator"/>
       <argument type="service" id="debug.stopwatch"/>
-      <argument type="service" id="templating.globals"/>
       <call method="setDefaultEscapingStrategy">
         <argument type="collection">
           <argument type="service" id="templating"/>
@@ -2994,6 +4814,14 @@
       <call method="addPath">
         <argument>/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views</argument>
         <argument>FOSUser</argument>
+      </call>
+      <call method="addPath">
+        <argument>/var/www/html/stageDouane/vendor/knplabs/knp-paginator-bundle/Knp/Bundle/PaginatorBundle/Resources/views</argument>
+        <argument>KnpPaginator</argument>
+      </call>
+      <call method="addPath">
+        <argument>/var/www/html/stageDouane/vendor/codeconsortium/ccdn-forum-bundle/CCDNForum/ForumBundle/Resources/views</argument>
+        <argument>CCDNForumForum</argument>
       </call>
       <call method="addPath">
         <argument>/var/www/html/stageDouane/src/Acme/DemoBundle/Resources/views</argument>
@@ -3119,6 +4947,7 @@
     </service>
     <service id="event_dispatcher" alias="debug.event_dispatcher"/>
     <service id="session.storage" alias="session.storage.native"/>
+    <service id="translator" alias="translator.default"/>
     <service id="debug.templating.engine.twig" alias="templating"/>
     <service id="swiftmailer.spool" alias="swiftmailer.mailer.default.spool"/>
     <service id="swiftmailer.transport.real" alias="swiftmailer.mailer.default.transport.real"/>

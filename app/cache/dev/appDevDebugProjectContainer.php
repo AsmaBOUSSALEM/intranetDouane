@@ -44,6 +44,81 @@ class appDevDebugProjectContainer extends Container
             'assetic.value_supplier.default' => 'getAssetic_ValueSupplier_DefaultService',
             'cache_clearer' => 'getCacheClearerService',
             'cache_warmer' => 'getCacheWarmerService',
+            'ccdn_forum_forum.component.crumb_builder' => 'getCcdnForumForum_Component_CrumbBuilderService',
+            'ccdn_forum_forum.component.crumb_factory' => 'getCcdnForumForum_Component_CrumbFactoryService',
+            'ccdn_forum_forum.component.event_listener.flash' => 'getCcdnForumForum_Component_EventListener_FlashService',
+            'ccdn_forum_forum.component.event_listener.stats' => 'getCcdnForumForum_Component_EventListener_StatsService',
+            'ccdn_forum_forum.component.event_listener.subscriber' => 'getCcdnForumForum_Component_EventListener_SubscriberService',
+            'ccdn_forum_forum.component.flood_control' => 'getCcdnForumForum_Component_FloodControlService',
+            'ccdn_forum_forum.component.helper.pagination_config' => 'getCcdnForumForum_Component_Helper_PaginationConfigService',
+            'ccdn_forum_forum.component.helper.post_lock' => 'getCcdnForumForum_Component_Helper_PostLockService',
+            'ccdn_forum_forum.component.helper.role' => 'getCcdnForumForum_Component_Helper_RoleService',
+            'ccdn_forum_forum.component.integrator.dashboard' => 'getCcdnForumForum_Component_Integrator_DashboardService',
+            'ccdn_forum_forum.component.security.authorizer' => 'getCcdnForumForum_Component_Security_AuthorizerService',
+            'ccdn_forum_forum.component.twig_extension.authorizer' => 'getCcdnForumForum_Component_TwigExtension_AuthorizerService',
+            'ccdn_forum_forum.component.twig_extension.board_list' => 'getCcdnForumForum_Component_TwigExtension_BoardListService',
+            'ccdn_forum_forum.form.handler.board_create' => 'getCcdnForumForum_Form_Handler_BoardCreateService',
+            'ccdn_forum_forum.form.handler.board_delete' => 'getCcdnForumForum_Form_Handler_BoardDeleteService',
+            'ccdn_forum_forum.form.handler.board_update' => 'getCcdnForumForum_Form_Handler_BoardUpdateService',
+            'ccdn_forum_forum.form.handler.category_create' => 'getCcdnForumForum_Form_Handler_CategoryCreateService',
+            'ccdn_forum_forum.form.handler.category_delete' => 'getCcdnForumForum_Form_Handler_CategoryDeleteService',
+            'ccdn_forum_forum.form.handler.category_update' => 'getCcdnForumForum_Form_Handler_CategoryUpdateService',
+            'ccdn_forum_forum.form.handler.change_topics_board' => 'getCcdnForumForum_Form_Handler_ChangeTopicsBoardService',
+            'ccdn_forum_forum.form.handler.forum_create' => 'getCcdnForumForum_Form_Handler_ForumCreateService',
+            'ccdn_forum_forum.form.handler.forum_delete' => 'getCcdnForumForum_Form_Handler_ForumDeleteService',
+            'ccdn_forum_forum.form.handler.forum_update' => 'getCcdnForumForum_Form_Handler_ForumUpdateService',
+            'ccdn_forum_forum.form.handler.post_create' => 'getCcdnForumForum_Form_Handler_PostCreateService',
+            'ccdn_forum_forum.form.handler.post_delete' => 'getCcdnForumForum_Form_Handler_PostDeleteService',
+            'ccdn_forum_forum.form.handler.post_unlock' => 'getCcdnForumForum_Form_Handler_PostUnlockService',
+            'ccdn_forum_forum.form.handler.post_update' => 'getCcdnForumForum_Form_Handler_PostUpdateService',
+            'ccdn_forum_forum.form.handler.topic_create' => 'getCcdnForumForum_Form_Handler_TopicCreateService',
+            'ccdn_forum_forum.form.handler.topic_delete' => 'getCcdnForumForum_Form_Handler_TopicDeleteService',
+            'ccdn_forum_forum.form.handler.topic_update' => 'getCcdnForumForum_Form_Handler_TopicUpdateService',
+            'ccdn_forum_forum.form.type.board_create' => 'getCcdnForumForum_Form_Type_BoardCreateService',
+            'ccdn_forum_forum.form.type.board_delete' => 'getCcdnForumForum_Form_Type_BoardDeleteService',
+            'ccdn_forum_forum.form.type.board_update' => 'getCcdnForumForum_Form_Type_BoardUpdateService',
+            'ccdn_forum_forum.form.type.category_create' => 'getCcdnForumForum_Form_Type_CategoryCreateService',
+            'ccdn_forum_forum.form.type.category_delete' => 'getCcdnForumForum_Form_Type_CategoryDeleteService',
+            'ccdn_forum_forum.form.type.category_update' => 'getCcdnForumForum_Form_Type_CategoryUpdateService',
+            'ccdn_forum_forum.form.type.change_topics_board' => 'getCcdnForumForum_Form_Type_ChangeTopicsBoardService',
+            'ccdn_forum_forum.form.type.forum_create' => 'getCcdnForumForum_Form_Type_ForumCreateService',
+            'ccdn_forum_forum.form.type.forum_delete' => 'getCcdnForumForum_Form_Type_ForumDeleteService',
+            'ccdn_forum_forum.form.type.forum_update' => 'getCcdnForumForum_Form_Type_ForumUpdateService',
+            'ccdn_forum_forum.form.type.post_create' => 'getCcdnForumForum_Form_Type_PostCreateService',
+            'ccdn_forum_forum.form.type.post_delete' => 'getCcdnForumForum_Form_Type_PostDeleteService',
+            'ccdn_forum_forum.form.type.post_unlock' => 'getCcdnForumForum_Form_Type_PostUnlockService',
+            'ccdn_forum_forum.form.type.post_update' => 'getCcdnForumForum_Form_Type_PostUpdateService',
+            'ccdn_forum_forum.form.type.topic_create' => 'getCcdnForumForum_Form_Type_TopicCreateService',
+            'ccdn_forum_forum.form.type.topic_delete' => 'getCcdnForumForum_Form_Type_TopicDeleteService',
+            'ccdn_forum_forum.form.type.topic_update' => 'getCcdnForumForum_Form_Type_TopicUpdateService',
+            'ccdn_forum_forum.gateway.board' => 'getCcdnForumForum_Gateway_BoardService',
+            'ccdn_forum_forum.gateway.category' => 'getCcdnForumForum_Gateway_CategoryService',
+            'ccdn_forum_forum.gateway.forum' => 'getCcdnForumForum_Gateway_ForumService',
+            'ccdn_forum_forum.gateway.post' => 'getCcdnForumForum_Gateway_PostService',
+            'ccdn_forum_forum.gateway.registry' => 'getCcdnForumForum_Gateway_RegistryService',
+            'ccdn_forum_forum.gateway.subscription' => 'getCcdnForumForum_Gateway_SubscriptionService',
+            'ccdn_forum_forum.gateway.topic' => 'getCcdnForumForum_Gateway_TopicService',
+            'ccdn_forum_forum.manager.board' => 'getCcdnForumForum_Manager_BoardService',
+            'ccdn_forum_forum.manager.category' => 'getCcdnForumForum_Manager_CategoryService',
+            'ccdn_forum_forum.manager.forum' => 'getCcdnForumForum_Manager_ForumService',
+            'ccdn_forum_forum.manager.post' => 'getCcdnForumForum_Manager_PostService',
+            'ccdn_forum_forum.manager.registry' => 'getCcdnForumForum_Manager_RegistryService',
+            'ccdn_forum_forum.manager.subscription' => 'getCcdnForumForum_Manager_SubscriptionService',
+            'ccdn_forum_forum.manager.topic' => 'getCcdnForumForum_Manager_TopicService',
+            'ccdn_forum_forum.model.board' => 'getCcdnForumForum_Model_BoardService',
+            'ccdn_forum_forum.model.category' => 'getCcdnForumForum_Model_CategoryService',
+            'ccdn_forum_forum.model.forum' => 'getCcdnForumForum_Model_ForumService',
+            'ccdn_forum_forum.model.post' => 'getCcdnForumForum_Model_PostService',
+            'ccdn_forum_forum.model.registry' => 'getCcdnForumForum_Model_RegistryService',
+            'ccdn_forum_forum.model.subscription' => 'getCcdnForumForum_Model_SubscriptionService',
+            'ccdn_forum_forum.model.topic' => 'getCcdnForumForum_Model_TopicService',
+            'ccdn_forum_forum.repository.board' => 'getCcdnForumForum_Repository_BoardService',
+            'ccdn_forum_forum.repository.category' => 'getCcdnForumForum_Repository_CategoryService',
+            'ccdn_forum_forum.repository.forum' => 'getCcdnForumForum_Repository_ForumService',
+            'ccdn_forum_forum.repository.post' => 'getCcdnForumForum_Repository_PostService',
+            'ccdn_forum_forum.repository.registry' => 'getCcdnForumForum_Repository_RegistryService',
+            'ccdn_forum_forum.repository.subscription' => 'getCcdnForumForum_Repository_SubscriptionService',
+            'ccdn_forum_forum.repository.topic' => 'getCcdnForumForum_Repository_TopicService',
             'controller_name_converter' => 'getControllerNameConverterService',
             'data_collector.form' => 'getDataCollector_FormService',
             'data_collector.form.extractor' => 'getDataCollector_Form_ExtractorService',
@@ -135,6 +210,14 @@ class appDevDebugProjectContainer extends Container
             'fragment.renderer.inline' => 'getFragment_Renderer_InlineService',
             'http_kernel' => 'getHttpKernelService',
             'kernel' => 'getKernelService',
+            'knp_paginator' => 'getKnpPaginatorService',
+            'knp_paginator.helper.processor' => 'getKnpPaginator_Helper_ProcessorService',
+            'knp_paginator.subscriber.filtration' => 'getKnpPaginator_Subscriber_FiltrationService',
+            'knp_paginator.subscriber.paginate' => 'getKnpPaginator_Subscriber_PaginateService',
+            'knp_paginator.subscriber.sliding_pagination' => 'getKnpPaginator_Subscriber_SlidingPaginationService',
+            'knp_paginator.subscriber.sortable' => 'getKnpPaginator_Subscriber_SortableService',
+            'knp_paginator.templating.helper.pagination' => 'getKnpPaginator_Templating_Helper_PaginationService',
+            'knp_paginator.twig.extension.pagination' => 'getKnpPaginator_Twig_Extension_PaginationService',
             'locale_listener' => 'getLocaleListenerService',
             'logger' => 'getLoggerService',
             'monolog.handler.console' => 'getMonolog_Handler_ConsoleService',
@@ -242,9 +325,7 @@ class appDevDebugProjectContainer extends Container
             'translation.loader.xliff' => 'getTranslation_Loader_XliffService',
             'translation.loader.yml' => 'getTranslation_Loader_YmlService',
             'translation.writer' => 'getTranslation_WriterService',
-            'translator' => 'getTranslatorService',
             'translator.default' => 'getTranslator_DefaultService',
-            'translator.selector' => 'getTranslator_SelectorService',
             'twig' => 'getTwigService',
             'twig.controller.exception' => 'getTwig_Controller_ExceptionService',
             'twig.exception_listener' => 'getTwig_ExceptionListenerService',
@@ -274,6 +355,7 @@ class appDevDebugProjectContainer extends Container
             'swiftmailer.spool' => 'swiftmailer.mailer.default.spool',
             'swiftmailer.transport' => 'swiftmailer.mailer.default.transport',
             'swiftmailer.transport.real' => 'swiftmailer.mailer.default.transport.real',
+            'translator' => 'translator.default',
         );
     }
 
@@ -407,6 +489,981 @@ class appDevDebugProjectContainer extends Container
     }
 
     /**
+     * Gets the 'ccdn_forum_forum.component.crumb_builder' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Component\Crumbs\CrumbBuilder A CCDNForum\ForumBundle\Component\Crumbs\CrumbBuilder instance.
+     */
+    protected function getCcdnForumForum_Component_CrumbBuilderService()
+    {
+        return $this->services['ccdn_forum_forum.component.crumb_builder'] = new \CCDNForum\ForumBundle\Component\Crumbs\CrumbBuilder($this->get('ccdn_forum_forum.component.crumb_factory'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.component.crumb_factory' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Component\Crumbs\Factory\CrumbFactory A CCDNForum\ForumBundle\Component\Crumbs\Factory\CrumbFactory instance.
+     */
+    protected function getCcdnForumForum_Component_CrumbFactoryService()
+    {
+        return $this->services['ccdn_forum_forum.component.crumb_factory'] = new \CCDNForum\ForumBundle\Component\Crumbs\Factory\CrumbFactory($this->get('translator.default'), $this->get('router'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.component.event_listener.flash' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Component\Dispatcher\Listener\FlashListener A CCDNForum\ForumBundle\Component\Dispatcher\Listener\FlashListener instance.
+     */
+    protected function getCcdnForumForum_Component_EventListener_FlashService()
+    {
+        return $this->services['ccdn_forum_forum.component.event_listener.flash'] = new \CCDNForum\ForumBundle\Component\Dispatcher\Listener\FlashListener($this->get('session'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.component.event_listener.stats' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Component\Dispatcher\Listener\StatListener A CCDNForum\ForumBundle\Component\Dispatcher\Listener\StatListener instance.
+     */
+    protected function getCcdnForumForum_Component_EventListener_StatsService()
+    {
+        return $this->services['ccdn_forum_forum.component.event_listener.stats'] = new \CCDNForum\ForumBundle\Component\Dispatcher\Listener\StatListener($this->get('ccdn_forum_forum.model.board'), $this->get('ccdn_forum_forum.model.topic'), $this->get('ccdn_forum_forum.model.post'), $this->get('ccdn_forum_forum.model.registry'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.component.event_listener.subscriber' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Component\Dispatcher\Listener\SubscriberListener A CCDNForum\ForumBundle\Component\Dispatcher\Listener\SubscriberListener instance.
+     */
+    protected function getCcdnForumForum_Component_EventListener_SubscriberService()
+    {
+        return $this->services['ccdn_forum_forum.component.event_listener.subscriber'] = new \CCDNForum\ForumBundle\Component\Dispatcher\Listener\SubscriberListener($this->get('ccdn_forum_forum.model.subscription'), $this->get('security.context'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.component.flood_control' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Component\FloodControl A CCDNForum\ForumBundle\Component\FloodControl instance.
+     */
+    protected function getCcdnForumForum_Component_FloodControlService()
+    {
+        return $this->services['ccdn_forum_forum.component.flood_control'] = new \CCDNForum\ForumBundle\Component\FloodControl($this->get('security.context'), $this->get('session'), 'dev', 0, 0);
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.component.helper.pagination_config' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Component\Helper\PaginationConfigHelper A CCDNForum\ForumBundle\Component\Helper\PaginationConfigHelper instance.
+     */
+    protected function getCcdnForumForum_Component_Helper_PaginationConfigService()
+    {
+        return $this->services['ccdn_forum_forum.component.helper.pagination_config'] = new \CCDNForum\ForumBundle\Component\Helper\PaginationConfigHelper('50', '50', '20');
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.component.helper.post_lock' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Component\Helper\PostLockHelper A CCDNForum\ForumBundle\Component\Helper\PostLockHelper instance.
+     */
+    protected function getCcdnForumForum_Component_Helper_PostLockService()
+    {
+        return $this->services['ccdn_forum_forum.component.helper.post_lock'] = new \CCDNForum\ForumBundle\Component\Helper\PostLockHelper(true, '7');
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.component.helper.role' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Component\Helper\RoleHelper A CCDNForum\ForumBundle\Component\Helper\RoleHelper instance.
+     */
+    protected function getCcdnForumForum_Component_Helper_RoleService()
+    {
+        return $this->services['ccdn_forum_forum.component.helper.role'] = new \CCDNForum\ForumBundle\Component\Helper\RoleHelper($this->get('security.context'), array('ROLE_ADMIN' => array(0 => 'ROLE_USER'), 'ROLE_SUPER_ADMIN' => array(0 => 'ROLE_ADMIN')));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.component.integrator.dashboard' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Component\Integrator\DashboardIntegrator A CCDNForum\ForumBundle\Component\Integrator\DashboardIntegrator instance.
+     */
+    protected function getCcdnForumForum_Component_Integrator_DashboardService()
+    {
+        return $this->services['ccdn_forum_forum.component.integrator.dashboard'] = new \CCDNForum\ForumBundle\Component\Integrator\DashboardIntegrator();
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.component.security.authorizer' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Component\Security\Authorizer A CCDNForum\ForumBundle\Component\Security\Authorizer instance.
+     */
+    protected function getCcdnForumForum_Component_Security_AuthorizerService()
+    {
+        return $this->services['ccdn_forum_forum.component.security.authorizer'] = new \CCDNForum\ForumBundle\Component\Security\Authorizer($this->get('security.context'), $this->get('ccdn_forum_forum.component.helper.post_lock'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.component.twig_extension.authorizer' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Component\TwigExtension\AuthorizerExtension A CCDNForum\ForumBundle\Component\TwigExtension\AuthorizerExtension instance.
+     */
+    protected function getCcdnForumForum_Component_TwigExtension_AuthorizerService()
+    {
+        return $this->services['ccdn_forum_forum.component.twig_extension.authorizer'] = new \CCDNForum\ForumBundle\Component\TwigExtension\AuthorizerExtension($this->get('ccdn_forum_forum.component.security.authorizer'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.component.twig_extension.board_list' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Component\TwigExtension\BoardListExtension A CCDNForum\ForumBundle\Component\TwigExtension\BoardListExtension instance.
+     */
+    protected function getCcdnForumForum_Component_TwigExtension_BoardListService()
+    {
+        return $this->services['ccdn_forum_forum.component.twig_extension.board_list'] = new \CCDNForum\ForumBundle\Component\TwigExtension\BoardListExtension($this->get('ccdn_forum_forum.model.category'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.handler.board_create' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Handler\Admin\Board\BoardCreateFormHandler A CCDNForum\ForumBundle\Form\Handler\Admin\Board\BoardCreateFormHandler instance.
+     */
+    protected function getCcdnForumForum_Form_Handler_BoardCreateService()
+    {
+        return $this->services['ccdn_forum_forum.form.handler.board_create'] = new \CCDNForum\ForumBundle\Form\Handler\Admin\Board\BoardCreateFormHandler($this->get('debug.event_dispatcher'), $this->get('form.factory'), $this->get('ccdn_forum_forum.form.type.board_create'), $this->get('ccdn_forum_forum.model.board'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.handler.board_delete' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Handler\Admin\Board\BoardDeleteFormHandler A CCDNForum\ForumBundle\Form\Handler\Admin\Board\BoardDeleteFormHandler instance.
+     */
+    protected function getCcdnForumForum_Form_Handler_BoardDeleteService()
+    {
+        return $this->services['ccdn_forum_forum.form.handler.board_delete'] = new \CCDNForum\ForumBundle\Form\Handler\Admin\Board\BoardDeleteFormHandler($this->get('debug.event_dispatcher'), $this->get('form.factory'), $this->get('ccdn_forum_forum.form.type.board_delete'), $this->get('ccdn_forum_forum.model.board'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.handler.board_update' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Handler\Admin\Board\BoardUpdateFormHandler A CCDNForum\ForumBundle\Form\Handler\Admin\Board\BoardUpdateFormHandler instance.
+     */
+    protected function getCcdnForumForum_Form_Handler_BoardUpdateService()
+    {
+        return $this->services['ccdn_forum_forum.form.handler.board_update'] = new \CCDNForum\ForumBundle\Form\Handler\Admin\Board\BoardUpdateFormHandler($this->get('debug.event_dispatcher'), $this->get('form.factory'), $this->get('ccdn_forum_forum.form.type.board_update'), $this->get('ccdn_forum_forum.model.board'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.handler.category_create' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Handler\Admin\Category\CategoryCreateFormHandler A CCDNForum\ForumBundle\Form\Handler\Admin\Category\CategoryCreateFormHandler instance.
+     */
+    protected function getCcdnForumForum_Form_Handler_CategoryCreateService()
+    {
+        return $this->services['ccdn_forum_forum.form.handler.category_create'] = new \CCDNForum\ForumBundle\Form\Handler\Admin\Category\CategoryCreateFormHandler($this->get('debug.event_dispatcher'), $this->get('form.factory'), $this->get('ccdn_forum_forum.form.type.category_create'), $this->get('ccdn_forum_forum.model.category'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.handler.category_delete' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Handler\Admin\Category\CategoryDeleteFormHandler A CCDNForum\ForumBundle\Form\Handler\Admin\Category\CategoryDeleteFormHandler instance.
+     */
+    protected function getCcdnForumForum_Form_Handler_CategoryDeleteService()
+    {
+        return $this->services['ccdn_forum_forum.form.handler.category_delete'] = new \CCDNForum\ForumBundle\Form\Handler\Admin\Category\CategoryDeleteFormHandler($this->get('debug.event_dispatcher'), $this->get('form.factory'), $this->get('ccdn_forum_forum.form.type.category_delete'), $this->get('ccdn_forum_forum.model.category'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.handler.category_update' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Handler\Admin\Category\CategoryUpdateFormHandler A CCDNForum\ForumBundle\Form\Handler\Admin\Category\CategoryUpdateFormHandler instance.
+     */
+    protected function getCcdnForumForum_Form_Handler_CategoryUpdateService()
+    {
+        return $this->services['ccdn_forum_forum.form.handler.category_update'] = new \CCDNForum\ForumBundle\Form\Handler\Admin\Category\CategoryUpdateFormHandler($this->get('debug.event_dispatcher'), $this->get('form.factory'), $this->get('ccdn_forum_forum.form.type.category_update'), $this->get('ccdn_forum_forum.model.category'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.handler.change_topics_board' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Handler\Moderator\Topic\TopicChangeBoardFormHandler A CCDNForum\ForumBundle\Form\Handler\Moderator\Topic\TopicChangeBoardFormHandler instance.
+     */
+    protected function getCcdnForumForum_Form_Handler_ChangeTopicsBoardService()
+    {
+        return $this->services['ccdn_forum_forum.form.handler.change_topics_board'] = new \CCDNForum\ForumBundle\Form\Handler\Moderator\Topic\TopicChangeBoardFormHandler($this->get('debug.event_dispatcher'), $this->get('form.factory'), $this->get('ccdn_forum_forum.form.type.change_topics_board'), $this->get('ccdn_forum_forum.model.topic'), $this->get('ccdn_forum_forum.model.board'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.handler.forum_create' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Handler\Admin\Forum\ForumCreateFormHandler A CCDNForum\ForumBundle\Form\Handler\Admin\Forum\ForumCreateFormHandler instance.
+     */
+    protected function getCcdnForumForum_Form_Handler_ForumCreateService()
+    {
+        return $this->services['ccdn_forum_forum.form.handler.forum_create'] = new \CCDNForum\ForumBundle\Form\Handler\Admin\Forum\ForumCreateFormHandler($this->get('debug.event_dispatcher'), $this->get('form.factory'), $this->get('ccdn_forum_forum.form.type.forum_create'), $this->get('ccdn_forum_forum.model.forum'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.handler.forum_delete' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Handler\Admin\Forum\ForumDeleteFormHandler A CCDNForum\ForumBundle\Form\Handler\Admin\Forum\ForumDeleteFormHandler instance.
+     */
+    protected function getCcdnForumForum_Form_Handler_ForumDeleteService()
+    {
+        return $this->services['ccdn_forum_forum.form.handler.forum_delete'] = new \CCDNForum\ForumBundle\Form\Handler\Admin\Forum\ForumDeleteFormHandler($this->get('debug.event_dispatcher'), $this->get('form.factory'), $this->get('ccdn_forum_forum.form.type.forum_delete'), $this->get('ccdn_forum_forum.model.forum'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.handler.forum_update' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Handler\Admin\Forum\ForumUpdateFormHandler A CCDNForum\ForumBundle\Form\Handler\Admin\Forum\ForumUpdateFormHandler instance.
+     */
+    protected function getCcdnForumForum_Form_Handler_ForumUpdateService()
+    {
+        return $this->services['ccdn_forum_forum.form.handler.forum_update'] = new \CCDNForum\ForumBundle\Form\Handler\Admin\Forum\ForumUpdateFormHandler($this->get('debug.event_dispatcher'), $this->get('form.factory'), $this->get('ccdn_forum_forum.form.type.forum_update'), $this->get('ccdn_forum_forum.model.forum'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.handler.post_create' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Handler\User\Post\PostCreateFormHandler A CCDNForum\ForumBundle\Form\Handler\User\Post\PostCreateFormHandler instance.
+     */
+    protected function getCcdnForumForum_Form_Handler_PostCreateService()
+    {
+        return $this->services['ccdn_forum_forum.form.handler.post_create'] = new \CCDNForum\ForumBundle\Form\Handler\User\Post\PostCreateFormHandler($this->get('debug.event_dispatcher'), $this->get('form.factory'), $this->get('ccdn_forum_forum.form.type.post_create'), $this->get('ccdn_forum_forum.model.post'), $this->get('ccdn_forum_forum.component.flood_control'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.handler.post_delete' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Handler\User\Post\PostDeleteFormHandler A CCDNForum\ForumBundle\Form\Handler\User\Post\PostDeleteFormHandler instance.
+     */
+    protected function getCcdnForumForum_Form_Handler_PostDeleteService()
+    {
+        return $this->services['ccdn_forum_forum.form.handler.post_delete'] = new \CCDNForum\ForumBundle\Form\Handler\User\Post\PostDeleteFormHandler($this->get('debug.event_dispatcher'), $this->get('form.factory'), $this->get('ccdn_forum_forum.form.type.post_delete'), $this->get('ccdn_forum_forum.model.post'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.handler.post_unlock' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Handler\Moderator\Post\PostUnlockFormHandler A CCDNForum\ForumBundle\Form\Handler\Moderator\Post\PostUnlockFormHandler instance.
+     */
+    protected function getCcdnForumForum_Form_Handler_PostUnlockService()
+    {
+        return $this->services['ccdn_forum_forum.form.handler.post_unlock'] = new \CCDNForum\ForumBundle\Form\Handler\Moderator\Post\PostUnlockFormHandler($this->get('debug.event_dispatcher'), $this->get('form.factory'), $this->get('ccdn_forum_forum.form.type.post_unlock'), $this->get('ccdn_forum_forum.model.post'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.handler.post_update' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Handler\User\Post\PostUpdateFormHandler A CCDNForum\ForumBundle\Form\Handler\User\Post\PostUpdateFormHandler instance.
+     */
+    protected function getCcdnForumForum_Form_Handler_PostUpdateService()
+    {
+        return $this->services['ccdn_forum_forum.form.handler.post_update'] = new \CCDNForum\ForumBundle\Form\Handler\User\Post\PostUpdateFormHandler($this->get('debug.event_dispatcher'), $this->get('form.factory'), $this->get('ccdn_forum_forum.form.type.post_update'), $this->get('ccdn_forum_forum.model.post'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.handler.topic_create' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Handler\User\Topic\TopicCreateFormHandler A CCDNForum\ForumBundle\Form\Handler\User\Topic\TopicCreateFormHandler instance.
+     */
+    protected function getCcdnForumForum_Form_Handler_TopicCreateService()
+    {
+        return $this->services['ccdn_forum_forum.form.handler.topic_create'] = new \CCDNForum\ForumBundle\Form\Handler\User\Topic\TopicCreateFormHandler($this->get('debug.event_dispatcher'), $this->get('form.factory'), $this->get('ccdn_forum_forum.form.type.topic_create'), $this->get('ccdn_forum_forum.form.type.post_create'), $this->get('ccdn_forum_forum.model.topic'), $this->get('ccdn_forum_forum.model.post'), $this->get('ccdn_forum_forum.model.board'), $this->get('ccdn_forum_forum.component.flood_control'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.handler.topic_delete' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Handler\Moderator\Topic\TopicDeleteFormHandler A CCDNForum\ForumBundle\Form\Handler\Moderator\Topic\TopicDeleteFormHandler instance.
+     */
+    protected function getCcdnForumForum_Form_Handler_TopicDeleteService()
+    {
+        return $this->services['ccdn_forum_forum.form.handler.topic_delete'] = new \CCDNForum\ForumBundle\Form\Handler\Moderator\Topic\TopicDeleteFormHandler($this->get('debug.event_dispatcher'), $this->get('form.factory'), $this->get('ccdn_forum_forum.form.type.topic_delete'), $this->get('ccdn_forum_forum.model.topic'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.handler.topic_update' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Handler\User\Topic\TopicUpdateFormHandler A CCDNForum\ForumBundle\Form\Handler\User\Topic\TopicUpdateFormHandler instance.
+     */
+    protected function getCcdnForumForum_Form_Handler_TopicUpdateService()
+    {
+        return $this->services['ccdn_forum_forum.form.handler.topic_update'] = new \CCDNForum\ForumBundle\Form\Handler\User\Topic\TopicUpdateFormHandler($this->get('debug.event_dispatcher'), $this->get('form.factory'), $this->get('ccdn_forum_forum.form.type.topic_update'), $this->get('ccdn_forum_forum.form.type.post_update'), $this->get('ccdn_forum_forum.model.topic'), $this->get('ccdn_forum_forum.model.post'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.type.board_create' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Type\Admin\Board\BoardCreateFormType A CCDNForum\ForumBundle\Form\Type\Admin\Board\BoardCreateFormType instance.
+     */
+    protected function getCcdnForumForum_Form_Type_BoardCreateService()
+    {
+        return $this->services['ccdn_forum_forum.form.type.board_create'] = new \CCDNForum\ForumBundle\Form\Type\Admin\Board\BoardCreateFormType('CCDNForum\\ForumBundle\\Entity\\Board', 'CCDNForum\\ForumBundle\\Entity\\Category', $this->get('ccdn_forum_forum.component.helper.role'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.type.board_delete' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Type\Admin\Board\BoardDeleteFormType A CCDNForum\ForumBundle\Form\Type\Admin\Board\BoardDeleteFormType instance.
+     */
+    protected function getCcdnForumForum_Form_Type_BoardDeleteService()
+    {
+        return $this->services['ccdn_forum_forum.form.type.board_delete'] = new \CCDNForum\ForumBundle\Form\Type\Admin\Board\BoardDeleteFormType('CCDNForum\\ForumBundle\\Entity\\Board');
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.type.board_update' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Type\Admin\Board\BoardUpdateFormType A CCDNForum\ForumBundle\Form\Type\Admin\Board\BoardUpdateFormType instance.
+     */
+    protected function getCcdnForumForum_Form_Type_BoardUpdateService()
+    {
+        return $this->services['ccdn_forum_forum.form.type.board_update'] = new \CCDNForum\ForumBundle\Form\Type\Admin\Board\BoardUpdateFormType('CCDNForum\\ForumBundle\\Entity\\Board', 'CCDNForum\\ForumBundle\\Entity\\Category', $this->get('ccdn_forum_forum.component.helper.role'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.type.category_create' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Type\Admin\Category\CategoryCreateFormType A CCDNForum\ForumBundle\Form\Type\Admin\Category\CategoryCreateFormType instance.
+     */
+    protected function getCcdnForumForum_Form_Type_CategoryCreateService()
+    {
+        return $this->services['ccdn_forum_forum.form.type.category_create'] = new \CCDNForum\ForumBundle\Form\Type\Admin\Category\CategoryCreateFormType('CCDNForum\\ForumBundle\\Entity\\Category', 'CCDNForum\\ForumBundle\\Entity\\Forum', $this->get('ccdn_forum_forum.component.helper.role'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.type.category_delete' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Type\Admin\Category\CategoryDeleteFormType A CCDNForum\ForumBundle\Form\Type\Admin\Category\CategoryDeleteFormType instance.
+     */
+    protected function getCcdnForumForum_Form_Type_CategoryDeleteService()
+    {
+        return $this->services['ccdn_forum_forum.form.type.category_delete'] = new \CCDNForum\ForumBundle\Form\Type\Admin\Category\CategoryDeleteFormType('CCDNForum\\ForumBundle\\Entity\\Category');
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.type.category_update' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Type\Admin\Category\CategoryUpdateFormType A CCDNForum\ForumBundle\Form\Type\Admin\Category\CategoryUpdateFormType instance.
+     */
+    protected function getCcdnForumForum_Form_Type_CategoryUpdateService()
+    {
+        return $this->services['ccdn_forum_forum.form.type.category_update'] = new \CCDNForum\ForumBundle\Form\Type\Admin\Category\CategoryUpdateFormType('CCDNForum\\ForumBundle\\Entity\\Category', 'CCDNForum\\ForumBundle\\Entity\\Forum', $this->get('ccdn_forum_forum.component.helper.role'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.type.change_topics_board' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Type\Moderator\Topic\TopicChangeBoardFormType A CCDNForum\ForumBundle\Form\Type\Moderator\Topic\TopicChangeBoardFormType instance.
+     */
+    protected function getCcdnForumForum_Form_Type_ChangeTopicsBoardService()
+    {
+        return $this->services['ccdn_forum_forum.form.type.change_topics_board'] = new \CCDNForum\ForumBundle\Form\Type\Moderator\Topic\TopicChangeBoardFormType('CCDNForum\\ForumBundle\\Entity\\Topic', 'CCDNForum\\ForumBundle\\Entity\\Board');
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.type.forum_create' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Type\Admin\Forum\ForumCreateFormType A CCDNForum\ForumBundle\Form\Type\Admin\Forum\ForumCreateFormType instance.
+     */
+    protected function getCcdnForumForum_Form_Type_ForumCreateService()
+    {
+        return $this->services['ccdn_forum_forum.form.type.forum_create'] = new \CCDNForum\ForumBundle\Form\Type\Admin\Forum\ForumCreateFormType('CCDNForum\\ForumBundle\\Entity\\Forum', $this->get('ccdn_forum_forum.component.helper.role'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.type.forum_delete' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Type\Admin\Forum\ForumDeleteFormType A CCDNForum\ForumBundle\Form\Type\Admin\Forum\ForumDeleteFormType instance.
+     */
+    protected function getCcdnForumForum_Form_Type_ForumDeleteService()
+    {
+        return $this->services['ccdn_forum_forum.form.type.forum_delete'] = new \CCDNForum\ForumBundle\Form\Type\Admin\Forum\ForumDeleteFormType('CCDNForum\\ForumBundle\\Entity\\Forum');
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.type.forum_update' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Type\Admin\Forum\ForumUpdateFormType A CCDNForum\ForumBundle\Form\Type\Admin\Forum\ForumUpdateFormType instance.
+     */
+    protected function getCcdnForumForum_Form_Type_ForumUpdateService()
+    {
+        return $this->services['ccdn_forum_forum.form.type.forum_update'] = new \CCDNForum\ForumBundle\Form\Type\Admin\Forum\ForumUpdateFormType('CCDNForum\\ForumBundle\\Entity\\Forum', $this->get('ccdn_forum_forum.component.helper.role'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.type.post_create' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Type\User\Post\PostCreateFormType A CCDNForum\ForumBundle\Form\Type\User\Post\PostCreateFormType instance.
+     */
+    protected function getCcdnForumForum_Form_Type_PostCreateService()
+    {
+        return $this->services['ccdn_forum_forum.form.type.post_create'] = new \CCDNForum\ForumBundle\Form\Type\User\Post\PostCreateFormType('CCDNForum\\ForumBundle\\Entity\\Post');
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.type.post_delete' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Type\User\Post\PostDeleteFormType A CCDNForum\ForumBundle\Form\Type\User\Post\PostDeleteFormType instance.
+     */
+    protected function getCcdnForumForum_Form_Type_PostDeleteService()
+    {
+        return $this->services['ccdn_forum_forum.form.type.post_delete'] = new \CCDNForum\ForumBundle\Form\Type\User\Post\PostDeleteFormType('CCDNForum\\ForumBundle\\Entity\\Post');
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.type.post_unlock' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Type\Moderator\Post\PostUnlockFormType A CCDNForum\ForumBundle\Form\Type\Moderator\Post\PostUnlockFormType instance.
+     */
+    protected function getCcdnForumForum_Form_Type_PostUnlockService()
+    {
+        return $this->services['ccdn_forum_forum.form.type.post_unlock'] = new \CCDNForum\ForumBundle\Form\Type\Moderator\Post\PostUnlockFormType('CCDNForum\\ForumBundle\\Entity\\Post');
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.type.post_update' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Type\User\Post\PostUpdateFormType A CCDNForum\ForumBundle\Form\Type\User\Post\PostUpdateFormType instance.
+     */
+    protected function getCcdnForumForum_Form_Type_PostUpdateService()
+    {
+        return $this->services['ccdn_forum_forum.form.type.post_update'] = new \CCDNForum\ForumBundle\Form\Type\User\Post\PostUpdateFormType('CCDNForum\\ForumBundle\\Entity\\Post');
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.type.topic_create' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Type\User\Topic\TopicCreateFormType A CCDNForum\ForumBundle\Form\Type\User\Topic\TopicCreateFormType instance.
+     */
+    protected function getCcdnForumForum_Form_Type_TopicCreateService()
+    {
+        return $this->services['ccdn_forum_forum.form.type.topic_create'] = new \CCDNForum\ForumBundle\Form\Type\User\Topic\TopicCreateFormType('CCDNForum\\ForumBundle\\Entity\\Topic');
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.type.topic_delete' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Type\Moderator\Topic\TopicDeleteFormType A CCDNForum\ForumBundle\Form\Type\Moderator\Topic\TopicDeleteFormType instance.
+     */
+    protected function getCcdnForumForum_Form_Type_TopicDeleteService()
+    {
+        return $this->services['ccdn_forum_forum.form.type.topic_delete'] = new \CCDNForum\ForumBundle\Form\Type\Moderator\Topic\TopicDeleteFormType('CCDNForum\\ForumBundle\\Entity\\Topic');
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.form.type.topic_update' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Form\Type\User\Topic\TopicUpdateFormType A CCDNForum\ForumBundle\Form\Type\User\Topic\TopicUpdateFormType instance.
+     */
+    protected function getCcdnForumForum_Form_Type_TopicUpdateService()
+    {
+        return $this->services['ccdn_forum_forum.form.type.topic_update'] = new \CCDNForum\ForumBundle\Form\Type\User\Topic\TopicUpdateFormType('CCDNForum\\ForumBundle\\Entity\\Topic');
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.gateway.board' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Model\Component\Gateway\BoardGateway A CCDNForum\ForumBundle\Model\Component\Gateway\BoardGateway instance.
+     */
+    protected function getCcdnForumForum_Gateway_BoardService()
+    {
+        return $this->services['ccdn_forum_forum.gateway.board'] = new \CCDNForum\ForumBundle\Model\Component\Gateway\BoardGateway($this->get('doctrine.orm.default_entity_manager'), 'CCDNForum\\ForumBundle\\Entity\\Board', $this->get('knp_paginator'), NULL);
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.gateway.category' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Model\Component\Gateway\CategoryGateway A CCDNForum\ForumBundle\Model\Component\Gateway\CategoryGateway instance.
+     */
+    protected function getCcdnForumForum_Gateway_CategoryService()
+    {
+        return $this->services['ccdn_forum_forum.gateway.category'] = new \CCDNForum\ForumBundle\Model\Component\Gateway\CategoryGateway($this->get('doctrine.orm.default_entity_manager'), 'CCDNForum\\ForumBundle\\Entity\\Category', $this->get('knp_paginator'), NULL);
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.gateway.forum' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Model\Component\Gateway\ForumGateway A CCDNForum\ForumBundle\Model\Component\Gateway\ForumGateway instance.
+     */
+    protected function getCcdnForumForum_Gateway_ForumService()
+    {
+        return $this->services['ccdn_forum_forum.gateway.forum'] = new \CCDNForum\ForumBundle\Model\Component\Gateway\ForumGateway($this->get('doctrine.orm.default_entity_manager'), 'CCDNForum\\ForumBundle\\Entity\\Forum', $this->get('knp_paginator'), NULL);
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.gateway.post' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Model\Component\Gateway\PostGateway A CCDNForum\ForumBundle\Model\Component\Gateway\PostGateway instance.
+     */
+    protected function getCcdnForumForum_Gateway_PostService()
+    {
+        return $this->services['ccdn_forum_forum.gateway.post'] = new \CCDNForum\ForumBundle\Model\Component\Gateway\PostGateway($this->get('doctrine.orm.default_entity_manager'), 'CCDNForum\\ForumBundle\\Entity\\Post', $this->get('knp_paginator'), NULL);
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.gateway.registry' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Model\Component\Gateway\RegistryGateway A CCDNForum\ForumBundle\Model\Component\Gateway\RegistryGateway instance.
+     */
+    protected function getCcdnForumForum_Gateway_RegistryService()
+    {
+        return $this->services['ccdn_forum_forum.gateway.registry'] = new \CCDNForum\ForumBundle\Model\Component\Gateway\RegistryGateway($this->get('doctrine.orm.default_entity_manager'), 'CCDNForum\\ForumBundle\\Entity\\Registry', $this->get('knp_paginator'), NULL);
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.gateway.subscription' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Model\Component\Gateway\SubscriptionGateway A CCDNForum\ForumBundle\Model\Component\Gateway\SubscriptionGateway instance.
+     */
+    protected function getCcdnForumForum_Gateway_SubscriptionService()
+    {
+        return $this->services['ccdn_forum_forum.gateway.subscription'] = new \CCDNForum\ForumBundle\Model\Component\Gateway\SubscriptionGateway($this->get('doctrine.orm.default_entity_manager'), 'CCDNForum\\ForumBundle\\Entity\\Subscription', $this->get('knp_paginator'), NULL);
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.gateway.topic' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Model\Component\Gateway\TopicGateway A CCDNForum\ForumBundle\Model\Component\Gateway\TopicGateway instance.
+     */
+    protected function getCcdnForumForum_Gateway_TopicService()
+    {
+        return $this->services['ccdn_forum_forum.gateway.topic'] = new \CCDNForum\ForumBundle\Model\Component\Gateway\TopicGateway($this->get('doctrine.orm.default_entity_manager'), 'CCDNForum\\ForumBundle\\Entity\\Topic', $this->get('knp_paginator'), NULL);
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.manager.board' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Model\Component\Manager\BoardManager A CCDNForum\ForumBundle\Model\Component\Manager\BoardManager instance.
+     */
+    protected function getCcdnForumForum_Manager_BoardService()
+    {
+        return $this->services['ccdn_forum_forum.manager.board'] = new \CCDNForum\ForumBundle\Model\Component\Manager\BoardManager($this->get('ccdn_forum_forum.gateway.board'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.manager.category' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Model\Component\Manager\CategoryManager A CCDNForum\ForumBundle\Model\Component\Manager\CategoryManager instance.
+     */
+    protected function getCcdnForumForum_Manager_CategoryService()
+    {
+        return $this->services['ccdn_forum_forum.manager.category'] = new \CCDNForum\ForumBundle\Model\Component\Manager\CategoryManager($this->get('ccdn_forum_forum.gateway.category'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.manager.forum' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Model\Component\Manager\ForumManager A CCDNForum\ForumBundle\Model\Component\Manager\ForumManager instance.
+     */
+    protected function getCcdnForumForum_Manager_ForumService()
+    {
+        return $this->services['ccdn_forum_forum.manager.forum'] = new \CCDNForum\ForumBundle\Model\Component\Manager\ForumManager($this->get('ccdn_forum_forum.gateway.forum'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.manager.post' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Model\Component\Manager\PostManager A CCDNForum\ForumBundle\Model\Component\Manager\PostManager instance.
+     */
+    protected function getCcdnForumForum_Manager_PostService()
+    {
+        return $this->services['ccdn_forum_forum.manager.post'] = new \CCDNForum\ForumBundle\Model\Component\Manager\PostManager($this->get('ccdn_forum_forum.gateway.post'), $this->get('ccdn_forum_forum.component.helper.post_lock'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.manager.registry' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Model\Component\Manager\RegistryManager A CCDNForum\ForumBundle\Model\Component\Manager\RegistryManager instance.
+     */
+    protected function getCcdnForumForum_Manager_RegistryService()
+    {
+        return $this->services['ccdn_forum_forum.manager.registry'] = new \CCDNForum\ForumBundle\Model\Component\Manager\RegistryManager($this->get('ccdn_forum_forum.gateway.registry'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.manager.subscription' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Model\Component\Manager\SubscriptionManager A CCDNForum\ForumBundle\Model\Component\Manager\SubscriptionManager instance.
+     */
+    protected function getCcdnForumForum_Manager_SubscriptionService()
+    {
+        return $this->services['ccdn_forum_forum.manager.subscription'] = new \CCDNForum\ForumBundle\Model\Component\Manager\SubscriptionManager($this->get('ccdn_forum_forum.gateway.subscription'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.manager.topic' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Model\Component\Manager\TopicManager A CCDNForum\ForumBundle\Model\Component\Manager\TopicManager instance.
+     */
+    protected function getCcdnForumForum_Manager_TopicService()
+    {
+        return $this->services['ccdn_forum_forum.manager.topic'] = new \CCDNForum\ForumBundle\Model\Component\Manager\TopicManager($this->get('ccdn_forum_forum.gateway.topic'), $this->get('ccdn_forum_forum.component.helper.post_lock'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.model.board' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Model\FrontModel\BoardModel A CCDNForum\ForumBundle\Model\FrontModel\BoardModel instance.
+     */
+    protected function getCcdnForumForum_Model_BoardService()
+    {
+        return $this->services['ccdn_forum_forum.model.board'] = new \CCDNForum\ForumBundle\Model\FrontModel\BoardModel($this->get('debug.event_dispatcher'), $this->get('ccdn_forum_forum.repository.board'), $this->get('ccdn_forum_forum.manager.board'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.model.category' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Model\FrontModel\CategoryModel A CCDNForum\ForumBundle\Model\FrontModel\CategoryModel instance.
+     */
+    protected function getCcdnForumForum_Model_CategoryService()
+    {
+        return $this->services['ccdn_forum_forum.model.category'] = new \CCDNForum\ForumBundle\Model\FrontModel\CategoryModel($this->get('debug.event_dispatcher'), $this->get('ccdn_forum_forum.repository.category'), $this->get('ccdn_forum_forum.manager.category'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.model.forum' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Model\FrontModel\ForumModel A CCDNForum\ForumBundle\Model\FrontModel\ForumModel instance.
+     */
+    protected function getCcdnForumForum_Model_ForumService()
+    {
+        return $this->services['ccdn_forum_forum.model.forum'] = new \CCDNForum\ForumBundle\Model\FrontModel\ForumModel($this->get('debug.event_dispatcher'), $this->get('ccdn_forum_forum.repository.forum'), $this->get('ccdn_forum_forum.manager.forum'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.model.post' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Model\FrontModel\PostModel A CCDNForum\ForumBundle\Model\FrontModel\PostModel instance.
+     */
+    protected function getCcdnForumForum_Model_PostService()
+    {
+        return $this->services['ccdn_forum_forum.model.post'] = new \CCDNForum\ForumBundle\Model\FrontModel\PostModel($this->get('debug.event_dispatcher'), $this->get('ccdn_forum_forum.repository.post'), $this->get('ccdn_forum_forum.manager.post'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.model.registry' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Model\FrontModel\RegistryModel A CCDNForum\ForumBundle\Model\FrontModel\RegistryModel instance.
+     */
+    protected function getCcdnForumForum_Model_RegistryService()
+    {
+        return $this->services['ccdn_forum_forum.model.registry'] = new \CCDNForum\ForumBundle\Model\FrontModel\RegistryModel($this->get('debug.event_dispatcher'), $this->get('ccdn_forum_forum.repository.registry'), $this->get('ccdn_forum_forum.manager.registry'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.model.subscription' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Model\FrontModel\SubscriptionModel A CCDNForum\ForumBundle\Model\FrontModel\SubscriptionModel instance.
+     */
+    protected function getCcdnForumForum_Model_SubscriptionService()
+    {
+        return $this->services['ccdn_forum_forum.model.subscription'] = new \CCDNForum\ForumBundle\Model\FrontModel\SubscriptionModel($this->get('debug.event_dispatcher'), $this->get('ccdn_forum_forum.repository.subscription'), $this->get('ccdn_forum_forum.manager.subscription'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.model.topic' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Model\FrontModel\TopicModel A CCDNForum\ForumBundle\Model\FrontModel\TopicModel instance.
+     */
+    protected function getCcdnForumForum_Model_TopicService()
+    {
+        return $this->services['ccdn_forum_forum.model.topic'] = new \CCDNForum\ForumBundle\Model\FrontModel\TopicModel($this->get('debug.event_dispatcher'), $this->get('ccdn_forum_forum.repository.topic'), $this->get('ccdn_forum_forum.manager.topic'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.repository.board' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Model\Component\Repository\BoardRepository A CCDNForum\ForumBundle\Model\Component\Repository\BoardRepository instance.
+     */
+    protected function getCcdnForumForum_Repository_BoardService()
+    {
+        return $this->services['ccdn_forum_forum.repository.board'] = new \CCDNForum\ForumBundle\Model\Component\Repository\BoardRepository($this->get('ccdn_forum_forum.gateway.board'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.repository.category' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Model\Component\Repository\CategoryRepository A CCDNForum\ForumBundle\Model\Component\Repository\CategoryRepository instance.
+     */
+    protected function getCcdnForumForum_Repository_CategoryService()
+    {
+        return $this->services['ccdn_forum_forum.repository.category'] = new \CCDNForum\ForumBundle\Model\Component\Repository\CategoryRepository($this->get('ccdn_forum_forum.gateway.category'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.repository.forum' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Model\Component\Repository\ForumRepository A CCDNForum\ForumBundle\Model\Component\Repository\ForumRepository instance.
+     */
+    protected function getCcdnForumForum_Repository_ForumService()
+    {
+        return $this->services['ccdn_forum_forum.repository.forum'] = new \CCDNForum\ForumBundle\Model\Component\Repository\ForumRepository($this->get('ccdn_forum_forum.gateway.forum'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.repository.post' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Model\Component\Repository\PostRepository A CCDNForum\ForumBundle\Model\Component\Repository\PostRepository instance.
+     */
+    protected function getCcdnForumForum_Repository_PostService()
+    {
+        return $this->services['ccdn_forum_forum.repository.post'] = new \CCDNForum\ForumBundle\Model\Component\Repository\PostRepository($this->get('ccdn_forum_forum.gateway.post'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.repository.registry' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Model\Component\Repository\RegistryRepository A CCDNForum\ForumBundle\Model\Component\Repository\RegistryRepository instance.
+     */
+    protected function getCcdnForumForum_Repository_RegistryService()
+    {
+        return $this->services['ccdn_forum_forum.repository.registry'] = new \CCDNForum\ForumBundle\Model\Component\Repository\RegistryRepository($this->get('ccdn_forum_forum.gateway.registry'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.repository.subscription' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Model\Component\Repository\SubscriptionRepository A CCDNForum\ForumBundle\Model\Component\Repository\SubscriptionRepository instance.
+     */
+    protected function getCcdnForumForum_Repository_SubscriptionService()
+    {
+        return $this->services['ccdn_forum_forum.repository.subscription'] = new \CCDNForum\ForumBundle\Model\Component\Repository\SubscriptionRepository($this->get('ccdn_forum_forum.gateway.subscription'));
+    }
+
+    /**
+     * Gets the 'ccdn_forum_forum.repository.topic' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return CCDNForum\ForumBundle\Model\Component\Repository\TopicRepository A CCDNForum\ForumBundle\Model\Component\Repository\TopicRepository instance.
+     */
+    protected function getCcdnForumForum_Repository_TopicService()
+    {
+        return $this->services['ccdn_forum_forum.repository.topic'] = new \CCDNForum\ForumBundle\Model\Component\Repository\TopicRepository($this->get('ccdn_forum_forum.gateway.topic'));
+    }
+
+    /**
      * Gets the 'data_collector.form' service.
      *
      * This service is shared.
@@ -509,8 +1566,14 @@ class appDevDebugProjectContainer extends Container
     {
         $this->services['debug.event_dispatcher'] = $instance = new \Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher(new \Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher($this), $this->get('debug.stopwatch'), $this->get('monolog.logger.event', ContainerInterface::NULL_ON_INVALID_REFERENCE));
 
+        $instance->addListenerService('knp_pager.before', array(0 => 'knp_paginator.subscriber.paginate', 1 => 'before'), 0);
+        $instance->addListenerService('knp_pager.pagination', array(0 => 'knp_paginator.subscriber.paginate', 1 => 'pagination'), 0);
+        $instance->addListenerService('knp_pager.before', array(0 => 'knp_paginator.subscriber.sortable', 1 => 'before'), 1);
+        $instance->addListenerService('knp_pager.before', array(0 => 'knp_paginator.subscriber.filtration', 1 => 'before'), 1);
+        $instance->addListenerService('knp_pager.pagination', array(0 => 'knp_paginator.subscriber.sliding_pagination', 1 => 'pagination'), 1);
         $instance->addListenerService('kernel.controller', array(0 => 'data_collector.router', 1 => 'onKernelController'), 0);
         $instance->addListenerService('kernel.request', array(0 => 'assetic.request_listener', 1 => 'onKernelRequest'), 0);
+        $instance->addListenerService('kernel.request', array(0 => 'knp_paginator.subscriber.sliding_pagination', 1 => 'onKernelRequest'), 0);
         $instance->addListenerService('kernel.controller', array(0 => 'acme.demo.listener', 1 => 'onKernelController'), 0);
         $instance->addSubscriberService('response_listener', 'Symfony\\Component\\HttpKernel\\EventListener\\ResponseListener');
         $instance->addSubscriberService('streamed_response_listener', 'Symfony\\Component\\HttpKernel\\EventListener\\StreamedResponseListener');
@@ -536,6 +1599,9 @@ class appDevDebugProjectContainer extends Container
         $instance->addSubscriberService('fos_user.listener.authentication', 'FOS\\UserBundle\\EventListener\\AuthenticationListener');
         $instance->addSubscriberService('fos_user.listener.flash', 'FOS\\UserBundle\\EventListener\\FlashListener');
         $instance->addSubscriberService('fos_user.listener.resetting', 'FOS\\UserBundle\\EventListener\\ResettingListener');
+        $instance->addSubscriberService('ccdn_forum_forum.component.event_listener.flash', 'CCDNForum\\ForumBundle\\Component\\Dispatcher\\Listener\\FlashListener');
+        $instance->addSubscriberService('ccdn_forum_forum.component.event_listener.subscriber', 'CCDNForum\\ForumBundle\\Component\\Dispatcher\\Listener\\SubscriberListener');
+        $instance->addSubscriberService('ccdn_forum_forum.component.event_listener.stats', 'CCDNForum\\ForumBundle\\Component\\Dispatcher\\Listener\\StatListener');
         $instance->addSubscriberService('web_profiler.debug_toolbar', 'Symfony\\Bundle\\WebProfilerBundle\\EventListener\\WebDebugToolbarListener');
 
         return $instance;
@@ -566,7 +1632,8 @@ class appDevDebugProjectContainer extends Container
     {
         $this->services['debug.templating.engine.php'] = $instance = new \Symfony\Bundle\FrameworkBundle\Templating\TimedPhpEngine($this->get('templating.name_parser'), $this, $this->get('templating.loader'), $this->get('debug.stopwatch'), $this->get('templating.globals'));
 
-        $instance->setHelpers(array('slots' => 'templating.helper.slots', 'assets' => 'templating.helper.assets', 'request' => 'templating.helper.request', 'session' => 'templating.helper.session', 'router' => 'templating.helper.router', 'actions' => 'templating.helper.actions', 'code' => 'templating.helper.code', 'translator' => 'templating.helper.translator', 'form' => 'templating.helper.form', 'stopwatch' => 'templating.helper.stopwatch', 'logout_url' => 'templating.helper.logout_url', 'security' => 'templating.helper.security', 'assetic' => 'assetic.helper.dynamic'));
+        $instance->setCharset('UTF-8');
+        $instance->setHelpers(array('slots' => 'templating.helper.slots', 'assets' => 'templating.helper.assets', 'request' => 'templating.helper.request', 'session' => 'templating.helper.session', 'router' => 'templating.helper.router', 'actions' => 'templating.helper.actions', 'code' => 'templating.helper.code', 'translator' => 'templating.helper.translator', 'form' => 'templating.helper.form', 'stopwatch' => 'templating.helper.stopwatch', 'logout_url' => 'templating.helper.logout_url', 'security' => 'templating.helper.security', 'assetic' => 'assetic.helper.dynamic', 'knp_pagination' => 'knp_paginator.templating.helper.pagination'));
 
         return $instance;
     }
@@ -614,10 +1681,14 @@ class appDevDebugProjectContainer extends Container
         $b = new \Doctrine\DBAL\Configuration();
         $b->setSQLLogger($a);
 
-        $c = new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this);
-        $c->addEventSubscriber(new \FOS\UserBundle\Doctrine\Orm\UserListener($this));
+        $c = new \Doctrine\ORM\Tools\ResolveTargetEntityListener();
+        $c->addResolveTargetEntity('Symfony\\Component\\Security\\Core\\User\\UserInterface', 'douane\\intraBundle\\Entity\\User', array());
 
-        return $this->services['doctrine.dbal.default_connection'] = $this->get('doctrine.dbal.connection_factory')->createConnection(array('driver' => 'pdo_mysql', 'host' => '127.0.0.1', 'port' => NULL, 'dbname' => 'douaneIntra', 'user' => 'root', 'password' => 'root', 'charset' => 'UTF8', 'driverOptions' => array()), $b, $c, array());
+        $d = new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this);
+        $d->addEventSubscriber(new \FOS\UserBundle\Doctrine\Orm\UserListener($this));
+        $d->addEventListener(array(0 => 'loadClassMetadata'), $c);
+
+        return $this->services['doctrine.dbal.default_connection'] = $this->get('doctrine.dbal.connection_factory')->createConnection(array('driver' => 'pdo_mysql', 'host' => '127.0.0.1', 'port' => NULL, 'dbname' => 'douaneIntra', 'user' => 'root', 'password' => 'root', 'charset' => 'UTF8', 'driverOptions' => array()), $b, $d, array());
     }
 
     /**
@@ -642,25 +1713,29 @@ class appDevDebugProjectContainer extends Container
         $d = new \Doctrine\ORM\Mapping\Driver\SimplifiedXmlDriver(array('/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/doctrine' => 'FOS\\UserBundle\\Entity'));
         $d->setGlobalBasename('mapping');
 
-        $e = new \Doctrine\ORM\Mapping\Driver\DriverChain();
-        $e->addDriver(new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($this->get('annotation_reader'), array(0 => '/var/www/html/stageDouane/src/douane/intraBundle/Entity')), 'douane\\intraBundle\\Entity');
-        $e->addDriver($d, 'FOS\\UserBundle\\Entity');
-        $e->addDriver(new \Doctrine\ORM\Mapping\Driver\XmlDriver(new \Doctrine\Common\Persistence\Mapping\Driver\SymfonyFileLocator(array('/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/doctrine/model' => 'FOS\\UserBundle\\Model'), '.orm.xml')), 'FOS\\UserBundle\\Model');
+        $e = new \Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver(array('/var/www/html/stageDouane/vendor/codeconsortium/ccdn-forum-bundle/CCDNForum/ForumBundle/Resources/config/doctrine' => 'CCDNForum\\ForumBundle\\Entity'));
+        $e->setGlobalBasename('mapping');
 
-        $f = new \Doctrine\ORM\Configuration();
-        $f->setEntityNamespaces(array('douaneintraBundle' => 'douane\\intraBundle\\Entity', 'FOSUserBundle' => 'FOS\\UserBundle\\Entity'));
-        $f->setMetadataCacheImpl($a);
-        $f->setQueryCacheImpl($b);
-        $f->setResultCacheImpl($c);
-        $f->setMetadataDriverImpl($e);
-        $f->setProxyDir('/var/www/html/stageDouane/app/cache/dev/doctrine/orm/Proxies');
-        $f->setProxyNamespace('Proxies');
-        $f->setAutoGenerateProxyClasses(true);
-        $f->setClassMetadataFactoryName('Doctrine\\ORM\\Mapping\\ClassMetadataFactory');
-        $f->setDefaultRepositoryClassName('Doctrine\\ORM\\EntityRepository');
-        $f->setNamingStrategy(new \Doctrine\ORM\Mapping\DefaultNamingStrategy());
+        $f = new \Doctrine\ORM\Mapping\Driver\DriverChain();
+        $f->addDriver(new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($this->get('annotation_reader'), array(0 => '/var/www/html/stageDouane/src/douane/intraBundle/Entity')), 'douane\\intraBundle\\Entity');
+        $f->addDriver($d, 'FOS\\UserBundle\\Entity');
+        $f->addDriver($e, 'CCDNForum\\ForumBundle\\Entity');
+        $f->addDriver(new \Doctrine\ORM\Mapping\Driver\XmlDriver(new \Doctrine\Common\Persistence\Mapping\Driver\SymfonyFileLocator(array('/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/doctrine/model' => 'FOS\\UserBundle\\Model'), '.orm.xml')), 'FOS\\UserBundle\\Model');
 
-        $this->services['doctrine.orm.default_entity_manager'] = $instance = call_user_func(array('Doctrine\\ORM\\EntityManager', 'create'), $this->get('doctrine.dbal.default_connection'), $f);
+        $g = new \Doctrine\ORM\Configuration();
+        $g->setEntityNamespaces(array('douaneintraBundle' => 'douane\\intraBundle\\Entity', 'FOSUserBundle' => 'FOS\\UserBundle\\Entity', 'CCDNForumForumBundle' => 'CCDNForum\\ForumBundle\\Entity'));
+        $g->setMetadataCacheImpl($a);
+        $g->setQueryCacheImpl($b);
+        $g->setResultCacheImpl($c);
+        $g->setMetadataDriverImpl($f);
+        $g->setProxyDir('/var/www/html/stageDouane/app/cache/dev/doctrine/orm/Proxies');
+        $g->setProxyNamespace('Proxies');
+        $g->setAutoGenerateProxyClasses(true);
+        $g->setClassMetadataFactoryName('Doctrine\\ORM\\Mapping\\ClassMetadataFactory');
+        $g->setDefaultRepositoryClassName('Doctrine\\ORM\\EntityRepository');
+        $g->setNamingStrategy(new \Doctrine\ORM\Mapping\DefaultNamingStrategy());
+
+        $this->services['doctrine.orm.default_entity_manager'] = $instance = call_user_func(array('Doctrine\\ORM\\EntityManager', 'create'), $this->get('doctrine.dbal.default_connection'), $g);
 
         $this->get('doctrine.orm.default_manager_configurator')->configure($instance);
 
@@ -1340,7 +2415,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getFosUser_Listener_FlashService()
     {
-        return $this->services['fos_user.listener.flash'] = new \FOS\UserBundle\EventListener\FlashListener($this->get('session'), $this->get('translator'));
+        return $this->services['fos_user.listener.flash'] = new \FOS\UserBundle\EventListener\FlashListener($this->get('session'), $this->get('translator.default'));
     }
 
     /**
@@ -1647,6 +2722,114 @@ class appDevDebugProjectContainer extends Container
     protected function getKernelService()
     {
         throw new RuntimeException('You have requested a synthetic service ("kernel"). The DIC does not know how to construct this service.');
+    }
+
+    /**
+     * Gets the 'knp_paginator' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Knp\Component\Pager\Paginator A Knp\Component\Pager\Paginator instance.
+     */
+    protected function getKnpPaginatorService()
+    {
+        $this->services['knp_paginator'] = $instance = new \Knp\Component\Pager\Paginator($this->get('debug.event_dispatcher'));
+
+        $instance->setDefaultPaginatorOptions(array('pageParameterName' => 'page', 'sortFieldParameterName' => 'sort', 'sortDirectionParameterName' => 'direction', 'filterFieldParameterName' => 'filterField', 'filterValueParameterName' => 'filterValue', 'distinct' => true));
+
+        return $instance;
+    }
+
+    /**
+     * Gets the 'knp_paginator.helper.processor' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Knp\Bundle\PaginatorBundle\Helper\Processor A Knp\Bundle\PaginatorBundle\Helper\Processor instance.
+     */
+    protected function getKnpPaginator_Helper_ProcessorService()
+    {
+        return $this->services['knp_paginator.helper.processor'] = new \Knp\Bundle\PaginatorBundle\Helper\Processor($this->get('templating.helper.router'), $this->get('translator.default'));
+    }
+
+    /**
+     * Gets the 'knp_paginator.subscriber.filtration' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Knp\Component\Pager\Event\Subscriber\Filtration\FiltrationSubscriber A Knp\Component\Pager\Event\Subscriber\Filtration\FiltrationSubscriber instance.
+     */
+    protected function getKnpPaginator_Subscriber_FiltrationService()
+    {
+        return $this->services['knp_paginator.subscriber.filtration'] = new \Knp\Component\Pager\Event\Subscriber\Filtration\FiltrationSubscriber();
+    }
+
+    /**
+     * Gets the 'knp_paginator.subscriber.paginate' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Knp\Component\Pager\Event\Subscriber\Paginate\PaginationSubscriber A Knp\Component\Pager\Event\Subscriber\Paginate\PaginationSubscriber instance.
+     */
+    protected function getKnpPaginator_Subscriber_PaginateService()
+    {
+        return $this->services['knp_paginator.subscriber.paginate'] = new \Knp\Component\Pager\Event\Subscriber\Paginate\PaginationSubscriber();
+    }
+
+    /**
+     * Gets the 'knp_paginator.subscriber.sliding_pagination' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Knp\Bundle\PaginatorBundle\Subscriber\SlidingPaginationSubscriber A Knp\Bundle\PaginatorBundle\Subscriber\SlidingPaginationSubscriber instance.
+     */
+    protected function getKnpPaginator_Subscriber_SlidingPaginationService()
+    {
+        return $this->services['knp_paginator.subscriber.sliding_pagination'] = new \Knp\Bundle\PaginatorBundle\Subscriber\SlidingPaginationSubscriber(array('defaultPaginationTemplate' => 'KnpPaginatorBundle:Pagination:sliding.html.twig', 'defaultSortableTemplate' => 'KnpPaginatorBundle:Pagination:sortable_link.html.twig', 'defaultFiltrationTemplate' => 'KnpPaginatorBundle:Pagination:filtration.html.twig', 'defaultPageRange' => 5));
+    }
+
+    /**
+     * Gets the 'knp_paginator.subscriber.sortable' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Knp\Component\Pager\Event\Subscriber\Sortable\SortableSubscriber A Knp\Component\Pager\Event\Subscriber\Sortable\SortableSubscriber instance.
+     */
+    protected function getKnpPaginator_Subscriber_SortableService()
+    {
+        return $this->services['knp_paginator.subscriber.sortable'] = new \Knp\Component\Pager\Event\Subscriber\Sortable\SortableSubscriber();
+    }
+
+    /**
+     * Gets the 'knp_paginator.templating.helper.pagination' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Knp\Bundle\PaginatorBundle\Templating\PaginationHelper A Knp\Bundle\PaginatorBundle\Templating\PaginationHelper instance.
+     */
+    protected function getKnpPaginator_Templating_Helper_PaginationService()
+    {
+        return $this->services['knp_paginator.templating.helper.pagination'] = new \Knp\Bundle\PaginatorBundle\Templating\PaginationHelper($this->get('knp_paginator.helper.processor'), $this->get('debug.templating.engine.php'));
+    }
+
+    /**
+     * Gets the 'knp_paginator.twig.extension.pagination' service.
+     *
+     * This service is shared.
+     * This method always returns the same instance of the service.
+     *
+     * @return Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension A Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension instance.
+     */
+    protected function getKnpPaginator_Twig_Extension_PaginationService()
+    {
+        return $this->services['knp_paginator.twig.extension.pagination'] = new \Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension($this->get('knp_paginator.helper.processor'));
     }
 
     /**
@@ -2141,10 +3324,10 @@ class appDevDebugProjectContainer extends Container
         $m = new \Symfony\Component\Security\Http\Firewall\LogoutListener($b, $l, new \Symfony\Component\Security\Http\Logout\DefaultLogoutSuccessHandler($l, '/'), array('csrf_parameter' => '_csrf_token', 'intention' => 'logout', 'logout_path' => '/logout'));
         $m->addHandler(new \Symfony\Component\Security\Http\Logout\SessionLogoutHandler());
 
-        $n = new \Symfony\Component\Security\Http\Authentication\DefaultAuthenticationSuccessHandler($l, array('always_use_default_target_path' => false, 'default_target_path' => '/', 'login_path' => '/login', 'target_path_parameter' => '_target_path', 'use_referer' => false));
+        $n = new \Symfony\Component\Security\Http\Authentication\DefaultAuthenticationSuccessHandler($l, array('default_target_path' => '/demo/hello/World', 'always_use_default_target_path' => false, 'login_path' => '/login', 'target_path_parameter' => '_target_path', 'use_referer' => false));
         $n->setProviderKey('main');
 
-        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($k, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => $this->get('fos_user.user_provider.username')), 'main', $a, $c), 2 => $m, 3 => new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($b, $f, $this->get('security.authentication.session_strategy'), $l, 'main', $n, new \Symfony\Component\Security\Http\Authentication\DefaultAuthenticationFailureHandler($e, $l, array('login_path' => '/login', 'failure_path' => NULL, 'failure_forward' => false, 'failure_path_parameter' => '_failure_path'), $a), array('check_path' => '/login_check', 'use_forward' => false, 'require_previous_session' => true, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_parameter' => '_csrf_token', 'intention' => 'authenticate', 'post_only' => true), $a, $c, $this->get('form.csrf_provider')), 4 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '53c1c0f80e003', $a), 5 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $k, $f)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), $l, 'main', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($e, $l, '/login', false), NULL, NULL, $a));
+        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => new \Symfony\Component\Security\Http\Firewall\ChannelListener($k, new \Symfony\Component\Security\Http\EntryPoint\RetryAuthenticationEntryPoint(80, 443), $a), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($b, array(0 => $this->get('fos_user.user_provider.username')), 'main', $a, $c), 2 => $m, 3 => new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($b, $f, $this->get('security.authentication.session_strategy'), $l, 'main', $n, new \Symfony\Component\Security\Http\Authentication\DefaultAuthenticationFailureHandler($e, $l, array('login_path' => '/login', 'failure_path' => NULL, 'failure_forward' => false, 'failure_path_parameter' => '_failure_path'), $a), array('check_path' => '/login_check', 'use_forward' => false, 'require_previous_session' => true, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_parameter' => '_csrf_token', 'intention' => 'authenticate', 'post_only' => true), $a, $c, $this->get('form.csrf_provider')), 4 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($b, '53c2b0c6b7996', $a), 5 => new \Symfony\Component\Security\Http\Firewall\AccessListener($b, $this->get('security.access.decision_manager'), $k, $f)), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($b, $this->get('security.authentication.trust_resolver'), $l, 'main', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($e, $l, '/login', false), NULL, NULL, $a));
     }
 
     /**
@@ -2517,7 +3700,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getTemplatingService()
     {
-        $this->services['templating'] = $instance = new \Symfony\Bundle\TwigBundle\Debug\TimedTwigEngine($this->get('twig'), $this->get('templating.name_parser'), $this->get('templating.locator'), $this->get('debug.stopwatch'), $this->get('templating.globals'));
+        $this->services['templating'] = $instance = new \Symfony\Bundle\TwigBundle\Debug\TimedTwigEngine($this->get('twig'), $this->get('templating.name_parser'), $this->get('templating.locator'), $this->get('debug.stopwatch'));
 
         $instance->setDefaultEscapingStrategy(array(0 => $instance, 1 => 'guessDefaultEscapingStrategy'));
 
@@ -2726,7 +3909,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getTemplating_Helper_TranslatorService()
     {
-        return $this->services['templating.helper.translator'] = new \Symfony\Bundle\FrameworkBundle\Templating\Helper\TranslatorHelper($this->get('translator'));
+        return $this->services['templating.helper.translator'] = new \Symfony\Bundle\FrameworkBundle\Templating\Helper\TranslatorHelper($this->get('translator.default'));
     }
 
     /**
@@ -3116,19 +4299,6 @@ class appDevDebugProjectContainer extends Container
     }
 
     /**
-     * Gets the 'translator' service.
-     *
-     * This service is shared.
-     * This method always returns the same instance of the service.
-     *
-     * @return Symfony\Component\Translation\IdentityTranslator A Symfony\Component\Translation\IdentityTranslator instance.
-     */
-    protected function getTranslatorService()
-    {
-        return $this->services['translator'] = new \Symfony\Component\Translation\IdentityTranslator($this->get('translator.selector'));
-    }
-
-    /**
      * Gets the 'translator.default' service.
      *
      * This service is shared.
@@ -3138,7 +4308,202 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getTranslator_DefaultService()
     {
-        return $this->services['translator.default'] = new \Symfony\Bundle\FrameworkBundle\Translation\Translator($this, $this->get('translator.selector'), array('translation.loader.php' => array(0 => 'php'), 'translation.loader.yml' => array(0 => 'yml'), 'translation.loader.xliff' => array(0 => 'xlf', 1 => 'xliff'), 'translation.loader.po' => array(0 => 'po'), 'translation.loader.mo' => array(0 => 'mo'), 'translation.loader.qt' => array(0 => 'ts'), 'translation.loader.csv' => array(0 => 'csv'), 'translation.loader.res' => array(0 => 'res'), 'translation.loader.dat' => array(0 => 'dat'), 'translation.loader.ini' => array(0 => 'ini'), 'translation.loader.json' => array(0 => 'json')), array('cache_dir' => '/var/www/html/stageDouane/app/cache/dev/translations', 'debug' => true));
+        $this->services['translator.default'] = $instance = new \Symfony\Bundle\FrameworkBundle\Translation\Translator($this, new \Symfony\Component\Translation\MessageSelector(), array('translation.loader.php' => array(0 => 'php'), 'translation.loader.yml' => array(0 => 'yml'), 'translation.loader.xliff' => array(0 => 'xlf', 1 => 'xliff'), 'translation.loader.po' => array(0 => 'po'), 'translation.loader.mo' => array(0 => 'mo'), 'translation.loader.qt' => array(0 => 'ts'), 'translation.loader.csv' => array(0 => 'csv'), 'translation.loader.res' => array(0 => 'res'), 'translation.loader.dat' => array(0 => 'dat'), 'translation.loader.ini' => array(0 => 'ini'), 'translation.loader.json' => array(0 => 'json')), array('cache_dir' => '/var/www/html/stageDouane/app/cache/dev/translations', 'debug' => true));
+
+        $instance->setFallbackLocales(array(0 => 'en'));
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.lt.xlf', 'lt', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.lb.xlf', 'lb', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.he.xlf', 'he', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.pl.xlf', 'pl', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.id.xlf', 'id', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.gl.xlf', 'gl', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.nb.xlf', 'nb', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.pt.xlf', 'pt', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sq.xlf', 'sq', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.cy.xlf', 'cy', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.tr.xlf', 'tr', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.fr.xlf', 'fr', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.hy.xlf', 'hy', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.th.xlf', 'th', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sl.xlf', 'sl', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.ro.xlf', 'ro', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.vi.xlf', 'vi', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.uk.xlf', 'uk', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.ca.xlf', 'ca', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sr_Cyrl.xlf', 'sr_Cyrl', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.en.xlf', 'en', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.bg.xlf', 'bg', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.nl.xlf', 'nl', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.cs.xlf', 'cs', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.hr.xlf', 'hr', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.zh_TW.xlf', 'zh_TW', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.ar.xlf', 'ar', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.de.xlf', 'de', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.fa.xlf', 'fa', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.el.xlf', 'el', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sv.xlf', 'sv', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.eu.xlf', 'eu', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.fi.xlf', 'fi', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.no.xlf', 'no', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.es.xlf', 'es', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.mn.xlf', 'mn', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.ru.xlf', 'ru', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sr_Latn.xlf', 'sr_Latn', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.da.xlf', 'da', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.hu.xlf', 'hu', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.ja.xlf', 'ja', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sk.xlf', 'sk', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.et.xlf', 'et', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.af.xlf', 'af', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.it.xlf', 'it', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.pt_BR.xlf', 'pt_BR', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.zh_CN.xlf', 'zh_CN', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.lt.xlf', 'lt', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.lb.xlf', 'lb', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.he.xlf', 'he', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.pl.xlf', 'pl', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.id.xlf', 'id', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.gl.xlf', 'gl', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.nb.xlf', 'nb', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.pt.xlf', 'pt', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.fr.xlf', 'fr', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.hy.xlf', 'hy', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.sl.xlf', 'sl', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.ro.xlf', 'ro', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.uk.xlf', 'uk', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.ca.xlf', 'ca', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.sr_Cyrl.xlf', 'sr_Cyrl', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.en.xlf', 'en', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.bg.xlf', 'bg', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.nl.xlf', 'nl', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.cs.xlf', 'cs', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.hr.xlf', 'hr', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.ar.xlf', 'ar', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.de.xlf', 'de', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.fa.xlf', 'fa', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.el.xlf', 'el', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.sv.xlf', 'sv', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.eu.xlf', 'eu', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.fi.xlf', 'fi', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.es.xlf', 'es', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.mn.xlf', 'mn', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.ru.xlf', 'ru', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.sr_Latn.xlf', 'sr_Latn', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.da.xlf', 'da', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.hu.xlf', 'hu', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.ja.xlf', 'ja', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.sk.xlf', 'sk', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.et.xlf', 'et', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.lv.xlf', 'lv', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.it.xlf', 'it', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.pt_BR.xlf', 'pt_BR', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.zh_CN.xlf', 'zh_CN', 'validators');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.sr_Cyrl.xlf', 'sr_Cyrl', 'security');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.sr_Latn.xlf', 'sr_Latn', 'security');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.en.xlf', 'en', 'security');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.nl.xlf', 'nl', 'security');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.pl.xlf', 'pl', 'security');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.sl.xlf', 'sl', 'security');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.fa.xlf', 'fa', 'security');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.ar.xlf', 'ar', 'security');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.ru.xlf', 'ru', 'security');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.sv.xlf', 'sv', 'security');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.gl.xlf', 'gl', 'security');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.lb.xlf', 'lb', 'security');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.cs.xlf', 'cs', 'security');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.de.xlf', 'de', 'security');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.hu.xlf', 'hu', 'security');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.ca.xlf', 'ca', 'security');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.ro.xlf', 'ro', 'security');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.it.xlf', 'it', 'security');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.pt_BR.xlf', 'pt_BR', 'security');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.pt_PT.xlf', 'pt_PT', 'security');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.no.xlf', 'no', 'security');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.tr.xlf', 'tr', 'security');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.fr.xlf', 'fr', 'security');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.el.xlf', 'el', 'security');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.es.xlf', 'es', 'security');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.da.xlf', 'da', 'security');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.sk.xlf', 'sk', 'security');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.ua.xlf', 'ua', 'security');
+        $instance->addResource('xlf', '/var/www/html/stageDouane/src/douane/intraBundle/Resources/translations/messages.fr.xlf', 'fr', 'messages');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.en.yml', 'en', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.pt.yml', 'pt', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.ro.yml', 'ro', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.ja.yml', 'ja', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.fa.yml', 'fa', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.sr_Latn.yml', 'sr_Latn', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.sv.yml', 'sv', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.pt_BR.yml', 'pt_BR', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.ar.yml', 'ar', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.lt.yml', 'lt', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.tr.yml', 'tr', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.de.yml', 'de', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.nb.yml', 'nb', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.sv.yml', 'sv', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.id.yml', 'id', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.es.yml', 'es', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.bg.yml', 'bg', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.pl.yml', 'pl', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.vi.yml', 'vi', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.ca.yml', 'ca', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.fr.yml', 'fr', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.fa.yml', 'fa', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.ja.yml', 'ja', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.pt_BR.yml', 'pt_BR', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.lb.yml', 'lb', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.lt.yml', 'lt', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.uk.yml', 'uk', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.pt_PT.yml', 'pt_PT', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.ro.yml', 'ro', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.ca.yml', 'ca', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.hr.yml', 'hr', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.nl.yml', 'nl', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.da.yml', 'da', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.it.yml', 'it', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.pl.yml', 'pl', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.fi.yml', 'fi', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.lv.yml', 'lv', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.tr.yml', 'tr', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.et.yml', 'et', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.ar.yml', 'ar', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.sk.yml', 'sk', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.th.yml', 'th', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.de.yml', 'de', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.id.yml', 'id', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.it.yml', 'it', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.cs.yml', 'cs', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.th.yml', 'th', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.da.yml', 'da', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.he.yml', 'he', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.uk.yml', 'uk', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.fi.yml', 'fi', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.ru.yml', 'ru', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.ru.yml', 'ru', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.nl.yml', 'nl', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.en.yml', 'en', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.lv.yml', 'lv', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.zh_CN.yml', 'zh_CN', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.hu.yml', 'hu', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.vi.yml', 'vi', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.fr.yml', 'fr', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.sr_Latn.yml', 'sr_Latn', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.sl.yml', 'sl', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.cs.yml', 'cs', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.bg.yml', 'bg', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.sl.yml', 'sl', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.hu.yml', 'hu', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.hr.yml', 'hr', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.zh_CN.yml', 'zh_CN', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.he.yml', 'he', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.es.yml', 'es', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/validators.nb.yml', 'nb', 'validators');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/translations/FOSUserBundle.sk.yml', 'sk', 'FOSUserBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/codeconsortium/ccdn-forum-bundle/CCDNForum/ForumBundle/Resources/translations/CCDNForumForumBundle.hr.yml', 'hr', 'CCDNForumForumBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/codeconsortium/ccdn-forum-bundle/CCDNForum/ForumBundle/Resources/translations/CCDNForumForumBundle.en.yml', 'en', 'CCDNForumForumBundle');
+        $instance->addResource('yml', '/var/www/html/stageDouane/vendor/codeconsortium/ccdn-forum-bundle/CCDNForum/ForumBundle/Resources/translations/CCDNForumForumBundle.fr.yml', 'fr', 'CCDNForumForumBundle');
+
+        return $instance;
     }
 
     /**
@@ -3155,7 +4520,7 @@ class appDevDebugProjectContainer extends Container
 
         $instance->addExtension(new \Symfony\Bundle\SecurityBundle\Twig\Extension\LogoutUrlExtension($this->get('templating.helper.logout_url')));
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\SecurityExtension($this->get('security.context', ContainerInterface::NULL_ON_INVALID_REFERENCE)));
-        $instance->addExtension(new \Symfony\Bridge\Twig\Extension\TranslationExtension($this->get('translator')));
+        $instance->addExtension(new \Symfony\Bridge\Twig\Extension\TranslationExtension($this->get('translator.default')));
         $instance->addExtension(new \Symfony\Bundle\TwigBundle\Extension\AssetsExtension($this));
         $instance->addExtension(new \Symfony\Bundle\TwigBundle\Extension\ActionsExtension($this));
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\CodeExtension(NULL, '/var/www/html/stageDouane/app', 'UTF-8'));
@@ -3168,6 +4533,9 @@ class appDevDebugProjectContainer extends Container
         $instance->addExtension(new \Twig_Extension_Debug());
         $instance->addExtension(new \Symfony\Bundle\AsseticBundle\Twig\AsseticExtension($this->get('assetic.asset_factory'), $this->get('templating.name_parser'), true, array(), array(), $this->get('assetic.value_supplier.default', ContainerInterface::NULL_ON_INVALID_REFERENCE)));
         $instance->addExtension(new \Doctrine\Bundle\DoctrineBundle\Twig\DoctrineExtension());
+        $instance->addExtension($this->get('knp_paginator.twig.extension.pagination'));
+        $instance->addExtension($this->get('ccdn_forum_forum.component.twig_extension.board_list'));
+        $instance->addExtension($this->get('ccdn_forum_forum.component.twig_extension.authorizer'));
         $instance->addExtension($this->get('twig.extension.acme.demo'));
         $instance->addGlobal('app', $this->get('templating.globals'));
 
@@ -3219,6 +4587,8 @@ class appDevDebugProjectContainer extends Container
         $instance->addPath('/var/www/html/stageDouane/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Resources/views', 'Doctrine');
         $instance->addPath('/var/www/html/stageDouane/src/douane/intraBundle/Resources/views', 'douaneintra');
         $instance->addPath('/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views', 'FOSUser');
+        $instance->addPath('/var/www/html/stageDouane/vendor/knplabs/knp-paginator-bundle/Knp/Bundle/PaginatorBundle/Resources/views', 'KnpPaginator');
+        $instance->addPath('/var/www/html/stageDouane/vendor/codeconsortium/ccdn-forum-bundle/CCDNForum/ForumBundle/Resources/views', 'CCDNForumForum');
         $instance->addPath('/var/www/html/stageDouane/src/Acme/DemoBundle/Resources/views', 'AcmeDemo');
         $instance->addPath('/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views', 'WebProfiler');
         $instance->addPath('/var/www/html/stageDouane/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/views', 'SensioDistribution');
@@ -3264,7 +4634,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getValidatorService()
     {
-        return $this->services['validator'] = new \Symfony\Component\Validator\Validator($this->get('validator.mapping.class_metadata_factory'), new \Symfony\Bundle\FrameworkBundle\Validator\ConstraintValidatorFactory($this, array('validator.expression' => 'validator.expression', 'security.validator.user_password' => 'security.validator.user_password', 'doctrine.orm.validator.unique' => 'doctrine.orm.validator.unique')), $this->get('translator'), 'validators', array(0 => $this->get('doctrine.orm.validator_initializer'), 1 => new \FOS\UserBundle\Validator\Initializer($this->get('fos_user.user_manager'))));
+        return $this->services['validator'] = new \Symfony\Component\Validator\Validator($this->get('validator.mapping.class_metadata_factory'), new \Symfony\Bundle\FrameworkBundle\Validator\ConstraintValidatorFactory($this, array('validator.expression' => 'validator.expression', 'security.validator.user_password' => 'security.validator.user_password', 'doctrine.orm.validator.unique' => 'doctrine.orm.validator.unique')), $this->get('translator.default'), 'validators', array(0 => $this->get('doctrine.orm.validator_initializer'), 1 => new \FOS\UserBundle\Validator\Initializer($this->get('fos_user.user_manager'))));
     }
 
     /**
@@ -3489,7 +4859,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getSecurity_Authentication_ManagerService()
     {
-        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider($this->get('fos_user.user_provider.username'), $this->get('security.user_checker'), 'main', $this->get('security.encoder_factory'), true), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('53c1c0f80e003')), true);
+        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider($this->get('fos_user.user_provider.username'), $this->get('security.user_checker'), 'main', $this->get('security.encoder_factory'), true), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('53c2b0c6b7996')), true);
 
         $instance->setEventDispatcher($this->get('debug.event_dispatcher'));
 
@@ -3616,23 +4986,6 @@ class appDevDebugProjectContainer extends Container
     }
 
     /**
-     * Gets the 'translator.selector' service.
-     *
-     * This service is shared.
-     * This method always returns the same instance of the service.
-     *
-     * This service is private.
-     * If you want to be able to request this service from the container directly,
-     * make it public, otherwise you might end up with broken code.
-     *
-     * @return Symfony\Component\Translation\MessageSelector A Symfony\Component\Translation\MessageSelector instance.
-     */
-    protected function getTranslator_SelectorService()
-    {
-        return $this->services['translator.selector'] = new \Symfony\Component\Translation\MessageSelector();
-    }
-
-    /**
      * Gets the 'twig.extension.acme.demo' service.
      *
      * This service is shared.
@@ -3663,7 +5016,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getValidator_Mapping_ClassMetadataFactoryService()
     {
-        return $this->services['validator.mapping.class_metadata_factory'] = new \Symfony\Component\Validator\Mapping\ClassMetadataFactory(new \Symfony\Component\Validator\Mapping\Loader\LoaderChain(array(0 => new \Symfony\Component\Validator\Mapping\Loader\AnnotationLoader($this->get('annotation_reader')), 1 => new \Symfony\Component\Validator\Mapping\Loader\StaticMethodLoader(), 2 => new \Symfony\Component\Validator\Mapping\Loader\XmlFilesLoader(array(0 => '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/config/validation.xml', 1 => '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/validation.xml', 2 => '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/validation/orm.xml')), 3 => new \Symfony\Component\Validator\Mapping\Loader\YamlFilesLoader(array()))), NULL);
+        return $this->services['validator.mapping.class_metadata_factory'] = new \Symfony\Component\Validator\Mapping\ClassMetadataFactory(new \Symfony\Component\Validator\Mapping\Loader\LoaderChain(array(0 => new \Symfony\Component\Validator\Mapping\Loader\AnnotationLoader($this->get('annotation_reader')), 1 => new \Symfony\Component\Validator\Mapping\Loader\StaticMethodLoader(), 2 => new \Symfony\Component\Validator\Mapping\Loader\XmlFilesLoader(array(0 => '/var/www/html/stageDouane/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/config/validation.xml', 1 => '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/validation.xml', 2 => '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/validation/orm.xml')), 3 => new \Symfony\Component\Validator\Mapping\Loader\YamlFilesLoader(array(0 => '/var/www/html/stageDouane/vendor/codeconsortium/ccdn-forum-bundle/CCDNForum/ForumBundle/Resources/config/validation.yml')))), NULL);
     }
 
     /**
@@ -3699,7 +5052,7 @@ class appDevDebugProjectContainer extends Container
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getParameterBag()
     {
@@ -3734,6 +5087,8 @@ class appDevDebugProjectContainer extends Container
                 'SensioFrameworkExtraBundle' => 'Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle',
                 'douaneintraBundle' => 'douane\\intraBundle\\douaneintraBundle',
                 'FOSUserBundle' => 'FOS\\UserBundle\\FOSUserBundle',
+                'KnpPaginatorBundle' => 'Knp\\Bundle\\PaginatorBundle\\KnpPaginatorBundle',
+                'CCDNForumForumBundle' => 'CCDNForum\\ForumBundle\\CCDNForumForumBundle',
                 'AcmeDemoBundle' => 'Acme\\DemoBundle\\AcmeDemoBundle',
                 'WebProfilerBundle' => 'Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle',
                 'SensioDistributionBundle' => 'Sensio\\Bundle\\DistributionBundle\\SensioDistributionBundle',
@@ -3893,7 +5248,7 @@ class appDevDebugProjectContainer extends Container
                 2 => '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/validation/orm.xml',
             ),
             'validator.mapping.loader.yaml_files_loader.mapping_files' => array(
-
+                0 => '/var/www/html/stageDouane/vendor/codeconsortium/ccdn-forum-bundle/CCDNForum/ForumBundle/Resources/config/validation.yml',
             ),
             'validator.expression.class' => 'Symfony\\Component\\Validator\\Constraints\\ExpressionValidator',
             'validator.translation_domain' => 'validators',
@@ -4065,15 +5420,20 @@ class appDevDebugProjectContainer extends Container
             ),
             'monolog.logger.class' => 'Symfony\\Bridge\\Monolog\\Logger',
             'monolog.gelf.publisher.class' => 'Gelf\\MessagePublisher',
+            'monolog.gelfphp.publisher.class' => 'Gelf\\Publisher',
             'monolog.handler.stream.class' => 'Monolog\\Handler\\StreamHandler',
             'monolog.handler.console.class' => 'Symfony\\Bridge\\Monolog\\Handler\\ConsoleHandler',
             'monolog.handler.group.class' => 'Monolog\\Handler\\GroupHandler',
             'monolog.handler.buffer.class' => 'Monolog\\Handler\\BufferHandler',
             'monolog.handler.rotating_file.class' => 'Monolog\\Handler\\RotatingFileHandler',
             'monolog.handler.syslog.class' => 'Monolog\\Handler\\SyslogHandler',
+            'monolog.handler.syslogudp.class' => 'Monolog\\Handler\\SyslogUdpHandler',
             'monolog.handler.null.class' => 'Monolog\\Handler\\NullHandler',
             'monolog.handler.test.class' => 'Monolog\\Handler\\TestHandler',
             'monolog.handler.gelf.class' => 'Monolog\\Handler\\GelfHandler',
+            'monolog.handler.rollbar.class' => 'Monolog\\Handler\\RollbarHandler',
+            'monolog.handler.flowdock.class' => 'Monolog\\Handler\\FlowdockHandler',
+            'monolog.handler.browser_console.class' => 'Monolog\\Handler\\BrowserConsoleHandler',
             'monolog.handler.firephp.class' => 'Symfony\\Bridge\\Monolog\\Handler\\FirePHPHandler',
             'monolog.handler.chromephp.class' => 'Symfony\\Bridge\\Monolog\\Handler\\ChromePhpHandler',
             'monolog.handler.debug.class' => 'Symfony\\Bridge\\Monolog\\Handler\\DebugHandler',
@@ -4088,9 +5448,11 @@ class appDevDebugProjectContainer extends Container
             'monolog.handler.amqp.class' => 'Monolog\\Handler\\AmqpHandler',
             'monolog.handler.error_log.class' => 'Monolog\\Handler\\ErrorLogHandler',
             'monolog.handler.loggly.class' => 'Monolog\\Handler\\LogglyHandler',
+            'monolog.handler.logentries.class' => 'Monolog\\Handler\\LogEntriesHandler',
             'monolog.activation_strategy.not_found.class' => 'Symfony\\Bundle\\MonologBundle\\NotFoundActivationStrategy',
             'monolog.handler.fingers_crossed.class' => 'Monolog\\Handler\\FingersCrossedHandler',
             'monolog.handler.fingers_crossed.error_level_activation_strategy.class' => 'Monolog\\Handler\\FingersCrossed\\ErrorLevelActivationStrategy',
+            'monolog.handler.filter.class' => 'Monolog\\Handler\\FilterHandler',
             'monolog.handler.mongo.class' => 'Monolog\\Handler\\MongoDBHandler',
             'monolog.mongo.client.class' => 'MongoClient',
             'monolog.swift_mailer.handlers' => array(
@@ -4290,6 +5652,160 @@ class appDevDebugProjectContainer extends Container
                 0 => 'ResetPassword',
                 1 => 'Default',
             ),
+            'knp_paginator.class' => 'Knp\\Component\\Pager\\Paginator',
+            'knp_paginator.templating.helper.pagination.class' => 'Knp\\Bundle\\PaginatorBundle\\Templating\\PaginationHelper',
+            'knp_paginator.helper.processor.class' => 'Knp\\Bundle\\PaginatorBundle\\Helper\\Processor',
+            'knp_paginator.template.pagination' => 'KnpPaginatorBundle:Pagination:sliding.html.twig',
+            'knp_paginator.template.filtration' => 'KnpPaginatorBundle:Pagination:filtration.html.twig',
+            'knp_paginator.template.sortable' => 'KnpPaginatorBundle:Pagination:sortable_link.html.twig',
+            'knp_paginator.page_range' => 5,
+            'ccdn_forum_forum.entity.forum.class' => 'CCDNForum\\ForumBundle\\Entity\\Forum',
+            'ccdn_forum_forum.entity.category.class' => 'CCDNForum\\ForumBundle\\Entity\\Category',
+            'ccdn_forum_forum.entity.board.class' => 'CCDNForum\\ForumBundle\\Entity\\Board',
+            'ccdn_forum_forum.entity.topic.class' => 'CCDNForum\\ForumBundle\\Entity\\Topic',
+            'ccdn_forum_forum.entity.post.class' => 'CCDNForum\\ForumBundle\\Entity\\Post',
+            'ccdn_forum_forum.entity.subscription.class' => 'CCDNForum\\ForumBundle\\Entity\\Subscription',
+            'ccdn_forum_forum.entity.registry.class' => 'CCDNForum\\ForumBundle\\Entity\\Registry',
+            'ccdn_forum_forum.gateway.forum.class' => 'CCDNForum\\ForumBundle\\Model\\Component\\Gateway\\ForumGateway',
+            'ccdn_forum_forum.gateway.category.class' => 'CCDNForum\\ForumBundle\\Model\\Component\\Gateway\\CategoryGateway',
+            'ccdn_forum_forum.gateway.board.class' => 'CCDNForum\\ForumBundle\\Model\\Component\\Gateway\\BoardGateway',
+            'ccdn_forum_forum.gateway.topic.class' => 'CCDNForum\\ForumBundle\\Model\\Component\\Gateway\\TopicGateway',
+            'ccdn_forum_forum.gateway.post.class' => 'CCDNForum\\ForumBundle\\Model\\Component\\Gateway\\PostGateway',
+            'ccdn_forum_forum.gateway.subscription.class' => 'CCDNForum\\ForumBundle\\Model\\Component\\Gateway\\SubscriptionGateway',
+            'ccdn_forum_forum.gateway.registry.class' => 'CCDNForum\\ForumBundle\\Model\\Component\\Gateway\\RegistryGateway',
+            'ccdn_forum_forum.repository.forum.class' => 'CCDNForum\\ForumBundle\\Model\\Component\\Repository\\ForumRepository',
+            'ccdn_forum_forum.repository.category.class' => 'CCDNForum\\ForumBundle\\Model\\Component\\Repository\\CategoryRepository',
+            'ccdn_forum_forum.repository.board.class' => 'CCDNForum\\ForumBundle\\Model\\Component\\Repository\\BoardRepository',
+            'ccdn_forum_forum.repository.topic.class' => 'CCDNForum\\ForumBundle\\Model\\Component\\Repository\\TopicRepository',
+            'ccdn_forum_forum.repository.post.class' => 'CCDNForum\\ForumBundle\\Model\\Component\\Repository\\PostRepository',
+            'ccdn_forum_forum.repository.subscription.class' => 'CCDNForum\\ForumBundle\\Model\\Component\\Repository\\SubscriptionRepository',
+            'ccdn_forum_forum.repository.registry.class' => 'CCDNForum\\ForumBundle\\Model\\Component\\Repository\\RegistryRepository',
+            'ccdn_forum_forum.manager.forum.class' => 'CCDNForum\\ForumBundle\\Model\\Component\\Manager\\ForumManager',
+            'ccdn_forum_forum.manager.category.class' => 'CCDNForum\\ForumBundle\\Model\\Component\\Manager\\CategoryManager',
+            'ccdn_forum_forum.manager.board.class' => 'CCDNForum\\ForumBundle\\Model\\Component\\Manager\\BoardManager',
+            'ccdn_forum_forum.manager.topic.class' => 'CCDNForum\\ForumBundle\\Model\\Component\\Manager\\TopicManager',
+            'ccdn_forum_forum.manager.post.class' => 'CCDNForum\\ForumBundle\\Model\\Component\\Manager\\PostManager',
+            'ccdn_forum_forum.manager.subscription.class' => 'CCDNForum\\ForumBundle\\Model\\Component\\Manager\\SubscriptionManager',
+            'ccdn_forum_forum.manager.registry.class' => 'CCDNForum\\ForumBundle\\Model\\Component\\Manager\\RegistryManager',
+            'ccdn_forum_forum.model.forum.class' => 'CCDNForum\\ForumBundle\\Model\\FrontModel\\ForumModel',
+            'ccdn_forum_forum.model.category.class' => 'CCDNForum\\ForumBundle\\Model\\FrontModel\\CategoryModel',
+            'ccdn_forum_forum.model.board.class' => 'CCDNForum\\ForumBundle\\Model\\FrontModel\\BoardModel',
+            'ccdn_forum_forum.model.topic.class' => 'CCDNForum\\ForumBundle\\Model\\FrontModel\\TopicModel',
+            'ccdn_forum_forum.model.post.class' => 'CCDNForum\\ForumBundle\\Model\\FrontModel\\PostModel',
+            'ccdn_forum_forum.model.subscription.class' => 'CCDNForum\\ForumBundle\\Model\\FrontModel\\SubscriptionModel',
+            'ccdn_forum_forum.model.registry.class' => 'CCDNForum\\ForumBundle\\Model\\FrontModel\\RegistryModel',
+            'ccdn_forum_forum.form.type.forum_create.class' => 'CCDNForum\\ForumBundle\\Form\\Type\\Admin\\Forum\\ForumCreateFormType',
+            'ccdn_forum_forum.form.type.forum_update.class' => 'CCDNForum\\ForumBundle\\Form\\Type\\Admin\\Forum\\ForumUpdateFormType',
+            'ccdn_forum_forum.form.type.forum_delete.class' => 'CCDNForum\\ForumBundle\\Form\\Type\\Admin\\Forum\\ForumDeleteFormType',
+            'ccdn_forum_forum.form.type.category_create.class' => 'CCDNForum\\ForumBundle\\Form\\Type\\Admin\\Category\\CategoryCreateFormType',
+            'ccdn_forum_forum.form.type.category_update.class' => 'CCDNForum\\ForumBundle\\Form\\Type\\Admin\\Category\\CategoryUpdateFormType',
+            'ccdn_forum_forum.form.type.category_delete.class' => 'CCDNForum\\ForumBundle\\Form\\Type\\Admin\\Category\\CategoryDeleteFormType',
+            'ccdn_forum_forum.form.type.board_create.class' => 'CCDNForum\\ForumBundle\\Form\\Type\\Admin\\Board\\BoardCreateFormType',
+            'ccdn_forum_forum.form.type.board_update.class' => 'CCDNForum\\ForumBundle\\Form\\Type\\Admin\\Board\\BoardUpdateFormType',
+            'ccdn_forum_forum.form.type.board_delete.class' => 'CCDNForum\\ForumBundle\\Form\\Type\\Admin\\Board\\BoardDeleteFormType',
+            'ccdn_forum_forum.form.type.topic_create.class' => 'CCDNForum\\ForumBundle\\Form\\Type\\User\\Topic\\TopicCreateFormType',
+            'ccdn_forum_forum.form.type.topic_update.class' => 'CCDNForum\\ForumBundle\\Form\\Type\\User\\Topic\\TopicUpdateFormType',
+            'ccdn_forum_forum.form.type.topic_delete.class' => 'CCDNForum\\ForumBundle\\Form\\Type\\Moderator\\Topic\\TopicDeleteFormType',
+            'ccdn_forum_forum.form.type.change_topics_board.class' => 'CCDNForum\\ForumBundle\\Form\\Type\\Moderator\\Topic\\TopicChangeBoardFormType',
+            'ccdn_forum_forum.form.type.post_create.class' => 'CCDNForum\\ForumBundle\\Form\\Type\\User\\Post\\PostCreateFormType',
+            'ccdn_forum_forum.form.type.post_update.class' => 'CCDNForum\\ForumBundle\\Form\\Type\\User\\Post\\PostUpdateFormType',
+            'ccdn_forum_forum.form.type.post_delete.class' => 'CCDNForum\\ForumBundle\\Form\\Type\\User\\Post\\PostDeleteFormType',
+            'ccdn_forum_forum.form.type.post_unlock.class' => 'CCDNForum\\ForumBundle\\Form\\Type\\Moderator\\Post\\PostUnlockFormType',
+            'ccdn_forum_forum.form.handler.forum_create.class' => 'CCDNForum\\ForumBundle\\Form\\Handler\\Admin\\Forum\\ForumCreateFormHandler',
+            'ccdn_forum_forum.form.handler.forum_update.class' => 'CCDNForum\\ForumBundle\\Form\\Handler\\Admin\\Forum\\ForumUpdateFormHandler',
+            'ccdn_forum_forum.form.handler.forum_delete.class' => 'CCDNForum\\ForumBundle\\Form\\Handler\\Admin\\Forum\\ForumDeleteFormHandler',
+            'ccdn_forum_forum.form.handler.category_create.class' => 'CCDNForum\\ForumBundle\\Form\\Handler\\Admin\\Category\\CategoryCreateFormHandler',
+            'ccdn_forum_forum.form.handler.category_update.class' => 'CCDNForum\\ForumBundle\\Form\\Handler\\Admin\\Category\\CategoryUpdateFormHandler',
+            'ccdn_forum_forum.form.handler.category_delete.class' => 'CCDNForum\\ForumBundle\\Form\\Handler\\Admin\\Category\\CategoryDeleteFormHandler',
+            'ccdn_forum_forum.form.handler.board_create.class' => 'CCDNForum\\ForumBundle\\Form\\Handler\\Admin\\Board\\BoardCreateFormHandler',
+            'ccdn_forum_forum.form.handler.board_update.class' => 'CCDNForum\\ForumBundle\\Form\\Handler\\Admin\\Board\\BoardUpdateFormHandler',
+            'ccdn_forum_forum.form.handler.board_delete.class' => 'CCDNForum\\ForumBundle\\Form\\Handler\\Admin\\Board\\BoardDeleteFormHandler',
+            'ccdn_forum_forum.form.handler.topic_create.class' => 'CCDNForum\\ForumBundle\\Form\\Handler\\User\\Topic\\TopicCreateFormHandler',
+            'ccdn_forum_forum.form.handler.topic_update.class' => 'CCDNForum\\ForumBundle\\Form\\Handler\\User\\Topic\\TopicUpdateFormHandler',
+            'ccdn_forum_forum.form.handler.topic_delete.class' => 'CCDNForum\\ForumBundle\\Form\\Handler\\Moderator\\Topic\\TopicDeleteFormHandler',
+            'ccdn_forum_forum.form.handler.change_topics_board.class' => 'CCDNForum\\ForumBundle\\Form\\Handler\\Moderator\\Topic\\TopicChangeBoardFormHandler',
+            'ccdn_forum_forum.form.handler.post_create.class' => 'CCDNForum\\ForumBundle\\Form\\Handler\\User\\Post\\PostCreateFormHandler',
+            'ccdn_forum_forum.form.handler.post_update.class' => 'CCDNForum\\ForumBundle\\Form\\Handler\\User\\Post\\PostUpdateFormHandler',
+            'ccdn_forum_forum.form.handler.post_delete.class' => 'CCDNForum\\ForumBundle\\Form\\Handler\\User\\Post\\PostDeleteFormHandler',
+            'ccdn_forum_forum.form.handler.post_unlock.class' => 'CCDNForum\\ForumBundle\\Form\\Handler\\Moderator\\Post\\PostUnlockFormHandler',
+            'ccdn_forum_forum.component.integrator.dashboard.class' => 'CCDNForum\\ForumBundle\\Component\\Integrator\\DashboardIntegrator',
+            'ccdn_forum_forum.component.crumb_factory.class' => 'CCDNForum\\ForumBundle\\Component\\Crumbs\\Factory\\CrumbFactory',
+            'ccdn_forum_forum.component.crumb_builder.class' => 'CCDNForum\\ForumBundle\\Component\\Crumbs\\CrumbBuilder',
+            'ccdn_forum_forum.component.security.authorizer.class' => 'CCDNForum\\ForumBundle\\Component\\Security\\Authorizer',
+            'ccdn_forum_forum.component.flood_control.class' => 'CCDNForum\\ForumBundle\\Component\\FloodControl',
+            'ccdn_forum_forum.component.helper.role.class' => 'CCDNForum\\ForumBundle\\Component\\Helper\\RoleHelper',
+            'ccdn_forum_forum.component.helper.pagination_config.class' => 'CCDNForum\\ForumBundle\\Component\\Helper\\PaginationConfigHelper',
+            'ccdn_forum_forum.component.helper.post_lock.class' => 'CCDNForum\\ForumBundle\\Component\\Helper\\PostLockHelper',
+            'ccdn_forum_forum.component.twig_extension.board_list.class' => 'CCDNForum\\ForumBundle\\Component\\TwigExtension\\BoardListExtension',
+            'ccdn_forum_forum.component.twig_extension.authorizer.class' => 'CCDNForum\\ForumBundle\\Component\\TwigExtension\\AuthorizerExtension',
+            'ccdn_forum_forum.component.event_listener.flash.class' => 'CCDNForum\\ForumBundle\\Component\\Dispatcher\\Listener\\FlashListener',
+            'ccdn_forum_forum.component.event_listener.subscriber.class' => 'CCDNForum\\ForumBundle\\Component\\Dispatcher\\Listener\\SubscriberListener',
+            'ccdn_forum_forum.component.event_listener.stats.class' => 'CCDNForum\\ForumBundle\\Component\\Dispatcher\\Listener\\StatListener',
+            'ccdn_forum_forum.template.engine' => 'twig',
+            'ccdn_forum_forum.template.pager_theme' => NULL,
+            'ccdn_forum_forum.fixtures.user_admin' => 'user-admin',
+            'ccdn_forum_forum.seo.title_length' => '67',
+            'ccdn_forum_forum.forum.admin.create.layout_template' => 'CCDNForumForumBundle::base.html.twig',
+            'ccdn_forum_forum.forum.admin.create.form_theme' => 'form_div_layout.html.twig',
+            'ccdn_forum_forum.forum.admin.edit.layout_template' => 'CCDNForumForumBundle::base.html.twig',
+            'ccdn_forum_forum.forum.admin.edit.form_theme' => 'form_div_layout.html.twig',
+            'ccdn_forum_forum.forum.admin.delete.layout_template' => 'CCDNForumForumBundle::base.html.twig',
+            'ccdn_forum_forum.forum.admin.delete.form_theme' => 'form_div_layout.html.twig',
+            'ccdn_forum_forum.forum.admin.list.layout_template' => 'CCDNForumForumBundle::base.html.twig',
+            'ccdn_forum_forum.category.admin.create.layout_template' => 'CCDNForumForumBundle::base.html.twig',
+            'ccdn_forum_forum.category.admin.create.form_theme' => 'form_div_layout.html.twig',
+            'ccdn_forum_forum.category.admin.edit.layout_template' => 'CCDNForumForumBundle::base.html.twig',
+            'ccdn_forum_forum.category.admin.edit.form_theme' => 'form_div_layout.html.twig',
+            'ccdn_forum_forum.category.admin.delete.layout_template' => 'CCDNForumForumBundle::base.html.twig',
+            'ccdn_forum_forum.category.admin.delete.form_theme' => 'form_div_layout.html.twig',
+            'ccdn_forum_forum.category.admin.list.layout_template' => 'CCDNForumForumBundle::base.html.twig',
+            'ccdn_forum_forum.category.user.last_post_datetime_format' => 'd-m-Y - H:i',
+            'ccdn_forum_forum.category.user.index.layout_template' => 'CCDNForumForumBundle::base.html.twig',
+            'ccdn_forum_forum.category.user.show.layout_template' => 'CCDNForumForumBundle::base.html.twig',
+            'ccdn_forum_forum.board.admin.create.layout_template' => 'CCDNForumForumBundle::base.html.twig',
+            'ccdn_forum_forum.board.admin.create.form_theme' => 'form_div_layout.html.twig',
+            'ccdn_forum_forum.board.admin.edit.layout_template' => 'CCDNForumForumBundle::base.html.twig',
+            'ccdn_forum_forum.board.admin.edit.form_theme' => 'form_div_layout.html.twig',
+            'ccdn_forum_forum.board.admin.delete.layout_template' => 'CCDNForumForumBundle::base.html.twig',
+            'ccdn_forum_forum.board.admin.delete.form_theme' => 'form_div_layout.html.twig',
+            'ccdn_forum_forum.board.admin.list.layout_template' => 'CCDNForumForumBundle::base.html.twig',
+            'ccdn_forum_forum.board.user.show.layout_template' => 'CCDNForumForumBundle::base.html.twig',
+            'ccdn_forum_forum.board.user.show.topics_per_page' => '50',
+            'ccdn_forum_forum.board.user.show.topic_title_truncate' => '50',
+            'ccdn_forum_forum.board.user.show.first_post_datetime_format' => 'd-m-Y - H:i',
+            'ccdn_forum_forum.board.user.show.last_post_datetime_format' => 'd-m-Y - H:i',
+            'ccdn_forum_forum.topic.moderator.change_board.layout_template' => 'CCDNForumForumBundle::base.html.twig',
+            'ccdn_forum_forum.topic.moderator.change_board.form_theme' => 'form_div_layout.html.twig',
+            'ccdn_forum_forum.topic.moderator.delete.layout_template' => 'CCDNForumForumBundle::base.html.twig',
+            'ccdn_forum_forum.topic.moderator.delete.form_theme' => 'form_div_layout.html.twig',
+            'ccdn_forum_forum.topic.user.flood_control.post_limit' => 0,
+            'ccdn_forum_forum.topic.user.flood_control.block_for_minutes' => 0,
+            'ccdn_forum_forum.topic.user.show.layout_template' => 'CCDNForumForumBundle::base.html.twig',
+            'ccdn_forum_forum.topic.user.show.posts_per_page' => '20',
+            'ccdn_forum_forum.topic.user.show.closed_datetime_format' => 'd-m-Y - H:i',
+            'ccdn_forum_forum.topic.user.show.deleted_datetime_format' => 'd-m-Y - H:i',
+            'ccdn_forum_forum.topic.user.create.layout_template' => 'CCDNForumForumBundle::base.html.twig',
+            'ccdn_forum_forum.topic.user.create.form_theme' => 'form_div_layout.html.twig',
+            'ccdn_forum_forum.topic.user.reply.layout_template' => 'CCDNForumForumBundle::base.html.twig',
+            'ccdn_forum_forum.topic.user.reply.form_theme' => 'form_div_layout.html.twig',
+            'ccdn_forum_forum.post.moderator.unlock.layout_template' => 'CCDNForumForumBundle::base.html.twig',
+            'ccdn_forum_forum.post.moderator.unlock.form_theme' => 'form_div_layout.html.twig',
+            'ccdn_forum_forum.post.user.show.layout_template' => 'CCDNForumForumBundle::base.html.twig',
+            'ccdn_forum_forum.post.user.edit.layout_template' => 'CCDNForumForumBundle::base.html.twig',
+            'ccdn_forum_forum.post.user.edit.form_theme' => 'form_div_layout.html.twig',
+            'ccdn_forum_forum.post.user.delete.layout_template' => 'CCDNForumForumBundle::base.html.twig',
+            'ccdn_forum_forum.post.user.delete.form_theme' => 'form_div_layout.html.twig',
+            'ccdn_forum_forum.post.user.lock.enable' => true,
+            'ccdn_forum_forum.post.user.lock.after_days' => '7',
+            'ccdn_forum_forum.item_post.created_datetime_format' => 'd-m-Y - H:i',
+            'ccdn_forum_forum.item_post.edited_datetime_format' => 'd-m-Y - H:i',
+            'ccdn_forum_forum.item_post.post_locked_datetime_format' => 'd-m-Y - H:i',
+            'ccdn_forum_forum.item_post.deleted_datetime_format' => 'd-m-Y - H:i',
+            'ccdn_forum_forum.subscription.list.layout_template' => 'CCDNForumForumBundle::base.html.twig',
+            'ccdn_forum_forum.subscription.list.topics_per_page' => '50',
+            'ccdn_forum_forum.subscription.list.topic_title_truncate' => '50',
+            'ccdn_forum_forum.subscription.list.first_post_datetime_format' => 'd-m-Y - H:i',
+            'ccdn_forum_forum.subscription.list.last_post_datetime_format' => 'd-m-Y - H:i',
             'web_profiler.controller.profiler.class' => 'Symfony\\Bundle\\WebProfilerBundle\\Controller\\ProfilerController',
             'web_profiler.controller.router.class' => 'Symfony\\Bundle\\WebProfilerBundle\\Controller\\RouterController',
             'web_profiler.controller.exception.class' => 'Symfony\\Bundle\\WebProfilerBundle\\Controller\\ExceptionController',

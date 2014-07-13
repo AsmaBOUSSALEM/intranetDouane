@@ -49,7 +49,7 @@ $this->container = $container;
 protected function getSession()
 {
 if (!$this->container->has('session')) {
-return null;
+return;
 }
 return $this->container->get('session');
 }
@@ -415,17 +415,17 @@ public function close()
 $this->active = false;
 return (bool) $this->handler->close();
 }
-public function read($id)
+public function read($sessionId)
 {
-return (string) $this->handler->read($id);
+return (string) $this->handler->read($sessionId);
 }
-public function write($id, $data)
+public function write($sessionId, $data)
 {
-return (bool) $this->handler->write($id, $data);
+return (bool) $this->handler->write($sessionId, $data);
 }
-public function destroy($id)
+public function destroy($sessionId)
 {
-return (bool) $this->handler->destroy($id);
+return (bool) $this->handler->destroy($sessionId);
 }
 public function gc($maxlifetime)
 {
@@ -625,7 +625,7 @@ return $this->container->getParameter('kernel.environment');
 }
 public function getDebug()
 {
-return (Boolean) $this->container->getParameter('kernel.debug');
+return (bool) $this->container->getParameter('kernel.debug');
 }
 }
 }
@@ -859,7 +859,7 @@ return $this->context;
 }
 public function setStrictRequirements($enabled)
 {
-$this->strictRequirements = null === $enabled ? null : (Boolean) $enabled;
+$this->strictRequirements = null === $enabled ? null : (bool) $enabled;
 }
 public function isStrictRequirements()
 {
@@ -893,7 +893,7 @@ throw new InvalidParameterException($message);
 if ($this->logger) {
 $this->logger->error($message);
 }
-return null;
+return;
 }
 $url = $token[1].$mergedParams[$token[3]].$url;
 $optional = false;
@@ -932,7 +932,7 @@ throw new InvalidParameterException($message);
 if ($this->logger) {
 $this->logger->error($message);
 }
-return null;
+return;
 }
 $routeHost = $token[1].$mergedParams[$token[3]].$routeHost;
 } else {
@@ -1684,7 +1684,7 @@ return $this->sorted;
 }
 public function hasListeners($eventName = null)
 {
-return (Boolean) count($this->getListeners($eventName));
+return (bool) count($this->getListeners($eventName));
 }
 public function addListener($eventName, $listener, $priority = 0)
 {
@@ -1793,7 +1793,7 @@ parent::removeListener($eventName, $listener);
 public function hasListeners($eventName = null)
 {
 if (null === $eventName) {
-return (Boolean) count($this->listenerIds) || (Boolean) count($this->listeners);
+return (bool) count($this->listenerIds) || (bool) count($this->listeners);
 }
 if (isset($this->listenerIds[$eventName])) {
 return true;
@@ -2563,7 +2563,7 @@ if (!$providers) {
 throw new \InvalidArgumentException('You must at least add one authentication provider.');
 }
 $this->providers = $providers;
-$this->eraseCredentials = (Boolean) $eraseCredentials;
+$this->eraseCredentials = (bool) $eraseCredentials;
 }
 public function setEventDispatcher(EventDispatcherInterface $dispatcher)
 {
@@ -2640,8 +2640,8 @@ throw new \InvalidArgumentException(sprintf('The strategy "%s" is not supported.
 }
 $this->voters = $voters;
 $this->strategy = $strategyMethod;
-$this->allowIfAllAbstainDecisions = (Boolean) $allowIfAllAbstainDecisions;
-$this->allowIfEqualGrantedDeniedDecisions = (Boolean) $allowIfEqualGrantedDeniedDecisions;
+$this->allowIfAllAbstainDecisions = (bool) $allowIfAllAbstainDecisions;
+$this->allowIfEqualGrantedDeniedDecisions = (bool) $allowIfEqualGrantedDeniedDecisions;
 }
 public function decide(TokenInterface $token, array $attributes, $object = null)
 {
@@ -2880,7 +2880,7 @@ namespace
 {
 class Twig_Environment
 {
-const VERSION ='1.15.1';
+const VERSION ='1.16.0';
 protected $charset;
 protected $loader;
 protected $debug;
@@ -3878,15 +3878,15 @@ $thousandSep = $defaults[2];
 }
 return number_format((float) $number, $decimal, $decimalPoint, $thousandSep);
 }
-function twig_urlencode_filter($url, $raw = false)
+function twig_urlencode_filter($url)
 {
 if (is_array($url)) {
+if (defined('PHP_QUERY_RFC3986')) {
+return http_build_query($url,'','&', PHP_QUERY_RFC3986);
+}
 return http_build_query($url,'','&');
 }
-if ($raw) {
 return rawurlencode($url);
-}
-return urlencode($url);
 }
 if (version_compare(PHP_VERSION,'5.3.0','<')) {
 function twig_jsonencode_filter($value, $options = 0)
@@ -4459,20 +4459,19 @@ public function displayParentBlock($name, array $context, array $blocks = array(
 {
 $name = (string) $name;
 if (isset($this->traits[$name])) {
-$this->traits[$name][0]->displayBlock($name, $context, $blocks);
+$this->traits[$name][0]->displayBlock($name, $context, $blocks, false);
 } elseif (false !== $parent = $this->getParent($context)) {
-$parent->displayBlock($name, $context, $blocks);
+$parent->displayBlock($name, $context, $blocks, false);
 } else {
 throw new Twig_Error_Runtime(sprintf('The template has no parent and no traits defining the "%s" block', $name), -1, $this->getTemplateName());
 }
 }
-public function displayBlock($name, array $context, array $blocks = array())
+public function displayBlock($name, array $context, array $blocks = array(), $useBlocks = true)
 {
 $name = (string) $name;
-if (isset($blocks[$name])) {
+if ($useBlocks && isset($blocks[$name])) {
 $template = $blocks[$name][0];
 $block = $blocks[$name][1];
-unset($blocks[$name]);
 } elseif (isset($this->blocks[$name])) {
 $template = $this->blocks[$name][0];
 $block = $this->blocks[$name][1];
@@ -4489,7 +4488,7 @@ throw $e;
 throw new Twig_Error_Runtime(sprintf('An exception has been thrown during the rendering of a template ("%s").', $e->getMessage()), -1, $template->getTemplateName(), $e);
 }
 } elseif (false !== $parent = $this->getParent($context)) {
-$parent->displayBlock($name, $context, array_merge($this->blocks, $blocks));
+$parent->displayBlock($name, $context, array_merge($this->blocks, $blocks), false);
 }
 }
 public function renderParentBlock($name, array $context, array $blocks = array())
@@ -4498,10 +4497,10 @@ ob_start();
 $this->displayParentBlock($name, $context, $blocks);
 return ob_get_clean();
 }
-public function renderBlock($name, array $context, array $blocks = array())
+public function renderBlock($name, array $context, array $blocks = array(), $useBlocks = true)
 {
 ob_start();
-$this->displayBlock($name, $context, $blocks);
+$this->displayBlock($name, $context, $blocks, $useBlocks);
 return ob_get_clean();
 }
 public function hasBlock($name)
@@ -4518,7 +4517,7 @@ return $this->blocks;
 }
 public function display(array $context, array $blocks = array())
 {
-$this->displayWithErrorHandling($this->env->mergeGlobals($context), $blocks);
+$this->displayWithErrorHandling($this->env->mergeGlobals($context), array_merge($this->blocks, $blocks));
 }
 public function render(array $context)
 {
@@ -4556,7 +4555,7 @@ final protected function getContext($context, $item, $ignoreStrictCheck = false)
 {
 if (!array_key_exists($item, $context)) {
 if ($ignoreStrictCheck || !$this->env->isStrictVariables()) {
-return null;
+return;
 }
 throw new Twig_Error_Runtime(sprintf('Variable "%s" does not exist', $item), -1, $this->getTemplateName());
 }
@@ -4579,7 +4578,7 @@ if ($isDefinedTest) {
 return false;
 }
 if ($ignoreStrictCheck || !$this->env->isStrictVariables()) {
-return null;
+return;
 }
 if ($object instanceof ArrayAccess) {
 $message = sprintf('Key "%s" in object with ArrayAccess of class "%s" does not exist', $arrayItem, get_class($object));
@@ -4600,11 +4599,10 @@ if ($isDefinedTest) {
 return false;
 }
 if ($ignoreStrictCheck || !$this->env->isStrictVariables()) {
-return null;
+return;
 }
 throw new Twig_Error_Runtime(sprintf('Impossible to invoke a method ("%s") on a %s variable ("%s")', $item, gettype($object), $object), -1, $this->getTemplateName());
 }
-$class = get_class($object);
 if (Twig_Template::METHOD_CALL !== $type) {
 if (isset($object->$item) || array_key_exists((string) $item, $object)) {
 if ($isDefinedTest) {
@@ -4616,6 +4614,7 @@ $this->env->getExtension('sandbox')->checkPropertyAllowed($object, $item);
 return $object->$item;
 }
 }
+$class = get_class($object);
 if (!isset(self::$cache[$class]['methods'])) {
 self::$cache[$class]['methods'] = array_change_key_case(array_flip(get_class_methods($object)));
 }
@@ -4635,7 +4634,7 @@ if ($isDefinedTest) {
 return false;
 }
 if ($ignoreStrictCheck || !$this->env->isStrictVariables()) {
-return null;
+return;
 }
 throw new Twig_Error_Runtime(sprintf('Method "%s" for object "%s" does not exist', $item, get_class($object)), -1, $this->getTemplateName());
 }
@@ -4649,7 +4648,7 @@ try {
 $ret = call_user_func_array(array($object, $method), $arguments);
 } catch (BadMethodCallException $e) {
 if ($call && ($ignoreStrictCheck || !$this->env->isStrictVariables())) {
-return null;
+return;
 }
 throw $e;
 }
@@ -4963,7 +4962,8 @@ class StreamHandler extends AbstractProcessingHandler
 protected $stream;
 protected $url;
 private $errorMessage;
-public function __construct($stream, $level = Logger::DEBUG, $bubble = true)
+protected $filePermission;
+public function __construct($stream, $level = Logger::DEBUG, $bubble = true, $filePermission = null)
 {
 parent::__construct($level, $bubble);
 if (is_resource($stream)) {
@@ -4971,6 +4971,7 @@ $this->stream = $stream;
 } else {
 $this->url = $stream;
 }
+$this->filePermission = $filePermission;
 }
 public function close()
 {
@@ -4981,13 +4982,16 @@ $this->stream = null;
 }
 protected function write(array $record)
 {
-if (null === $this->stream) {
+if (!is_resource($this->stream)) {
 if (!$this->url) {
 throw new \LogicException('Missing stream url, the stream can not be opened. This may be caused by a premature call to close().');
 }
 $this->errorMessage = null;
 set_error_handler(array($this,'customErrorHandler'));
 $this->stream = fopen($this->url,'a');
+if ($this->filePermission !== null) {
+@chmod($this->url, $this->filePermission);
+}
 restore_error_handler();
 if (!is_resource($this->stream)) {
 $this->stream = null;
@@ -5015,7 +5019,8 @@ protected $buffering = true;
 protected $bufferSize;
 protected $buffer = array();
 protected $stopBuffering;
-public function __construct($handler, $activationStrategy = null, $bufferSize = 0, $bubble = true, $stopBuffering = true)
+protected $passthruLevel;
+public function __construct($handler, $activationStrategy = null, $bufferSize = 0, $bubble = true, $stopBuffering = true, $passthruLevel = NULL)
 {
 if (null === $activationStrategy) {
 $activationStrategy = new ErrorLevelActivationStrategy(Logger::WARNING);
@@ -5028,6 +5033,7 @@ $this->activationStrategy = $activationStrategy;
 $this->bufferSize = $bufferSize;
 $this->bubble = $bubble;
 $this->stopBuffering = $stopBuffering;
+$this->passthruLevel = $passthruLevel;
 }
 public function isHandling(array $record)
 {
@@ -5066,9 +5072,90 @@ $this->handler->handle($record);
 }
 return false === $this->bubble;
 }
+public function close()
+{
+if (NULL !== $this->passthruLevel) {
+$level = $this->passthruLevel;
+$this->buffer = array_filter($this->buffer, function ($record) use ($level) {
+return $record['level'] >= $level;
+});
+if (count($this->buffer) > 0) {
+$this->handler->handleBatch($this->buffer);
+$this->buffer = array();
+}
+}
+}
 public function reset()
 {
 $this->buffering = true;
+}
+}
+}
+namespace Monolog\Handler
+{
+use Monolog\Logger;
+class FilterHandler extends AbstractHandler
+{
+protected $handler;
+protected $acceptedLevels;
+protected $bubble;
+public function __construct($handler, $minLevelOrList = Logger::DEBUG, $maxLevel = Logger::EMERGENCY, $bubble = true)
+{
+$this->handler = $handler;
+$this->bubble = $bubble;
+$this->setAcceptedLevels($minLevelOrList, $maxLevel);
+}
+public function getAcceptedLevels()
+{
+return array_flip($this->acceptedLevels);
+}
+public function setAcceptedLevels($minLevelOrList = Logger::DEBUG, $maxLevel = Logger::EMERGENCY)
+{
+if (is_array($minLevelOrList)) {
+$acceptedLevels = $minLevelOrList;
+} else {
+$acceptedLevels = array_filter(Logger::getLevels(), function ($level) use ($minLevelOrList, $maxLevel) {
+return $level >= $minLevelOrList && $level <= $maxLevel;
+});
+}
+$this->acceptedLevels = array_flip($acceptedLevels);
+}
+public function isHandling(array $record)
+{
+return isset($this->acceptedLevels[$record['level']]);
+}
+public function handle(array $record)
+{
+if (!$this->isHandling($record)) {
+return false;
+}
+if (!$this->handler instanceof HandlerInterface) {
+if (!is_callable($this->handler)) {
+throw new \RuntimeException("The given handler (". json_encode($this->handler)
+.") is not a callable nor a Monolog\\Handler\\HandlerInterface object");
+}
+$this->handler = call_user_func($this->handler, $record, $this);
+if (!$this->handler instanceof HandlerInterface) {
+throw new \RuntimeException("The factory callable should return a HandlerInterface");
+}
+}
+if ($this->processors) {
+foreach ($this->processors as $processor) {
+$record = call_user_func($processor, $record);
+}
+}
+$this->handler->handle($record);
+return false === $this->bubble;
+}
+public function handleBatch(array $records)
+{
+$filtered = array();
+foreach ($records as $record) {
+if ($this->isHandling($record)) {
+$filtered[] = $record;
+}
+}
+$this->handler->handleBatch($filtered);
 }
 }
 }
@@ -5236,6 +5323,10 @@ throw new \LogicException('You tried to pop from an empty handler stack.');
 }
 return array_shift($this->handlers);
 }
+public function getHandlers()
+{
+return $this->handlers;
+}
 public function pushProcessor($callback)
 {
 if (!is_callable($callback)) {
@@ -5249,6 +5340,10 @@ if (!$this->processors) {
 throw new \LogicException('You tried to pop from an empty processor stack.');
 }
 return array_shift($this->processors);
+}
+public function getProcessors()
+{
+return $this->processors;
 }
 public function addRecord($level, $message, array $context = array())
 {

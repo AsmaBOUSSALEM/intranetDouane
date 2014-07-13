@@ -131,7 +131,9 @@ class GetSetMethodNormalizer extends SerializerAwareNormalizer implements Normal
                     $params[] = $data[$paramName];
                     // don't run set for a parameter passed to the constructor
                     unset($data[$paramName]);
-                } elseif (!$constructorParameter->isOptional()) {
+                } elseif ($constructorParameter->isOptional()) {
+                    $params[] = $constructorParameter->getDefaultValue();
+                } else {
                     throw new RuntimeException(
                         'Cannot create an instance of '.$class.
                         ' from serialized data because its constructor requires '.
@@ -178,7 +180,7 @@ class GetSetMethodNormalizer extends SerializerAwareNormalizer implements Normal
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function supportsNormalization($data, $format = null)
     {
@@ -186,7 +188,7 @@ class GetSetMethodNormalizer extends SerializerAwareNormalizer implements Normal
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function supportsDenormalization($data, $type, $format = null)
     {
@@ -198,7 +200,7 @@ class GetSetMethodNormalizer extends SerializerAwareNormalizer implements Normal
      *
      * @param string $class
      *
-     * @return Boolean
+     * @return bool
      */
     private function supports($class)
     {
@@ -218,7 +220,7 @@ class GetSetMethodNormalizer extends SerializerAwareNormalizer implements Normal
      *
      * @param \ReflectionMethod $method the method to check
      *
-     * @return Boolean whether the method is a getter.
+     * @return bool    whether the method is a getter.
      */
     private function isGetMethod(\ReflectionMethod $method)
     {

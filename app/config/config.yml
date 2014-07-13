@@ -3,8 +3,12 @@ imports:
     - { resource: security.yml }
 
 framework:
+    translator: ~
+
+framework:
     #esi:             ~
     #translator:      { fallback: "%locale%" }
+    translator: ~
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -57,8 +61,11 @@ doctrine:
         # path:     "%database_path%"
 
     orm:
+        
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping: true
+        resolve_target_entities:
+            Symfony\Component\Security\Core\User\UserInterface: douane\intraBundle\Entity\User
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -67,6 +74,7 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
 
 
 fos_user:
