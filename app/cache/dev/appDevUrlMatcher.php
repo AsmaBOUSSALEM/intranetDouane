@@ -136,8 +136,29 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         // douaneintra_homepage
-        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'douaneintra_homepage')), array (  '_controller' => 'douane\\intraBundle\\Controller\\DefaultController::indexAction',));
+        if ($pathinfo === '/index') {
+            return array (  '_controller' => 'douane\\intraBundle\\Controller\\DefaultController::indexAction',  '_route' => 'douaneintra_homepage',);
+        }
+
+        if (0 === strpos($pathinfo, '/do')) {
+            if (0 === strpos($pathinfo, '/doc')) {
+                // upload
+                if ($pathinfo === '/docUpload') {
+                    return array (  '_controller' => 'douane\\intraBundle\\Controller\\DefaultController::uploadAction',  '_route' => 'upload',);
+                }
+
+                // show
+                if ($pathinfo === '/docShow') {
+                    return array (  '_controller' => 'douane\\intraBundle\\Controller\\DefaultController::showAction',  '_route' => 'show',);
+                }
+
+            }
+
+            // download_route
+            if (0 === strpos($pathinfo, '/download') && preg_match('#^/download/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'download_route')), array (  '_controller' => 'douane\\intraBundle\\Controller\\DefaultController::downloadAction',));
+            }
+
         }
 
         if (0 === strpos($pathinfo, '/log')) {
@@ -598,11 +619,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         // ccdn_homepage
-        if (rtrim($pathinfo, '/') === '') {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'ccdn_homepage');
-            }
-
+        if ($pathinfo === '/forumHome') {
             return array (  '_controller' => 'CCDNForum\\ForumBundle\\Controller\\UserCategoryController::indexAction',  '_locale' => 'en',  'forumName' => 'default',  '_route' => 'ccdn_homepage',);
         }
 

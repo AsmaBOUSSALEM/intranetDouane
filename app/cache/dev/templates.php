@@ -88,6 +88,8 @@
   'douaneintraBundle:Profile:edit_content.html.twig' => '/var/www/html/stageDouane/src/douane/intraBundle/Resources/views/Profile/edit_content.html.twig',
   'douaneintraBundle:Profile:show_content.html.twig' => '/var/www/html/stageDouane/src/douane/intraBundle/Resources/views/Profile/show_content.html.twig',
   'douaneintraBundle:Profile:show.html.twig' => '/var/www/html/stageDouane/src/douane/intraBundle/Resources/views/Profile/show.html.twig',
+  'douaneintraBundle:Default:docShow.html.twig' => '/var/www/html/stageDouane/src/douane/intraBundle/Resources/views/Default/docShow.html.twig',
+  'douaneintraBundle:Default:docUpload.html.twig' => '/var/www/html/stageDouane/src/douane/intraBundle/Resources/views/Default/docUpload.html.twig',
   'douaneintraBundle:Default:index.html.twig' => '/var/www/html/stageDouane/src/douane/intraBundle/Resources/views/Default/index.html.twig',
   'douaneintraBundle::base.html.twig' => '/var/www/html/stageDouane/src/douane/intraBundle/Resources/views/base.html.twig',
   'FOSUserBundle:ChangePassword:changePassword.html.twig' => '/var/www/html/stageDouane/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/views/ChangePassword/changePassword.html.twig',

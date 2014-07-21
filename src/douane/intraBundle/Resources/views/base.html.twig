@@ -6,7 +6,7 @@
 
         <title>{%- block title -%}{%- endblock -%}</title>
 
-		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
 		{%- block stylesheets -%}
 		{%- endblock -%}
     </head>
@@ -16,22 +16,11 @@
 
 		<div id="page-wrap">
 			<div id="page-main">
-
+			<img src="{{asset('concours-douane.jpg')}}" style="width: 100%; height: 150px; margin-bottom: 34px; ">
 				{%- block navbar -%}
-					<header class="navbar navbar-default navbar-fixed-top clearfix" role="navigation">
-						
+					
 
-						<p class="navbar-text pull-right">
-							<i class="glyphicon glyphicon-user"></i>
-							&nbsp;
-							{%- if app.user -%}
-								{{- app.user.email -}}
-							{%- endif -%}
-						</p>
-					</header>
-
-					{%- block tool_bar -%}
-					{%- endblock tool_bar -%}
+					
 				{%- endblock navbar -%}
 
 				<div class="container clearfix">
@@ -55,8 +44,8 @@
 		<br>
 
 		
-		<script src="//code.jquery.com/jquery.js"></script>
-		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+		<script src="{{asset('js/jquery.js')}}"></script>
+		<script src="{{asset('js/bootstrap.min.js')}}"></script>
 		{%- block javascripts -%}
 		{%- endblock -%}
 
