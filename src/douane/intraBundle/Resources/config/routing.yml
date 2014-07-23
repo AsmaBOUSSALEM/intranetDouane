@@ -13,3 +13,12 @@ show:
 download_route:
     pattern:  /download/{id}
     defaults: { _controller: douaneintraBundle:Default:download }
+
+display_route:
+    pattern:  /display
+    defaults: { _controller: douaneintraBundle:Default:display }
+
+formation_route:
+    pattern:  /admin/addFormation
+    defaults: { _controller: douaneintraBundle:Default:addFormation }
+

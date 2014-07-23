@@ -28,6 +28,9 @@ CCDNForumForumBundle:
 
 ccdn_homepage:
     pattern: /forumHome
-    defaults: { _controller: CCDNForumForumBundle:UserCategory:index, _locale: en, forumName: default }
+    defaults: { _controller: CCDNForumForumBundle:UserCategory:index, _locale: fr, forumName: default }
 
 
+forum_admin:
+    resource: "@CCDNForumForumBundle/Resources/config/routing/admin.yml"
+    

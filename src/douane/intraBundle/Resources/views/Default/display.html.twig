@@ -1,0 +1,33 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+{% block fos_user_content %}
+
+
+
+<div class="form">
+{{ form(form) }}
+</div>
+
+<center><h3>Liste des documents disponibles</h3></center>
+<table class="table table-hover" style="margin-top: 30px; margin-left: 25px; margin-right: 55px;">
+<tr>
+      <th>nom du document</th>
+      <th>nom de la formation</th>
+      <th></th>
+    </tr>
+{% for item in result %}
+<tr><td>
+{{ item.nom_document }}  </td>
+<td>
+{{ item.formation.nom_formation }}  </td>
+
+<td>
+<a href="{{ path('download_route', {'id': item.id_document}) }}">
+  telecharger
+</a></td></tr>
+
+
+
+
+{% endfor %}
+</table>
+{% endblock fos_user_content %}
